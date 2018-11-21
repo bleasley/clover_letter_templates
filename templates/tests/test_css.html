@@ -1,0 +1,44 @@
+<style type="text/css">
+    body {
+        font-size: {{ "20pt" if use_large_font() else "13pt" }};
+        font-family: 'Ubuntu';
+    }
+
+    @keyframes active-stripes {
+        from {
+            background-position: 40px;
+        }
+        to {
+            background-position: 0px;
+        }
+    }
+
+    @keyframes height-bounce {
+        0% {
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+        }
+        50% {
+            box-shadow: 16px 16px 10px rgba(0, 0, 0, 0.8);
+        }
+        100% {
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    div {
+        width: 20em;
+        height: 20em;
+        border-radius: 2px;
+        border: none;
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, .175) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .175) 50%, rgba(255, 255, 255, .175) 75%, transparent 75%, transparent);
+        background-size: 40px 40px;
+        animation: active-stripes 2s linear infinite, height-bounce 3s linear infinite;
+    }
+    .en {
+        background-color: teal;
+    }
+
+    .es {
+        background-color: purple;
+    }
+</style>
