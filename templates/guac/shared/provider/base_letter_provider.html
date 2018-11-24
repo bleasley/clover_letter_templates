@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block greeting %}
-<p><<Month>> <<Day>>, <<Year>></p>
+
+<p>{% now "%B" %} {% now "%d" %}, {% now "%" %}</p>
 
   <p>{{ _('Dear') }} {{ recipient.name }}:</p>
 {% endblock %}
