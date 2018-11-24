@@ -6,8 +6,7 @@
 
 {% block greeting %}
 
-<p>{% now "%B" %} {% now "%d" %}, {% now "%" %}</p>
-
+ <p>{{ current_date().strftime("%B %d, %Y") }}</p>
   <p>{{ _('Dear') }} {{ recipient.name }}:</p>
 {% endblock %}
 
