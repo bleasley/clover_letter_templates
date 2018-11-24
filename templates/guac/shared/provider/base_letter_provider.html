@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
+{% block logo %}
+  {% include "guac/shared/logo.html" %}
+{% endblock %}
+
 {% block greeting %}
 <p><<Month>> <<Day>>, <<Year>></p>
 
   <p>{{ _('Dear') }} {{ recipient.name }}:</p>
 {% endblock %}
-{% block logo %}
-  {% include "guac/shared/logo.html" %}
-{% endblock %}
+
+
+
 
 {% block disclaimer %}
   {% include "guac/shared/provider/disclaimer.html" %}
