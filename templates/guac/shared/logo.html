@@ -1,0 +1,11 @@
+<div class="header-logo">
+
+{% if locale() == "es" %}
+ <!-- spanish language logo -->
+  {% include "logos/Clover_PartnerInHealth_logo_SPA_300dpi.png" %}
+ {% else %}
+
+ <!-- default to english language logo -->
+  {% include "logos/Clover_PartnerInHealth_logo_300dpi.png" %}
+ {% endif %}
+</div>
