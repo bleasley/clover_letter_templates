@@ -1,0 +1,16 @@
+{% import "base.html" as utils %}
+
+<table class="member-case-info">
+  <tr>
+    <td><strong>{{ _( 'Date' ) }}: </strong>{{ utils.render_date_inline(current_date) }}</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>{{ _( 'Name' ) }}: </strong>{{ grievance_case.member.first_name }} {{ grievance_case.member.last_name }}</td>
+    <td><strong>{{ _( 'Address' ) }}: </strong>{{ member_contact.combined_address }}, {{ member_contact.city }}, {{ member_contact.state }} {{ member_contact.zipcode }}</td>
+  </tr>
+  <tr>
+    <td><strong>{{ _( 'Member ID' ) }}: </strong>{{ grievance_case.member_carepoint_id }}</td>
+    <td><strong>{{ _( 'Case ID' ) }}: </strong>{{ grievance_formatted_case_id }}</td>
+  </tr>
+</table>

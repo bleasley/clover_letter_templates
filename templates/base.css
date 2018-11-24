@@ -1,0 +1,112 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  width: 8.5in;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, monospace;  /* monospace is ONLY for catching missing Helvetica. */
+  font-size: 12pt;
+}
+.vertical-flexbox {
+  /* The version of QT that wkhtmltopdf uses doesn't support flexbox yet
+    so we're forced to use this nonstandard stuff.
+
+    Adapted from https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1522
+  */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: justify;
+}
+.horizontal-flexbox {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: justify;
+}
+table {
+  width: 100%;
+}
+footer {
+  width: 100%;
+  margin-top: 0.25in;
+}
+.model-number {
+  margin-top: 10px;
+}
+.page {
+  page-break-after: always;
+  width: 7.5in;
+  height: 10.25in;
+  left: 0.5in;
+  top: 0.5in;
+  position: relative;
+  border: 0;
+}
+.header-logo {
+  width: 165px;
+}
+.header-logo svg {
+  width: 165px;
+  height: 59px;
+}
+.pdf-page, .pdf-attachment {
+  width: 8.5in;
+  height: 10.98in;
+  margin: 0;
+  padding: 0;
+}
+
+.pdf-attachment-margin {
+  width: 7.9in;
+  height: auto;
+  margin: 0;
+  padding: 0.3in;
+}
+
+.clover-mailing-address {
+  text-align: center;
+  white-space: nowrap;
+}
+.clover-mailing-address span {
+  display: inline-block;
+  text-align: left;
+}
+.member-case-info {
+  width: 100%;
+}
+.member-case-info td {
+  width: 50%;
+  text-align: left;
+}
+ul.checkboxes {
+   list-style-type: none;
+   list-style-position: outside;
+}
+ul.checkboxes li {
+  margin-bottom: 1em;
+}
+ul.checkboxes li .checkbox{
+  font-size: 24pt;
+  float: left;
+  margin-left: -1.2em;
+  margin-top: -3pt;
+}
+hr {
+  background-color: black;
+  border: none;
+  color: black;
+  height: 0.25em;
+}
+.spaced-prior-auth-member-info{
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}
+.disable-wrap {
+  white-space: nowrap;
+}
+.footer-page {
+  position: absolute;
+  right: 0;
+}
