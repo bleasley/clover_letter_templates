@@ -32,9 +32,13 @@
     <div class="document">
       <div class="page vertical-flexbox">
         <div class="page-content">
+	       <div class="logo">
           {% block logo %}{% endblock %}
+	       </div>
+	       <div class="greeting">
           {% block member_and_case_info %}{% endblock %}
           {% block greeting %}{% endblock %}
+	       </div>
           <div class="message-content">
             {% block header %}{% endblock %}
             {% block message %}{% endblock %}
