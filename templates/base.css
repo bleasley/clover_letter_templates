@@ -113,5 +113,7 @@ hr {
 
 
 /********* added by Two Cups *********/
+.page-content {position: relative;}
+.disclaimer {position: absolute; bottom:0px;width:100%; height:100px;}
 .greeting .greeting-date {line-height: 2em;}
 .greeting .greeting-line {    margin-bottom: 13pt;margin-top: 26pt;}
