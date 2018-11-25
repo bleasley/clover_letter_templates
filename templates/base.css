@@ -44,13 +44,15 @@ footer {
   position: relative;
   border: 0;
 }
+/*
 .header-logo {
   width: 165px;
 }
 .header-logo svg {
-  width: 165px;
+  width: 300px;
   height: 100px;
 }
+*/
 .pdf-page, .pdf-attachment {
   width: 8.5in;
   height: 10.98in;
@@ -117,3 +119,9 @@ hr {
 .disclaimer {position: absolute; bottom:0px;width:100%; height:100px;}
 .greeting .greeting-date {line-height: 2em;}
 .greeting .greeting-line {    margin-bottom: 13pt;margin-top: 26pt;}
+.header-logo {
+  width: 300px;
+}
+.header-logo svg {
+  width: 300px;
+}
