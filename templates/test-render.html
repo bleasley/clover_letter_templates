@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <style type="text/css">
+        *, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  width: 8.5in;
+  margin: 0;
+  padding: 0;
+  font-family: Calibre, "Times New Roman", monospace;  /* monospace is ONLY for catching missing Helvetica. */
+  font-size: 13pt;
+}
+.vertical-flexbox {
+  /* The version of QT that wkhtmltopdf uses doesn't support flexbox yet
+    so we're forced to use this nonstandard stuff.
+
+    Adapted from https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1522
+  */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: justify;
+}
+.horizontal-flexbox {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: justify;
+}
+table {
+  width: 100%;
+}
+footer {
+  width: 100%;
+  margin-top: 0.25in;
+}
+.model-number {
+  margin-top: 10px;
+}
+.page {
+  page-break-after: always;
+  width: 7.5in;
+  height: 10.25in;
+  left: 0.5in;
+  top: 0.5in;
+  position: relative;
+  border: 0;
+}
+.header-logo {
+  width: 165px;
+}
+.header-logo svg {
+  width: 165px;
+  height: 59px;
+}
+.pdf-page, .pdf-attachment {
+  width: 8.5in;
+  height: 10.98in;
+  margin: 0;
+  padding: 0;
+}
+
+.pdf-attachment-margin {
+  width: 7.9in;
+  height: auto;
+  margin: 0;
+  padding: 0.3in;
+}
+
+.clover-mailing-address {
+  text-align: center;
+  white-space: nowrap;
+}
+.clover-mailing-address span {
+  display: inline-block;
+  text-align: left;
+}
+.member-case-info {
+  width: 100%;
+}
+.member-case-info td {
+  width: 50%;
+  text-align: left;
+}
+ul.checkboxes {
+   list-style-type: none;
+   list-style-position: outside;
+}
+ul.checkboxes li {
+  margin-bottom: 1em;
+}
+ul.checkboxes li .checkbox{
+  font-size: 24pt;
+  float: left;
+  margin-left: -1.2em;
+  margin-top: -3pt;
+}
+hr {
+  background-color: black;
+  border: none;
+  color: black;
+  height: 0.25em;
+}
+.spaced-prior-auth-member-info{
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}
+.disable-wrap {
+  white-space: nowrap;
+}
+.footer-page {
+  position: absolute;
+  right: 0;
+}
+
+
+/********* added by Two Cups *********/
+.greeting .greeting-date {line-height: 2em;}
+.greeting .greeting-line {    margin-bottom: 13pt;margin-top: 26pt;}
+
+        
+      </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="document">
+      <div class="page vertical-flexbox">
+        <div class="page-content">
+          
+  <div class="header-logo">
+
+
+
+ <!-- default to english language logo -->
+   <img src="logos/Clover_PartnerInHealth_logo_300dpi.png" style="width:300px;" />
+ 
+</div>
+
+
+ <div class="greeting">         
+<p class="greeting-date">November 25, 2018</p>
+<p class="greeting-line">Dear Dale Cooper:</p>
+  
+ </div>
+
+          <div class="message-content">
+            
+            
+
+
+<p>NOTE: Please use the Calibre Family font (13 pts) for this letter. Keep disclaimer is at the bottom of the page. (The bottom of pg 1 if letter is one page or the bottom of pg 2 if letter is 2 pages.)</p>
+<p><b>Nulla maximus ullamcorper est, vel egestas ligula volutpat vel:</b></p>
+<ul>
+	<li>Vestibulum ut viverra urna, efficitur semper libero</li>
+	<li>Nunc luctus varius quam, eget condimentum quam tristique </li>
+</ul>
+<p>Nulla maximus ullamcorper est, vel egestas ligula volutpat vel:</p>
+<ol>
+	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit scelerisque ultrices.</li>
+	<li>Pellentesque dapibus hendrerit libero, ut fermentum est finibus eu.</li>
+</ol>
+<p>Nam feugiat risus et 1-888-555-5555 (TTY 000), 0 am–0 pm EST, 0 vel in sem. Pellentesque dapibus. Fusce ipsum in laoreet lobortis, leo libero rhoncus enim, eu tincidunt magna et justo. </p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dui arcu, commodo ut scelerisque sed, viverra vel metus. Praesent pharetra nisi a urna eleifend malesuada. Morbi a maximus massa. Pellentesque pharetra nec eros quis congue. Suspendisse varius felis et erat ullamcorper laoreet. Pellentesque finibus iaculis turpis. Praesent suscipit placerat mauris id placerat.</p>
+<p>
+Nulla eu pulvinar quam. Sed tristique vehicula velit eu fringilla. Donec finibus, diam ut commodo hendrerit, dolor dolor volutpat arcu, eget ultricies est est sit amet mi. Nullam aliquam quis felis in congue. Donec at mauris quam. Nunc in quam sed augue bibendum tincidunt at nec purus. Duis mattis convallis euismod. Phasellus ut dui non elit rhoncus euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+</p>
+<p>
+Nulla facilisi. Donec tincidunt sagittis tellus nec dapibus. Ut mi neque, varius et condimentum at, congue sed mi. Vestibulum laoreet ex at nisi commodo, vel bibendum libero placerat. Curabitur et lacus vitae metus hendrerit vehicula eget et purus. Mauris bibendum dictum orci, et sollicitudin magna sollicitudin vitae. Cras non massa sed tellus ornare porta posuere at enim. Sed rutrum fermentum porttitor. Integer eu erat congue, ultricies augue vitae, eleifend elit. Maecenas vehicula lacus vel varius aliquet. Aliquam nulla diam, tristique sit amet convallis in, semper lacinia ante. Ut ut vulputate nisl. Suspendisse feugiat convallis est quis feugiat.
+</p>
+<p>
+In molestie nisi non molestie convallis. In nec tristique sem. Donec in tellus nec metus imperdiet efficitur. Mauris eget dignissim arcu. Praesent vehicula arcu magna, id aliquet magna pulvinar id. Nam dictum ipsum lacus, nec vulputate ligula volutpat sit amet. Sed bibendum elementum pharetra. Cras rhoncus odio ac eros ornare ullamcorper. Integer neque dui, dignissim sed nunc id, sollicitudin scelerisque magna. Ut sagittis pellentesque arcu ac varius. Aenean sed sapien ipsum. Nullam ac augue et nisl rhoncus fermentum. Sed auctor metus non tincidunt ornare. Aliquam dapibus quam non mollis efficitur. Fusce viverra velit ac sapien vehicula porta.
+</p>
+  <p class="disable-split">
+Thank you,
+<br>
+<br>
+Clover Health
+</p>
+      <div id="disclaimer" >
+	  
+
+	 <! -- default to english -->  
+	    <p>Clover Health is a Preferred Provider Organization (PPO) plan and a Health Maintenance Organization (HMO) plan with a Medicare contract. Enrollment in Clover Health depends on contract renewal. </p>
+	 
+  
+	  </div>
+	  
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js" integrity="sha256-1O3BtOwnPyyRzOszK6P+gqaRoXHV6JXj8HkjZmPYhCI=" crossorigin="anonymous"></script>
+    <script id="page-template" type="text/x-handlebars-template">
+      <div class="page vertical-flexbox">
+        <div class="page-content">
+          
+          <div class="message-content">
+            
+            {{{content}}}
+            
+          </div>
+        </div>
+      </div>
+    </script>
+    <script type="text/javascript">
+      function getElementFromSelector(selector) {
+  return selector.length ? selector[0] : selector;
+}
+
+function isOverflowed(page) {
+  var pageElement = getElementFromSelector($(page));
+  return pageElement.scrollHeight > pageElement.clientHeight;
+}
+
+function renderNewPage(children) {
+  var source   = $('#page-template').html();
+  var template = Handlebars.compile(source);
+  var context = {
+    content: children.reduce(function (prev, curr) {
+      return prev + curr.outerHTML;
+    }, '')
+  };
+  return template(context);
+}
+
+function processPageBreaks(page) {
+  var messageSelector = $(page).find('.message-content');
+  var childrenToMove = [];
+
+  // First scan down for a page-break
+  var pageBreak = $(messageSelector).find('.page-break');
+  if (pageBreak.length === 0) {
+    return false;
+  }
+
+  while (true) {
+    var lastChild = messageSelector.children().last();
+    var lastChildElement = getElementFromSelector(lastChild);
+    $(lastChildElement).remove();
+    if (lastChildElement === pageBreak[0]) {
+      $('.document').append(renderNewPage(childrenToMove));
+      return true;
+    }
+    childrenToMove.unshift(lastChildElement);
+  }
+}
+
+function moveContentToNextPage(page) {
+  // First scan down for a page-break
+  if (processPageBreaks(page)) {
+    return;
+  }
+  // don't bother if there's no overflow
+  if (!isOverflowed(page)) {
+    return;
+  }
+
+  var messageSelector = $(page).find('.message-content');
+
+  var childrenToMove = [];
+
+  // start removing elements until they fit on one page
+  while (isOverflowed(page)) {
+    var lastChild = messageSelector.children().last();
+
+    var lastChildElement = getElementFromSelector(lastChild);
+
+    $(lastChildElement).remove();
+
+    childrenToMove.unshift(lastChildElement);
+  }
+
+  // try to split the paragraph into two
+  var elementToSplit = childrenToMove[0];
+
+  var testElement = $(elementToSplit).clone();
+
+  if (!testElement.hasClass('disable-split') && testElement.text().length > 0) {
+    var textToMove = [];
+
+    messageSelector.append(testElement);
+
+    // start removing words until they fit on one page
+    while (isOverflowed(page) && testElement.text().length > 0) {
+      var elementText = testElement.text();
+      var lastSpaceIndex = elementText.lastIndexOf(' ');
+
+      var textToKeep, textToRemove;
+
+      if (lastSpaceIndex >= 0) {
+        textToKeep = elementText.substring(0, lastSpaceIndex);
+        textToRemove = elementText.substring(lastSpaceIndex);
+      } else {
+        // no spaces, just move the entire thing forward
+        textToKeep = '';
+        textToRemove = elementText;
+      }
+
+      testElement.text(textToKeep);
+
+      textToMove.unshift(textToRemove);
+    }
+
+    // we ended up moving/not moving the entire paragraph, we can't split, so don't do anything
+    var shouldNotSplit = testElement.text().length === 0 || textToMove.length === 0;
+
+    // if we're only going to move spaces, don't move anything
+    // var shouldNotSplit = shouldNotSplit || textToMove.filter(function (item) {
+    //   return item !== ' ';
+    // }).length === 0;
+    if (shouldNotSplit) {
+      testElement.remove();
+    } else {
+      var replacementText = textToMove.reduce(function (prev, curr) {
+        return prev + curr;
+      }, '');
+
+      $(elementToSplit).text(replacementText);
+    }
+  }
+
+  // render removed elements
+  var html = renderNewPage(childrenToMove);
+
+  $('.document').append(html);
+}
+
+function fixDocument() {
+  // We limit the number of fixes to 100, more as an escape hatch than anything
+  // else from an infinite loop of errant fixes. We assume that we will not
+  // want to paginate anything longer than 100 pages.
+  for (var i = 0; i < 100; i++) {
+    var previousLength = $('.page').length;
+
+    // Try to "fix" the document by moving overflowing content to a new page
+    moveContentToNextPage($('.page')[previousLength - 1]);
+
+    var newLength = $('.page').length;
+
+    if (previousLength === newLength) {
+      // If we maintain the same page length after the fix, then we're done. We
+      // can return now.
+      return;
+    }
+  }
+}
+
+function makePagination() {
+  var totalPages = $('.page').length;
+  $('.footer-page-current').each(function (i, el) {
+    $(el).text(i+1);
+  });
+  $('.footer-page-total').text(totalPages);
+}
+
+$(document).ready(function () {
+  fixDocument();
+  makePagination();
+});
+    </script>
+  </body>
+</html>

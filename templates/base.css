@@ -7,7 +7,7 @@ body {
   width: 8.5in;
   margin: 0;
   padding: 0;
-  font-family: Helvetica, monospace;  /* monospace is ONLY for catching missing Helvetica. */
+  font-family: Calibre, "Times New Roman", monospace;  /* monospace is ONLY for catching missing Helvetica. */
   font-size: 12pt;
 }
 .vertical-flexbox {
@@ -113,6 +113,6 @@ hr {
 
 
 /********* added by Two Cups *********/
-.disclaimer {
-	
-}
+.greeting .greeting-date {line-height: 2em;}
+.greeting .greeting-name {line-height: 2em;}
+
