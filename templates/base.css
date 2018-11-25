@@ -38,9 +38,9 @@ footer {
 .page {
   page-break-after: always;
   width: 7.5in;
-  height: 10.25in;
-  left: 0.5in;
-  top: 0.5in;
+  height: 10in;
+  left: 1in;
+  top: 1in;
   position: relative;
   border: 0;
 }
@@ -49,7 +49,7 @@ footer {
 }
 .header-logo svg {
   width: 165px;
-  height: 59px;
+  height: 100px;
 }
 .pdf-page, .pdf-attachment {
   width: 8.5in;
