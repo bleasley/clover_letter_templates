@@ -2,31 +2,58 @@
 {% extends "guac/shared/provider/base_letter_provider.html" %}
 {% import "guac/shared/footer.html" as footer with context %}
 
+
+
+
+
+
+{% block greeting %}
+
+<p class="greeting-info">{{ facility.name }}</p>
+<p class="greeting-info">{{ facility.department }}</p>
+<p class="greeting-info">{{ facility.address }}</p>
+ <p class="greeting-date">{{ current_date().strftime("%B %d, %Y") }}</p>
+  <p class="greeting-line">{{ _('Dear') }} {{ recipient.name }}:</p>
+{% endblock %}
+
+
+
 {% block message %}
-
-
-<p>NOTE: Please use the Calibre Family font (13 pts) for this letter. Keep disclaimer is at the bottom of the page. (The bottom of pg 1 if letter is one page or the bottom of pg 2 if letter is 2 pages.)</p>
-<p><b>Nulla maximus ullamcorper est, vel egestas ligula volutpat vel:</b></p>
+<p>Clover Health received a claim for services rendered to one of our members. The Utilization Management Department at Clover Health is requesting supporting medical records to determine medical necessity for the service rendered. The details of the received claim can be found below:</p>
+<table style="height: 26px;" width="100%">
+<tbody>
+<tr>
+<td style="width: 50%;" valign="top">
 <ul>
-	<li>Vestibulum ut viverra urna, efficitur semper libero</li>
-	<li>Nunc luctus varius quam, eget condimentum quam tristique </li>
+<li>Patient Name: <br />Date of Birth: &lt;XX/XX/XXXX&gt;</li>
+<li>Patient Account:</li>
 </ul>
-<p>Nulla maximus ullamcorper est, vel egestas ligula volutpat vel:</p>
-<ol>
-	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit scelerisque ultrices.</li>
-	<li>Pellentesque dapibus hendrerit libero, ut fermentum est finibus eu.</li>
-</ol>
-<p>Nam feugiat risus et 1-888-555-5555 (TTY 000), 0 am–0 pm EST, 0 vel in sem. Pellentesque dapibus. Fusce ipsum in laoreet lobortis, leo libero rhoncus enim, eu tincidunt magna et justo. </p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dui arcu, commodo ut scelerisque sed, viverra vel metus. Praesent pharetra nisi a urna eleifend malesuada. Morbi a maximus massa. Pellentesque pharetra nec eros quis congue. Suspendisse varius felis et erat ullamcorper laoreet. Pellentesque finibus iaculis turpis. Praesent suscipit placerat mauris id placerat.</p>
-<p>
-Nulla eu pulvinar quam. Sed tristique vehicula velit eu fringilla. Donec finibus, diam ut commodo hendrerit, dolor dolor volutpat arcu, eget ultricies est est sit amet mi. Nullam aliquam quis felis in congue. Donec at mauris quam. Nunc in quam sed augue bibendum tincidunt at nec purus. Duis mattis convallis euismod. Phasellus ut dui non elit rhoncus euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-</p>
-<p>
-Nulla facilisi. Donec tincidunt sagittis tellus nec dapibus. Ut mi neque, varius et condimentum at, congue sed mi. Vestibulum laoreet ex at nisi commodo, vel bibendum libero placerat. Curabitur et lacus vitae metus hendrerit vehicula eget et purus. Mauris bibendum dictum orci, et sollicitudin magna sollicitudin vitae. Cras non massa sed tellus ornare porta posuere at enim. Sed rutrum fermentum porttitor. Integer eu erat congue, ultricies augue vitae, eleifend elit. Maecenas vehicula lacus vel varius aliquet. Aliquam nulla diam, tristique sit amet convallis in, semper lacinia ante. Ut ut vulputate nisl. Suspendisse feugiat convallis est quis feugiat.
-</p>
-<p>
-In molestie nisi non molestie convallis. In nec tristique sem. Donec in tellus nec metus imperdiet efficitur. Mauris eget dignissim arcu. Praesent vehicula arcu magna, id aliquet magna pulvinar id. Nam dictum ipsum lacus, nec vulputate ligula volutpat sit amet. Sed bibendum elementum pharetra. Cras rhoncus odio ac eros ornare ullamcorper. Integer neque dui, dignissim sed nunc id, sollicitudin scelerisque magna. Ut sagittis pellentesque arcu ac varius. Aenean sed sapien ipsum. Nullam ac augue et nisl rhoncus fermentum. Sed auctor metus non tincidunt ornare. Aliquam dapibus quam non mollis efficitur. Fusce viverra velit ac sapien vehicula porta.
-</p>
+</td>
+<td style="width: 50%;" valign="top">
+<ul>
+<li>Facility:</li>
+<li>Department:</li>
+<li>Date(s) of Service: &lt;XX/XX/XXXX&gt; - &lt;XX/XX/XXXX&gt;</li>
+<li>Claim Number:</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Please provide copies of any relevant medical records pertaining to the date of service listed above. This includes, but is not limited to, admission orders, lab orders, radiology results, and any clinical review notes by the attending physician. Please fax or mail records to:</p>
+<table style="height: 26px;" width="80%" align="center">
+<tbody>
+<tr>
+<td style="width: 50%;" valign="top">
+<p><strong>Mail:</strong><br />Clover Health<br />Attn: Claims Medical Review<br />PO Box 471<br />Jersey City, NJ 07303</p>
+</td>
+<td style="width: 50%;" valign="top">
+<p><strong>Fax:</strong> <br />877-429-0514 <br /><a href="mailto:claims@cloverhealth.com ">claims@cloverhealth.com</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;If we do not receive these medical records by &lt;XX/XX/XXXX&gt;, your claim will be denied for a lack of clinical documentation. You will have the right to request a reconsideration of this denial. Out-ofnetwork providers in particular should know they have 60 days from the date of their remittance notice to request this reconsideration. For in-network providers, please refer to your contract or the Provider Manual for information on the dispute process. If you have any questions about the importance of these medical records for the processing of your claim, please call us at 1-877-853-8019.</p>
   {% include "guac/shared/provider/signature.html" %}
 {% endblock %}
 

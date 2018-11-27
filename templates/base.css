@@ -159,7 +159,7 @@ hr {
     border-top: 1px solid #999;
 	}
 .greeting .greeting-date {line-height: 2em;}
-.greeting .greeting-line {    margin-bottom: 13pt;margin-top: 26pt;}
+.greeting .greeting-line {    margin-bottom: 0;margin-top: 26pt;}
 .header-logo {
   width: 300px; margin-bottom:20px;
 }

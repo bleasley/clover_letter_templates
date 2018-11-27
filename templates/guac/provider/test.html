@@ -2,6 +2,15 @@
 {% extends "guac/shared/provider/base_letter_provider.html" %}
 {% import "guac/shared/footer.html" as footer with context %}
 
+
+
+{% block greeting %}
+
+ <p class="greeting-date">{{ current_date().strftime("%B %d, %Y") }}</p>
+  <p class="greeting-line">{{ _('Dear') }} {{ recipient.name }}:</p>
+{% endblock %}
+
+
 {% block message %}
 
 
@@ -31,5 +40,5 @@ In molestie nisi non molestie convallis. In nec tristique sem. Donec in tellus n
 {% endblock %}
 
 {% block footer %}
-  {{ footer.render(model_numbers={'en': 'Footer text here'}) }}
-{% endblock %}
+  {{ footer.render(include_default_footer = True) }}
+  {% endblock %}
