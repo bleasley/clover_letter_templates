@@ -160,7 +160,7 @@ hr {
 .greeting .greeting-date {line-height: 2em;}
 .greeting .greeting-line {    margin-bottom: 13pt;margin-top: 26pt;}
 .header-logo {
-  width: 300px;
+  width: 300px; margin-bottom:20px;
 }
 .header-logo svg {
   width: 300px;
