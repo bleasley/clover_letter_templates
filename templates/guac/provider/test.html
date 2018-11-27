@@ -1,5 +1,6 @@
 {% import "base.html" as utils %}
 {% extends "guac/shared/provider/base_letter_provider.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
 
 {% block message %}
 
@@ -30,5 +31,5 @@ In molestie nisi non molestie convallis. In nec tristique sem. Donec in tellus n
 {% endblock %}
 
 {% block footer %}
-  {{ footer.render(model_numbers={'en': 'H5141_PSAppAck File & Use 10/31/2012'}) }}
+  {{ footer.render(model_numbers={'en': 'Footer text here'}) }}
 {% endblock %}
