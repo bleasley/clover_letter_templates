@@ -1,8 +1,6 @@
 {%- macro render(model_numbers = {}, include_default_footer = True, include_language = True) -%}
 <footer class="letter-id disable-split">
-  {% if include_default_footer %}
-    <div class="footer-text">{{ _("Letter identifier here") }}</div>
-  {% endif %}
+
 
   {% set model_number = model_numbers[language] or ( model_numbers["en"] or "" ) %}
   <div class="footer-text">
