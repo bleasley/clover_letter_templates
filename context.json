@@ -1,0 +1,19 @@
+{
+    "facility": {
+        "name": "Test Facility",
+        "department": "Test Department",
+        "address": "1234 State Street"
+    },
+
+    "recipient": {
+        "name": "John Doe"
+    },
+
+    "member": {
+        "dob": "2018-11-27",
+        "date_start": "2000-1-1",
+        "date_end": "4000-1-1",
+        "claim_num": "0123456789",
+        "date_to_recieve": "3000-8-19"
+    }
+}
