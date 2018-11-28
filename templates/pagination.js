@@ -56,7 +56,6 @@ function processPageBreaks(page) {
 
   // First scan down for a page-break
   var pageBreak = $(messageSelector).find('.page-break');
-  console.log (pageBreak);
   if (pageBreak.length === 0) {
     console.log("No page breaks found");
     return false;
@@ -157,7 +156,7 @@ function moveContentToNextPage(page) {
   var html = renderNewPage(childrenToMove);
 
   $('.document').append(html);
-
+$('.page:not(:first)').addClass("multi");
 }
 
 
