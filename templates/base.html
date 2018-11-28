@@ -55,19 +55,7 @@
     {% block pdf_attachments %}{% endblock %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js" integrity="sha256-1O3BtOwnPyyRzOszK6P+gqaRoXHV6JXj8HkjZmPYhCI=" crossorigin="anonymous"></script>
-    <script id="page-template" type="text/x-handlebars-template">
-      <div class="page vertical-flexbox">
-        <div class="page-content">
-          {{ self.header() }}
-          <div class="message-content">
-            {% raw %}
-            {{{content}}}
-            {% endraw %}
-          </div>
-        </div>
-      </div>
-    </script>
-    
+ 
     
     
       <script id="page-template" type="text/x-handlebars-template">
