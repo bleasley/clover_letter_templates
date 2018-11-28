@@ -32,19 +32,21 @@
     <div class="document">
       <div class="page vertical-flexbox">
         <div class="page-content">
-	       <div class="logo">
-          {% block logo %}{% endblock %}
-	       </div>
-	       <div class="greeting">
+	        <div class="wrapper">
+		       <div class="logo">
+	          {% block logo %}{% endblock %}
+		       </div>
+			   <div class="greeting">
           {% block member_and_case_info %}{% endblock %}
           {% block greeting %}{% endblock %}
 	       </div>
-          <div class="message-content">
+			   <div class="message-content">
             {% block header %}{% endblock %}
             {% block message %}{% endblock %}
             {% block disclaimer %}{% endblock %}
             
           </div>
+	        </div>
         </div>
  {% block footer %}{% endblock %}
       </div>
@@ -65,6 +67,26 @@
         </div>
       </div>
     </script>
+    
+    
+    
+      <script id="page-template" type="text/x-handlebars-template">
+      <div class="page vertical-flexbox">
+        <div class="page-content">
+          <div class="wrapper">
+         	 <div class="message-content">
+          		  {% raw %}
+            {{{content}}}
+            {% endraw %}
+         	 </div>
+          </div>
+        </div>
+        {{ self.footer() }}
+      </div>
+    </script>
+    
+    
+    
     <script type="text/javascript">
       {% include "pagination.js" %}
     </script>

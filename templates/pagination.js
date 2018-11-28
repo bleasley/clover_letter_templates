@@ -1,11 +1,36 @@
+function fixDocument() {
+  // We limit the number of fixes to 100, more as an escape hatch than anything
+  // else from an infinite loop of errant fixes. We assume that we will not
+  // want to paginate anything longer than 100 pages.
+  for (var i = 0; i < 100; i++) {
+    var previousLength = $('.page').length;
+
+    // Try to "fix" the document by moving overflowing content to a new page
+    moveContentToNextPage($('.page')[previousLength - 1]);
+
+    var newLength = $('.page').length;
+
+    if (previousLength === newLength) {
+      // If we maintain the same page length after the fix, then we're done. We
+      // can return now.
+      return;
+    }
+  }
+}
+
 function getElementFromSelector(selector) {
   return selector.length ? selector[0] : selector;
 }
+
+
 
 function isOverflowed(page) {
   var pageElement = getElementFromSelector($(page));
   return pageElement.scrollHeight > pageElement.clientHeight;
 }
+
+
+
 
 function renderNewPage(children) {
   var source   = $('#page-template').html();
@@ -17,6 +42,9 @@ function renderNewPage(children) {
   };
   return template(context);
 }
+
+
+
 
 function processPageBreaks(page) {
   var messageSelector = $(page).find('.message-content');
@@ -39,6 +67,9 @@ function processPageBreaks(page) {
     childrenToMove.unshift(lastChildElement);
   }
 }
+
+
+
 
 function moveContentToNextPage(page) {
   // First scan down for a page-break
@@ -118,27 +149,10 @@ function moveContentToNextPage(page) {
   var html = renderNewPage(childrenToMove);
 
   $('.document').append(html);
+ 
 }
 
-function fixDocument() {
-  // We limit the number of fixes to 100, more as an escape hatch than anything
-  // else from an infinite loop of errant fixes. We assume that we will not
-  // want to paginate anything longer than 100 pages.
-  for (var i = 0; i < 100; i++) {
-    var previousLength = $('.page').length;
 
-    // Try to "fix" the document by moving overflowing content to a new page
-    moveContentToNextPage($('.page')[previousLength - 1]);
-
-    var newLength = $('.page').length;
-
-    if (previousLength === newLength) {
-      // If we maintain the same page length after the fix, then we're done. We
-      // can return now.
-      return;
-    }
-  }
-}
 
 function makePagination() {
   var totalPages = $('.page').length;
