@@ -138,6 +138,7 @@ footer.letter-id {
     text-align: left;
 }
 
+/* ORIGINAL RULES - disabled for testing table-row approach 
 .wrapper {
  display: flex;
   flex-flow: column;
@@ -160,13 +161,40 @@ footer.letter-id {
     height: 100%;
     padding-bottom: 80px;
 }
+*/
+
+
+.wrapper {
+  display: table;
+  height:10in;
+	min-height:100%;
+  }
+
+.logo {
+  position: relative;
+  display: table-row;
+  }
+.greeting {
+  position: relative;
+ display: table-row;
+  }
+  .message-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+   display: table-row;
+}
+
 #disclaimer {
     position: absolute;
     height: auto;
     bottom: 10px;
        color: #b1b0b0;
 	}
-	
+
+
+
 .greeting h1.page-title {text-align:center;font-size:15pt;margin-bottom:8pt;}
 .letter-info {}
 .greeting .greeting-date {    margin-top: 20pt;    margin-bottom: 20pt;}
