@@ -166,6 +166,9 @@ footer.letter-id {
     bottom: 0px;
        color: #b1b0b0;
 	}
+	
+.greeting h1.page-title {text-align:center;font-size:15pt;margin-bottom:8pt;}
+.greeting .greeting-info {}
 .greeting .greeting-date {line-height: 2em;}
 .greeting .greeting-line {    margin-bottom: 0;margin-top: 26pt;}
 .header-logo {
