@@ -7,6 +7,7 @@ function fixDocument() {
 
     // Try to "fix" the document by moving overflowing content to a new page
     moveContentToNextPage($('.page')[previousLength - 1]);
+    console.log("Moving page");
 
     var newLength = $('.page').length;
 
@@ -20,12 +21,14 @@ function fixDocument() {
 
 function getElementFromSelector(selector) {
   return selector.length ? selector[0] : selector;
+  console.log("Selecting: " + selector);
 }
 
 
 
 function isOverflowed(page) {
   var pageElement = getElementFromSelector($(page));
+  console.log("Page " + page + " is overflowed: " + (pageElement.scrollHeight > pageElement.clientHeight));
   return pageElement.scrollHeight > pageElement.clientHeight;
 }
 
@@ -33,6 +36,7 @@ function isOverflowed(page) {
 
 
 function renderNewPage(children) {
+  console.log("Rendering new page");
   var source   = $('#page-template').html();
   var template = Handlebars.compile(source);
   var context = {
@@ -53,6 +57,7 @@ function processPageBreaks(page) {
   // First scan down for a page-break
   var pageBreak = $(messageSelector).find('.page-break');
   if (pageBreak.length === 0) {
+    console.log("No page breaks found");
     return false;
   }
 
@@ -81,6 +86,7 @@ function moveContentToNextPage(page) {
     return;
   }
 
+  console.log("Moving to new page");
   var messageSelector = $(page).find('.message-content');
 
   var childrenToMove = [];
@@ -102,6 +108,7 @@ function moveContentToNextPage(page) {
   var testElement = $(elementToSplit).clone();
 
   if (!testElement.hasClass('disable-split') && testElement.text().length > 0) {
+    console.log("Handling no-split text");
     var textToMove = [];
 
     messageSelector.append(testElement);
@@ -149,15 +156,17 @@ function moveContentToNextPage(page) {
   var html = renderNewPage(childrenToMove);
 
   $('.document').append(html);
- 
+
 }
 
 
 
 function makePagination() {
+  console.log("Rendering pagination");
   var totalPages = $('.page').length;
   $('.footer-page-current').each(function (i, el) {
     $(el).text(i+1);
+    console.log("Reducing footer: (" + i + ", " + el + ")");
   });
   $('.footer-page-total').text(totalPages);
 }
