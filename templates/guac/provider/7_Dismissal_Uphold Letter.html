@@ -5,8 +5,6 @@
 
 {% block greeting %}
 
-<h1 class="page-title">PAYMENT DISPUTE UPHOLD LETTER <br/> Contracted Provider</h1>
-
 <p class="letter-info">
 	{{ provider.name }}<br/>
 	{{ provider.address }}<br/>
@@ -31,10 +29,9 @@
 {% endblock %}
 {% block message %}
 
-<p>Clover Health received a payment claim dispute regarding the claim referenced above. Upon careful review of this dispute, we have determined that the initial claim payment decision is being upheld for the following reason(s):</p>
+<p>Clover Health received a payment claim dispute regarding the claim referenced above. Upon careful review of this dispute, we have determined that the initial claim payment decision is being {{ PDR.appeal_status }} for the following reason(s):</p>
 <p>{{ PDR.determ_rationale }}</p>
-<p>This dispute is now closed. If you require additional information regarding the resolution of this dispute, please contact our Provider Services at (877) 853-8019, Monday thru Friday from 8 am to 5:30 pm EST. Please use the PDR Case ID Number listed above to reference the claim.</p>
-
+<p>This inquiry is now closed. If you require additional information regarding the resolution, please contact our Provider Services at (877) 853-8019, Monday through Friday from 8 am to 5:30 pm EST. Please use the PDR Case Number listed above to reference the claim.</p>
 
 
 

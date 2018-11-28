@@ -1,13 +1,17 @@
 {
     "provider": {
         "name": "Sample Provider",
+        "first-name":"Sample",
+	    "last-name":"Provider",
         "recipient": "Office Manager",
         "department": "Provider Department",
         "address": "1234 State Street",
         "address1": "",
         "city":"Smalltown",
         "state":"ST",
-        "zip":"zip"
+        "zip":"zip",
+        "num_days":"100 days",
+        "date_sent":"2018-7-12"
     },
 
     "member": {
@@ -30,6 +34,7 @@
 	    "appeal_status":"partially overturned",
 	    "pay_amount":"1845.00",
 	    "pay_reason":"<Enter the line item(s) or a description of the service that must be given and/or the
-reason for the payment>"
+reason for the payment>",
+		"determ_rationale":"<Determination Rationale>"
     }
 }
