@@ -3,68 +3,47 @@
 {% import "guac/shared/footer.html" as footer with context %}
 
 
-{#
-Variables used in this page:
-facility.name = "Sample Provider"
-facility.department = "Department"
-facility.address = "123 Random St. Smalltown, ST 00000"
-recipient.name = "John Doe"
-member.dob = "01/01/1980"
-member.date_start = "10/01/2017"
-member.date_end = "10/01/2019"
-member.claim_num = "1235423"
-member.date_to-receive = "12/5/2018"
-#}
+
+
 
 
 
 {% block greeting %}
 <h1 class="page-title">POST-SERVICE PAYMENT DISPUTE ACKNOWLEDGMENT LETTER</h1>
-<p class="greeting-info">{{ facility.name }}</p>
-<p class="greeting-info">{{ facility.department }}</p>
-<p class="greeting-info">{{ facility.address }}</p>
+<p class="letter-info">
+	{{ provider.name }}<br/>
+	{{ provider.address }}<br/>
+{% if provider.address1 %}
+	{{ provider.address1 }}<br/>
+ {% endif %}
+{{ provider.city }}, {{ provider.state }} {{ provider.zip }}
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p class="letter-info">
+	<strong>Member Name:</strong> {{ member.name }}<br /> 
+	<strong>Member ID:</strong> {{ member.id }}<br /> 
+	<strong>Date of Service:</strong> {{ utils.render_date_inline(member.date_service) }}<br /> 
+	<strong>Claim #:</strong> {{ member.claim_num }}<br /> 
+	<strong>PDR Received Date:</strong> {{ utils.render_date_inline(PDR.received_date) }}<br /> 
+	<strong>PDR Case #:</strong> {{ PDR.case_num }}
+</p>
+
  <p class="greeting-date">{{ current_date().strftime("%B %d, %Y") }}</p>
-  <p class="greeting-line">{{ _('Dear') }} {{ recipient.name }}:</p>
+  <p class="greeting-line">{{ _('Dear') }} {{ provider.recipient}}:</p>
 {% endblock %}
 
 
 
 {% block message %}
-<p>Clover Health received a claim for services rendered to one of our members. The Utilization Management Department at Clover Health is requesting supporting medical records to determine medical necessity for the service rendered. The details of the received claim can be found below:</p>
-<table style="height: 26px;" width="100%">
-<tbody>
-<tr>
-<td style="width: 50%;" valign="top">
-<ul>
-<li>Patient Name: <br />Date of Birth:  {{ utils.render_date_inline(member.dob) }}</li>
-<li>Patient Account:</li>
-</ul>
-</td>
-<td style="width: 50%;" valign="top">
-<ul>
-<li>Facility:</li>
-<li>Department:</li>
-<li>Date(s) of Service: {{ utils.render_date_inline(member.date_start) }} - {{ utils.render_date_inline(member.date_end) }}</li>
-<li>Claim Number: {{ member.claim_num }}</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Please provide copies of any relevant medical records pertaining to the date of service listed above. This includes, but is not limited to, admission orders, lab orders, radiology results, and any clinical review notes by the attending physician. Please fax or mail records to:</p>
-<table style="height: 26px;" width="80%" align="center">
-<tbody>
-<tr>
-<td style="width: 50%;" valign="top">
-<p><strong>Mail:</strong><br />Clover Health<br />Attn: Claims Medical Review<br />PO Box 471<br />Jersey City, NJ 07303</p>
-</td>
-<td style="width: 50%;" valign="top">
-<p><strong>Fax:</strong> <br />877-429-0514 <br /><a href="mailto:claims@cloverhealth.com ">claims@cloverhealth.com</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>If we do not receive these medical records by {{ utils.render_date_inline(member.date_to-receive) }}, your claim will be denied for a lack of clinical documentation. You will have the right to request a reconsideration of this denial. Out-of-network providers in particular should know they have 60 days from the date of their remittance notice to request this reconsideration. For in-network providers, please refer to your contract or the Provider Manual for information on the dispute process. If you have any questions about the importance of these medical records for the processing of your claim, please call us at 1-877-853-8019.</p>
+
+<p>Thank you for contacting Clover Health. This letter is to inform you that we received your payment dispute regarding the service referenced above. The case will be reviewed and a resolution will be sent.</p>
+<p>If you have not received a response or resolution within 60 calendar days from the date of receipt, please contact please contact Provider Services at (877) 853-8019, Monday thru Friday from 8 am to 5:30 pm EST. Please use the PDR Case ID Number listed above to reference the claim.</p>
+
+
+
+
   {% include "guac/shared/provider/signature.html" %}
 {% endblock %}
 

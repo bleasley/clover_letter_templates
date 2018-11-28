@@ -3,33 +3,22 @@
 {% import "guac/shared/footer.html" as footer with context %}
 
 
-{#
-Variables used in this page:
-facility.name = "Sample Provider"
-facility.department = "Department"
-facility.address = "123 Random St. Smalltown, ST 00000"
-recipient.name = "Office Manager"
-member.name = "John Doe"
-member.dob = "01/01/1980"
-member.account ="123ABC"
-member.facility = "Local Clinic"
-member.dept = "Clinic Dept"
-member.date_start = "10/01/2017"
-member.date_end = "10/01/2019"
-member.claim_num = "1235423"
-member.date_to-receive = "12/5/2018"
-#}
-
-
-
 {% block greeting %}
 
-<p class="greeting-info">
-	<strong>{{ facility.name }}</strong><br />
-	<strong>{{ facility.department }}</strong><br />
-	{{ facility.address }}<br />
-	{{ current_date().strftime("%B %d, %Y") }}</p>
-<p>	{{ _('Dear') }} {{ recipient.name }}:</p>
+
+
+
+<p class="letter-info">
+	<strong>{{ provider.name }}</strong><br />
+	<strong>{{ provider.department }}</strong><br />
+	{{ provider.address }}<br />
+	{{ current_date().strftime("%B %d, %Y") }}
+</p>
+	
+	
+ <p class="greeting-date">{{ current_date().strftime("%B %d, %Y") }}</p>
+  <p class="greeting-line">{{ _('Dear') }} {{ provider.recipient }}:</p>
+  
 {% endblock %}
 
 
@@ -51,7 +40,7 @@ member.date_to-receive = "12/5/2018"
 <ul style="list-style: none;">
 <li><strong>Facility: {{ member.facility }}</strong></li>
 <li><strong>Department: {{ member.dept }}</strong></li>
-<li><strong>Date(s) of Service:</strong> {{ utils.render_date_inline(member.date_start) }} - {{ utils.render_date_inline(member.date_end) }}</li>
+<li><strong>Date(s) of Service:</strong> {{ utils.render_date_inline(member.service_start) }} - {{ utils.render_date_inline(member.service_end) }}</li>
 <li><strong>Claim Number:</strong> {{ member.claim_num }}</li>
 </ul>
 </td>
