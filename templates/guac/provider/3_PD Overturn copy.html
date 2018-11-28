@@ -7,7 +7,6 @@
 
 <h1 class="page-title">PAYMENT DISPUTE OVERTURN LETTER</h1>
 
- <p class="greeting-date">{{ current_date().strftime("%B %d, %Y") }}</p>
 <p class="letter-info">
 	{{ provider.name }}<br/>
 	{{ provider.address }}<br/>
@@ -25,19 +24,16 @@
 	<strong>PDR Received Date:</strong> {{ utils.render_date_inline(PDR.received_date) }}<br /> 
 	<strong>PDR Case #:</strong> {{ PDR.case_num }}
 </p>
+ <p class="greeting-date">{{ current_date().strftime("%B %d, %Y") }}</p>
 
   <p class="greeting-line">{{ _('Dear') }} {{ provider.recipient}}:</p>
 {% endblock %}
 {% block message %}
 
-<p>Clover Health received a payment dispute regarding the claim referenced above. Upon careful review of this request, we have determined that the initial claim payment decision is being {{ PDR.appeal_status }} and payment will be made.
-Payment and any applicable interest due in the amount of ${{ PDR.pay_amount }} is made for the following
-services:</p>
+<p>Clover Health received a payment dispute regarding the claim referenced above. Upon careful review of this request, we have determined that the initial claim payment decision is being {{ PDR.appeal_status }} and payment will be made. Payment and any applicable interest due in the amount of ${{ PDR.pay_amount }} is made for the following services:</p>
 <p>{{ PDR.pay_reason }}</p>
 <p>
-If you require further information regarding this resolution of this dispute please contact our Provider
-Services at (877) 853-8019, Monday thru Friday from 9 am to 5 pm EST. Please use the PDR Case ID
-Number listed above to reference the claim.</p>
+If you require further information regarding this resolution of this dispute please contact our Provider Services at (877) 853-8019, Monday thru Friday from 9 am to 5 pm EST. Please use the PDR Case ID Number listed above to reference the claim.</p>
 
 
 

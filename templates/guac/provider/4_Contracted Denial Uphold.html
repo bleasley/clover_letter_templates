@@ -1,0 +1,46 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/provider/base_letter_provider.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block greeting %}
+
+<h1 class="page-title">PAYMENT DISPUTE UPHOLD LETTER <br/> Contracted Provider</h1>
+
+<p class="letter-info">
+	{{ provider.name }}<br/>
+	{{ provider.address }}<br/>
+{% if provider.address1 %}
+	{{ provider.address1 }}<br/>
+ {% endif %}
+{{ provider.city }}, {{ provider.state }} {{ provider.zip }}
+</p>
+
+<p class="letter-info">
+	<strong>Member Name:</strong> {{ member.name }}<br /> 
+	<strong>Date of Service:</strong> {{ utils.render_date_inline(member.date_service) }}<br /> 
+	<strong>Total Billed Amount:</strong> {{ member.bill_amt }}<br /> 
+	<strong>Claim #:</strong> {{ member.claim_num }}<br /> 
+	<strong>PDR Received Date:</strong> {{ utils.render_date_inline(PDR.received_date) }}<br /> 
+	<strong>PDR Case #:</strong> {{ PDR.case_num }}
+</p>
+ <p class="greeting-date">{{ current_date().strftime("%B %d, %Y") }}</p>
+
+
+  <p class="greeting-line">{{ _('Dear') }} {{ provider.recipient}}:</p>
+{% endblock %}
+{% block message %}
+
+<p>Clover Health received a payment claim dispute regarding the claim referenced above. Upon careful review of this dispute, we have determined that the initial claim payment decision is being upheld for the following reason(s):</p>
+<p>{{ PDR.determ_rationale }}</p>
+<p>This dispute is now closed. If you require additional information regarding the resolution of this dispute, please contact our Provider Services at (877) 853-8019, Monday thru Friday from 8 am to 5:30 pm EST. Please use the PDR Case ID Number listed above to reference the claim.</p>
+
+
+
+
+  {% include "guac/shared/provider/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+  {{ footer.render(model_numbers={'en': 'letter identifier'}) }}
+{% endblock %}
