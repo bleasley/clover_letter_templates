@@ -21,10 +21,15 @@
         "service_start": "2018-1-1",
         "service_end": "2019-1-1",
         "claim_num": "0123456789",
-        "date_to_recieve": "2018-12-10"
+        "date_to_recieve": "2018-12-10",
+        "bill_amt":"2560.00"
     },
     "PDR":{
 	    "received_date":"",
-	    "case_num":"12351243"
+	    "case_num":"12351243",
+	    "appeal_status":"partially overturned",
+	    "pay_amount":"1845.00",
+	    "pay_reason":"<Enter the line item(s) or a description of the service that must be given and/or the
+reason for the payment>"
     }
 }
