@@ -1,7 +1,7 @@
 {
     "provider": {
         "name": "Sample Provider",
-        "recipient": "Office Manager"
+        "recipient": "Office Manager",
         "department": "Provider Department",
         "address": "1234 State Street",
         "address1": "",
@@ -11,7 +11,7 @@
     },
 
     "member": {
-	    "name":"John Doe"
+	    "name":"John Doe",
 	    "id":"43523r32235",
         "dob": "2018-11-27",
         "account":"ABC123",
