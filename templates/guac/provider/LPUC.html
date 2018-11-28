@@ -12,7 +12,6 @@
 	<strong>{{ provider.name }}</strong><br />
 	<strong>{{ provider.department }}</strong><br />
 	{{ provider.address }}<br />
-	{{ current_date().strftime("%B %d, %Y") }}
 </p>
 	
 	
@@ -29,17 +28,17 @@
 <table style="height: 26px;" width="100%">
 <tbody>
 <tr>
-<td style="width: 50%;" valign="top">
+<td style="width: 40%;" valign="top">
 <ul style="list-style: none;">
-<li><strong>Patient Name: {{ member.name }}</strong></li>
+<li><strong>Patient Name:</strong> {{ member.name }}</li>
 <li><strong>Date of Birth:</strong> {{ utils.render_date_inline(member.dob) }}</li>
-<li><strong>Patient Account: {{ member.account }}</strong></li>
+<li><strong>Patient Account:</strong> {{ member.account }}</li>
 </ul>
 </td>
-<td style="width: 50%;" valign="top">
+<td  valign="top">
 <ul style="list-style: none;">
-<li><strong>Facility: {{ member.facility }}</strong></li>
-<li><strong>Department: {{ member.dept }}</strong></li>
+<li><strong>Facility:</strong> {{ member.facility }}</li>
+<li><strong>Department:</strong> {{ member.dept }}</li>
 <li><strong>Date(s) of Service:</strong> {{ utils.render_date_inline(member.service_start) }} - {{ utils.render_date_inline(member.service_end) }}</li>
 <li><strong>Claim Number:</strong> {{ member.claim_num }}</li>
 </ul>
@@ -61,7 +60,9 @@
 </tr>
 </tbody>
 </table>
-<p>If we do not receive these medical records by {{ utils.render_date_inline(member.date_to-receive) }}, your claim will be denied for a lack of clinical documentation. You will have the right to request a reconsideration of this denial. Out-of-network providers in particular should know they have 60 days from the date of their remittance notice to request this reconsideration. For in-network providers, please refer to your contract or the Provider Manual for information on the dispute process. If you have any questions about the importance of these medical records for the processing of your claim, please call us at 1-877-853-8019.</p>
+<p class="">If we do not receive these medical records by 12/10/2018, your claim will be denied for a lack of clinical documentation. You will have the right to request a reconsideration of this denial. Out-of-network providers in particular should know they have 60 days from the date of their remittance notice to request this reconsideration. </p>
+<p>For in-network providers, please refer to your contract or the Provider Manual for information on the dispute process. If you have any questions about the importance of these medical records for the processing of your claim, please call us at 1-877-853-8019.</p>
+ 
   {% include "guac/shared/provider/signature.html" %}
 {% endblock %}
 

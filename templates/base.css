@@ -135,7 +135,7 @@ footer.letter-id {
 	 width: 7in;
 	 height: .5in;
 	    font-size: 11pt;
-    text-align: right;
+    text-align: left;
 }
 
 .wrapper {
@@ -169,11 +169,19 @@ footer.letter-id {
 	
 .greeting h1.page-title {text-align:center;font-size:15pt;margin-bottom:8pt;}
 .letter-info {}
-.greeting .greeting-date {line-height: 2em;}
-.greeting .greeting-line {    margin-bottom: 0;margin-top: 26pt;}
+.greeting .greeting-date {    margin-top: 20pt;    margin-bottom: 20pt;}
+.greeting .greeting-line {    margin-bottom: 0;margin-top:0}
 .header-logo {
-  width: 300px; margin-bottom:20px;
+  width: 300px; margin-bottom:40px;
 }
 .header-logo svg {
   width: 300px;
 }
+.page.multi {
+    height: 10in !important;
+    top: .75in !important;
+    }
+.page.multi .page-content .wrapper{   
+  height:9.5in !important;
+  }
+  
