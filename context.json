@@ -33,8 +33,7 @@
 	    "case_num":"12351243",
 	    "appeal_status":"partially overturned",
 	    "pay_amount":"1845.00",
-	    "pay_reason":"<Enter the line item(s) or a description of the service that must be given and/or the
-reason for the payment>",
+	    "pay_reason":"<Enter the line item(s) or a description of the service that must be given and/or the reason for the payment>",
 		"determ_rationale":"<Determination Rationale>"
     }
 }
