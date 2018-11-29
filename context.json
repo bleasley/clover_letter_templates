@@ -9,7 +9,7 @@
         "address1": "",
         "city":"Smalltown",
         "state":"ST",
-        "zip":"zip",
+        "zip":"000000",
         "num_days":"100 days",
         "date_sent":"2018-7-12"
     },
@@ -33,7 +33,7 @@
 	    "case_num":"12351243",
 	    "appeal_status":"partially overturned",
 	    "pay_amount":"1845.00",
-	    "pay_reason":"<Enter the line item(s) or a description of the service that must be given and/or the reason for the payment>",
-		"determ_rationale":"<Determination Rationale>"
+	    "pay_reason":"Description of the service that must be given and/or the reason for the payment.",
+		"determ_rationale":"Rationale or explanation of determination goes here."
     }
 }
