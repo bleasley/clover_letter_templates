@@ -59,14 +59,19 @@ function processPageBreaks(page) {
   if (pageBreak.length === 0) {
     console.log("No page breaks found");
     return false;
+  }else{
+	  console.log("Page breaks found: "+pageBreak.length);
   }
-
+  
+  
   while (true) {
     var lastChild = messageSelector.children().last();
     var lastChildElement = getElementFromSelector(lastChild);
     $(lastChildElement).remove();
     if (lastChildElement === pageBreak[0]) {
       $('.document').append(renderNewPage(childrenToMove));
+       $('.page:not(:first)').addClass("multi");
+
       return true;
     }
     childrenToMove.unshift(lastChildElement);
@@ -157,6 +162,7 @@ function moveContentToNextPage(page) {
 
   $('.document').append(html);
 $('.page:not(:first)').addClass("multi");
+$('.page').addClass("multi");
 }
 
 
