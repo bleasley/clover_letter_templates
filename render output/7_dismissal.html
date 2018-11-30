@@ -8,7 +8,7 @@
   <head>
       <meta charset="UTF-8">
       <style type="text/css">
-        *, *:before, *:after {
+              *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -38,10 +38,7 @@ body {
 table {
   width: 100%;
 }
-footer {
-  width: 100%;
-  margin-top: 0.25in;
-}
+
 .model-number {
   margin-top: 10px;
 }
@@ -126,6 +123,7 @@ hr {
 
 
 /********* added by Two Cups *********/
+.document {position: relative; margin:0px;padding:0px;}
 .page {
     page-break-after: always;
     width: 7in;
@@ -138,43 +136,93 @@ hr {
 .page-content {
 	position: relative;   
 	 width: 7in;
-	 	height:100%;
-	min-height:100%;
-	 display: flex;
-  flex-flow: column;
-  height: 100%;
+	 /*height: 9in;*/
+	 height:auto;
+
 	}
+footer.letter-id {
+	position: relative;   
+	 width: 7in;
+	 height: .5in;
+	    font-size: 11pt;
+    text-align: left;
+}
+
+/* ORIGINAL RULES - disabled for testing table-row approach 
+.wrapper {
+ display: flex;
+  flex-flow: column;
+  height:9in;
+	min-height:100%;
+  }
 
 .logo {
   position: relative;
-  flex: 0 1 auto;
+  flex: auto;
   }
 .greeting {
   position: relative;
-  flex: 1 1 auto;
+  flex: auto;
   }
   .message-content{
-  flex: 2 1 auto;
     position: relative;
     width: 100%;
-    /*height: 100%;*/
+    flex: auto;
+    height: 100%;
+    padding-bottom: 80px;
 }
+*/
+
+
+.wrapper {
+  display: table;
+  height:10in;
+	min-height:100%;
+  }
+
+.logo {
+  position: relative;
+  display: table-row;
+  }
+.greeting {
+  position: relative;
+ display: table-row;
+  }
+  .message-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+   display: table-row;
+}
+
 #disclaimer {
     position: absolute;
-    background-color: white;
-    height: 150px;
-    bottom: 0px;
-       color: #999;
-    border-top: 1px solid #999;
+    height: auto;
+    bottom: 10px;
+       color: #b1b0b0;
 	}
-.greeting .greeting-date {line-height: 2em;}
-.greeting .greeting-line {    margin-bottom: 13pt;margin-top: 26pt;}
+
+
+
+.greeting h1.page-title {text-align:center;font-size:15pt;margin-bottom:8pt;}
+.letter-info {}
+.greeting .greeting-date {    margin-top: 20pt;    margin-bottom: 20pt;}
+.greeting .greeting-line {    margin-bottom: 0;margin-top:0}
 .header-logo {
-  width: 300px;
+  width: 300px; margin-bottom:40px;
 }
 .header-logo svg {
   width: 300px;
 }
+.page.multi {
+    height: 10in !important;
+    top: .75in !important;
+    }
+.page.multi .page-content .wrapper{   
+  height:9.5in !important;
+  }
+  
         
       </style>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -183,8 +231,9 @@ hr {
     <div class="document">
       <div class="page vertical-flexbox">
         <div class="page-content">
-	       <div class="logo">
-          
+	        <div class="wrapper">
+		       <div class="logo">
+	          
   <div class="header-logo">
 
 
@@ -311,47 +360,51 @@ hr {
 </div>
 
 
-	       </div>
-	       <div class="greeting">
+		       </div>
+			   <div class="greeting">
           
           
 
- <p class="greeting-date">November 25, 2018</p>
-  <p class="greeting-line">Dear Dale Cooper:</p>
+<p class="letter-info">
+	Sample Provider<br/>
+	1234 State Street<br/>
+
+Smalltown, ST zip
+</p>
+
+<p class="letter-info">
+	<strong>Member Name:</strong> John Doe<br /> 
+	<strong>Date of Service:</strong> 08/12/2018<br /> 
+	<strong>Total Billed Amount:</strong> 2560.00<br /> 
+	<strong>Claim #:</strong> 0123456789<br /> 
+	<strong>PDR Received Date:</strong> <br /> 
+	<strong>PDR Case #:</strong> 12351243
+</p>
+ <p class="greeting-date">November 28, 2018</p>
+
+
+  <p class="greeting-line">Dear Provider:</p>
 
 	       </div>
-          <div class="message-content">
-        
-<p>NOTE: Please use the Calibre Family font (13 pts) for this letter. Keep disclaimer is at the bottom of the page. (The bottom of pg 1 if letter is one page or the bottom of pg 2 if letter is 2 pages.)</p>
-<p><b>Nulla maximus ullamcorper est, vel egestas ligula volutpat vel:</b></p>
-<ul>
-	<li>Vestibulum ut viverra urna, efficitur semper libero</li>
-	<li>Nunc luctus varius quam, eget condimentum quam tristique </li>
-</ul>
-<p>Nulla maximus ullamcorper est, vel egestas ligula volutpat vel:</p>
-<ol>
-	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit scelerisque ultrices.</li>
-	<li>Pellentesque dapibus hendrerit libero, ut fermentum est finibus eu.</li>
-</ol>
-<p>Nam feugiat risus et 1-888-555-5555 (TTY 000), 0 am–0 pm EST, 0 vel in sem. Pellentesque dapibus. Fusce ipsum in laoreet lobortis, leo libero rhoncus enim, eu tincidunt magna et justo. </p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dui arcu, commodo ut scelerisque sed, viverra vel metus. Praesent pharetra nisi a urna eleifend malesuada. Morbi a maximus massa. Pellentesque pharetra nec eros quis congue. Suspendisse varius felis et erat ullamcorper laoreet. Pellentesque finibus iaculis turpis. Praesent suscipit placerat mauris id placerat.</p>
-<p>
-Nulla eu pulvinar quam. Sed tristique vehicula velit eu fringilla. Donec finibus, diam ut commodo hendrerit, dolor dolor volutpat arcu, eget ultricies est est sit amet mi. Nullam aliquam quis felis in congue. Donec at mauris quam. Nunc in quam sed augue bibendum tincidunt at nec purus. Duis mattis convallis euismod. Phasellus ut dui non elit rhoncus euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-</p>
-<p>
-Nulla facilisi. Donec tincidunt sagittis tellus nec dapibus. Ut mi neque, varius et condimentum at, congue sed mi. Vestibulum laoreet ex at nisi commodo, vel bibendum libero placerat. Curabitur et lacus vitae metus hendrerit vehicula eget et purus. Mauris bibendum dictum orci, et sollicitudin magna sollicitudin vitae. Cras non massa sed tellus ornare porta posuere at enim. Sed rutrum fermentum porttitor. Integer eu erat congue, ultricies augue vitae, eleifend elit. Maecenas vehicula lacus vel varius aliquet. Aliquam nulla diam, tristique sit amet convallis in, semper lacinia ante. Ut ut vulputate nisl. Suspendisse feugiat convallis est quis feugiat.
-</p>
-<p>
-In molestie nisi non molestie convallis. In nec tristique sem. Donec in tellus nec metus imperdiet efficitur. Mauris eget dignissim arcu. Praesent vehicula arcu magna, id aliquet magna pulvinar id. Nam dictum ipsum lacus, nec vulputate ligula volutpat sit amet. Sed bibendum elementum pharetra. Cras rhoncus odio ac eros ornare ullamcorper. Integer neque dui, dignissim sed nunc id, sollicitudin scelerisque magna. Ut sagittis pellentesque arcu ac varius. Aenean sed sapien ipsum. Nullam ac augue et nisl rhoncus fermentum. Sed auctor metus non tincidunt ornare. Aliquam dapibus quam non mollis efficitur. Fusce viverra velit ac sapien vehicula porta.
-</p>
+			   <div class="message-content">
+            
+            
+
+<p>Clover Health received a payment claim dispute regarding the claim referenced above. Upon careful review of this dispute, we have determined that the initial claim payment decision is being partially overturned for the following reason(s):</p>
+<p>&lt;Determination Rationale&gt;</p>
+<p>This inquiry is now closed. If you require additional information regarding the resolution, please contact our Provider Services at (877) 853-8019, Monday through Friday from 8 am to 5:30 pm EST. Please use the PDR Case Number listed above to reference the claim.</p>
+
+
+
   <p class="disable-split">
 Thank you,
 <br>
 <br>
 Clover Health
 </p>
-     
-	  <div id="disclaimer" >
+
+            
+    <div id="disclaimer" >
 	  
 
 	 <! -- default to english -->  
@@ -359,10 +412,23 @@ Clover Health
 	 
   
 	  </div>
+	  
 
+            
           </div>
-           
+	        </div>
         </div>
+ 
+  <footer class="letter-id disable-split">
+
+
+  
+  <div class="footer-text">letter identifier
+      &nbsp;- en
+    
+  </div>
+</footer>
+
 
       </div>
 
@@ -370,29 +436,77 @@ Clover Health
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js" integrity="sha256-1O3BtOwnPyyRzOszK6P+gqaRoXHV6JXj8HkjZmPYhCI=" crossorigin="anonymous"></script>
-    <script id="page-template" type="text/x-handlebars-template">
+ 
+    
+    
+      <script id="page-template" type="text/x-handlebars-template">
       <div class="page vertical-flexbox">
         <div class="page-content">
-          
-          <div class="message-content">
-            
+          <div class="wrapper">
+         	 <div class="message-content">
+          		  
             {{{content}}}
             
+         	 </div>
           </div>
         </div>
+        
+  <footer class="letter-id disable-split">
+
+
+  
+  <div class="footer-text">letter identifier
+      &nbsp;- en
+    
+  </div>
+</footer>
+
+
       </div>
     </script>
+    
+    
+    
     <script type="text/javascript">
-      function getElementFromSelector(selector) {
-  return selector.length ? selector[0] : selector;
+      function fixDocument() {
+  // We limit the number of fixes to 100, more as an escape hatch than anything
+  // else from an infinite loop of errant fixes. We assume that we will not
+  // want to paginate anything longer than 100 pages.
+  for (var i = 0; i < 100; i++) {
+    var previousLength = $('.page').length;
+
+    // Try to "fix" the document by moving overflowing content to a new page
+    moveContentToNextPage($('.page')[previousLength - 1]);
+    console.log("Moving page");
+
+    var newLength = $('.page').length;
+
+    if (previousLength === newLength) {
+      // If we maintain the same page length after the fix, then we're done. We
+      // can return now.
+      return;
+    }
+  }
 }
+
+function getElementFromSelector(selector) {
+  return selector.length ? selector[0] : selector;
+  console.log("Selecting: " + selector);
+}
+
+
 
 function isOverflowed(page) {
   var pageElement = getElementFromSelector($(page));
+  console.log("Page " + page + " is overflowed: " + (pageElement.scrollHeight > pageElement.clientHeight));
   return pageElement.scrollHeight > pageElement.clientHeight;
 }
 
+
+
+
 function renderNewPage(children) {
+  console.log("Rendering new page");
   var source   = $('#page-template').html();
   var template = Handlebars.compile(source);
   var context = {
@@ -403,6 +517,9 @@ function renderNewPage(children) {
   return template(context);
 }
 
+
+
+
 function processPageBreaks(page) {
   var messageSelector = $(page).find('.message-content');
   var childrenToMove = [];
@@ -410,6 +527,7 @@ function processPageBreaks(page) {
   // First scan down for a page-break
   var pageBreak = $(messageSelector).find('.page-break');
   if (pageBreak.length === 0) {
+    console.log("No page breaks found");
     return false;
   }
 
@@ -425,6 +543,9 @@ function processPageBreaks(page) {
   }
 }
 
+
+
+
 function moveContentToNextPage(page) {
   // First scan down for a page-break
   if (processPageBreaks(page)) {
@@ -435,6 +556,7 @@ function moveContentToNextPage(page) {
     return;
   }
 
+  console.log("Moving to new page");
   var messageSelector = $(page).find('.message-content');
 
   var childrenToMove = [];
@@ -456,6 +578,7 @@ function moveContentToNextPage(page) {
   var testElement = $(elementToSplit).clone();
 
   if (!testElement.hasClass('disable-split') && testElement.text().length > 0) {
+    console.log("Handling no-split text");
     var textToMove = [];
 
     messageSelector.append(testElement);
@@ -503,32 +626,17 @@ function moveContentToNextPage(page) {
   var html = renderNewPage(childrenToMove);
 
   $('.document').append(html);
+$('.page:not(:first)').addClass("multi");
 }
 
-function fixDocument() {
-  // We limit the number of fixes to 100, more as an escape hatch than anything
-  // else from an infinite loop of errant fixes. We assume that we will not
-  // want to paginate anything longer than 100 pages.
-  for (var i = 0; i < 100; i++) {
-    var previousLength = $('.page').length;
 
-    // Try to "fix" the document by moving overflowing content to a new page
-    moveContentToNextPage($('.page')[previousLength - 1]);
-
-    var newLength = $('.page').length;
-
-    if (previousLength === newLength) {
-      // If we maintain the same page length after the fix, then we're done. We
-      // can return now.
-      return;
-    }
-  }
-}
 
 function makePagination() {
+  console.log("Rendering pagination");
   var totalPages = $('.page').length;
   $('.footer-page-current').each(function (i, el) {
     $(el).text(i+1);
+    console.log("Reducing footer: (" + i + ", " + el + ")");
   });
   $('.footer-page-total').text(totalPages);
 }
