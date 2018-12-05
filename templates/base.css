@@ -10,6 +10,12 @@ body {
   font-family: Calibre, "Times New Roman", monospace;  /* monospace is ONLY for catching missing Helvetica. */
   font-size: 13pt;
 }
+
+
+body.large-font {
+	font-size: 20pt !important;
+}
+
 .vertical-flexbox {
   /* The version of QT that wkhtmltopdf uses doesn't support flexbox yet
     so we're forced to use this nonstandard stuff.

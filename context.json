@@ -10,6 +10,7 @@
         "city":"Smalltown",
         "state":"ST",
         "zip":"000000",
+        "phone":"555-555-5555",
         "num_days":"100 days",
         "date_sent":"2018-7-12"
     },
@@ -19,6 +20,7 @@
 	    "id":"43523r32235",
         "dob": "2018-11-27",
         "account":"ABC123",
+        "case_id":"123abc",
         "facility": "Local Clinic",
         "dept": "Clinic Dept",
         "date_service":"2018-8-12",
@@ -26,7 +28,10 @@
         "service_end": "2019-1-1",
         "claim_num": "0123456789",
         "date_to_recieve": "2018-12-10",
-        "bill_amt":"2560.00"
+        "bill_amt":"2560.00",
+        "requested_service":"Service that was requested",
+        "requested_service_date":"2018-9-01",
+        
     },
     "PDR":{
 	    "received_date":"",
@@ -34,6 +39,11 @@
 	    "appeal_status":"partially overturned",
 	    "pay_amount":"1845.00",
 	    "pay_reason":"Description of the service that must be given and/or the reason for the payment.",
-		"determ_rationale":"Rationale or explanation of determination goes here."
+		"determ_rationale":"Rationale or explanation of determination goes here.",
+		"denial_facts":"Description of facts",
+		"policy":"Policy language related to determination",
+		"approved_date":"2018-11-15",
+		"denial_begins_date","2018-11-16",
+		"curr_services":"medical or other"
     }
 }

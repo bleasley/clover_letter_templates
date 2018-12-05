@@ -1,0 +1,148 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/provider/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block greeting %}
+
+{% if locale() == "es" %}
+ <!-- spanish language  -->
+ 
+
+<p style="text-align: center;">
+	<strong>Clover Health Customer Services&emsp;1-888-657-1207</strong><br />
+	<strong>PO Box 471, Jersey City, NJ 07303-9919</strong>
+	</p>
+<h3 style="text-align: center;">Explicación Detallada No-Cobertura</h3>
+<p>
+	<strong>Servicing Provider:</strong> {{ provider.name }}&nbsp;({{ provider.phone }})<br />
+	{{ provider.address }},{{ provider.city }},{{ provider.state }}{{ provider.zip }}</p>
+
+
+<table width="98%">
+<tbody>
+<tr>
+<td valign="top" width="25%">
+<p>
+	<strong>Nombre del paciente</strong><br />
+	<strong>No. de ident. de caso</strong>
+</p>
+</td>
+<td valign="top">
+<p>
+	{{ member.name }}<br />
+	{{ member.case_id }}
+</p>
+</td>
+<td valign="top" width="25%">
+<p>
+	<strong>Número del paciente</strong><br />
+	<strong>Fecha de nacimiento</strong>
+</p>
+</td>
+<td valign="top">
+<p>
+	{{ member.id }}<br />
+	{{ utils.render_date_inline(member.dob) }}</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+ {% else %}
+
+ <!-- default to english language  -->
+
+
+<p style="text-align: center;">
+	<strong>Clover Health Customer Services&emsp;1-888-657-1207</strong><br />
+	<strong>PO Box 471, Jersey City, NJ 07303-9919</strong>
+	</p>
+<h3 style="text-align: center;">Detailed Explanation of Non-Coverage</h3>
+<p>
+	<strong>Servicing Provider:</strong> {{ provider.name }}&nbsp;({{ provider.phone }})<br />
+	{{ provider.address }},{{ provider.city }},{{ provider.state }}{{ provider.zip }}</p>
+
+
+<table width="98%">
+<tbody>
+<tr>
+<td valign="top" width="25%">
+<p>
+	<strong>Patient Name</strong><br />
+	<strong>Case ID</strong>
+</p>
+</td>
+<td valign="top">
+<p>
+	{{ member.name }}<br />
+	{{ member.case_id }}
+</p>
+</td>
+<td valign="top" width="25%">
+<p>
+	<strong>Patient ID</strong><br />
+	<strong>Patient DOB</strong>
+</p>
+</td>
+<td valign="top">
+<p>
+	{{ member.id }}<br />
+	{{ utils.render_date_inline(member.dob) }}</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+ {% endif %}
+
+ 
+ 
+
+<p>&nbsp;</p>
+
+ <p class="greeting-date">{{ current_date().strftime("%B %d, %Y") }}</p>
+  <p class="greeting-line">{{ _('Dear') }} {{ member.name }}:</p>
+
+{% endblock %}
+
+
+
+{% block message %}
+
+{% if locale() == "es" %}
+ <!-- spanish language  -->
+
+<p>Por medio de este aviso se le da una explicaci&oacute;n detallada del motivo por el cual Clover Health ha determinado que la cobertura de Medicare por sus servicios actuales debe terminar. Este aviso no es la decisi&oacute;n sobre su apelaci&oacute;n. La decisi&oacute;n sobre su apelaci&oacute;n la emitir&aacute; la Organizaci&oacute;n de Mejoramiento de la Calidad (QIO, por sus siglas en ingl&eacute;s).</p>
+<p>Hemos revisado su caso y decidimos que la cobertura actual de Medicare de sus servicios de {{ _(PDR.curr_services) }}, debe terminar.</p>
+<ul>
+<li><strong>Para tomar esta decisi&oacute;n nos hemos basado en:</strong><br />{{ _(PDR.denial_facts) }}</li>
+<li><strong>Explicaci&oacute;n detallada del motivo por el cual sus servicios actuales ya no ser&aacute;n cubiertos y sobre las normas o p&oacute;lizas de cobertura utilizadas para tomar esta decisi&oacute;n:</strong><br />{{ _(PDR.determ_rationale) }}</li>
+<li><strong>P&oacute;lizas, normas y raz&oacute;n del plan utilizadas para tomar esta decisi&oacute;n:</strong><br />Determinamos que no hab&iacute;a necesidad m&eacute;dica para esta solicitud. Esta decisi&oacute;n se basa en criterios m&eacute;dicos {{ _( PDR.policy) }}.La &uacute;ltima fecha de aprobaci&oacute;n es de (PDR.approved_date) }}, y la negaci&oacute;n comienza {{ utils.render_date_inline(PDR.denial_begins_date) }}.</li>
+</ul>
+<p>Si desea una copia de la pol&iacute;tica de cobertura y normas utilizadas para tomar la decisi&oacute;n, o una copia de los documentos mandados a la QIO, llame, por favor, a Servicio al Cliente al 1-888-657- 1207. Los usuarios de TTY deben llamar al 711. Atendemos de las 8 a.m. - 8 p.m., hora local, 7 d&iacute;as a la semana. Del 15 de febrero al 30 de septiembre, inclu&iacute;dos, se usar&aacute; la tecnolog&iacute;a alternativa (por ejemplo, buz&oacute;n de voz) los fines de semana y d&iacute;as feriados.</p>
+
+ {% else %}
+
+ <!-- default to english language  -->
+<p>This notice gives a detailed explanation of why Clover Health has determined Medicare coverage for your current services should end. This notice is not the decision on your appeal. The decision on your appeal will come from your Quality Improvement Organization (QIO).</p>
+<p>We have reviewed your case and decided that Medicare coverage of your current  {{ _(PDR.curr_services) }} services should end.</p>
+<ul>
+<li><strong>The facts used to make this decision:</strong><br />{{ _(PDR.denial_facts) }}</li>
+<li><strong>Detailed explanation of why your current services are no longer covered, and the specific Medicare coverage rules and policy used to make this decision:</strong><br />{{ _(PDR.determ_rationale) }}</li>
+<li><strong>Plan policy, provision, or rationale used in making the decision:</strong><br />It was determined that there was no medical necessity for this request. This decision was based on medical criteria {{ _( PDR.policy) }}. The last approved date is {{ utils.render_date_inline(PDR.approved_date) }}, and denial begins {{ utils.render_date_inline(PDR.denial_begins_date) }}.</li>
+</ul>
+<p>If you would like a copy of the policy or coverage guidelines used to make this decision, or a copy of the documents sent to the QIO, please call us at: Clover Health Customer Services 1-888-657-1207. TTY users should call 711. Open 8 a.m. - 8 p.m., local time, 7 days a week from February 15th through September 30th, alternate technologies (for example, voicemail) will be used on the weekends and holidays.</p>
+
+
+ {% endif %}
+
+
+  {% include "guac/shared/customer/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+  {{ footer.render(model_numbers={locale(): 'Form CMS 10124-DENC (Approved 12/31/2011)    OMB Approval 0938-0953     H5141_DENC'}) }}
+{% endblock %}

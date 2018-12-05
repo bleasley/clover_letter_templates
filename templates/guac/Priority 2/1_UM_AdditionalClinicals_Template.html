@@ -1,0 +1,131 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/provider/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block greeting %}
+
+<table width="98%">
+<tbody><tr>
+{% if locale() == "es" %}
+ <!-- spanish language  -->
+ 
+<td style="width: 25%;" valign="top">
+<p>
+	<strong>No. de ident. de caso</strong><br />
+	<strong>Servicio solicitado</strong><br />
+	<strong>Fecha de recepción de la solicitud</strong><br />
+	<strong>Proveedor Pedido</strong>
+</p>
+</td>
+<td style="width: 27%;" valign="top">
+<p>
+	{{ member.case_id }}<br />
+	{{ member.requested_service }}<br />
+	{{ utils.render_date_inline(member.requested_service_date) }} <br />
+	{{ provider.name }}</p>
+</td>
+<td style="width: 20%;" valign="top">
+<p>
+	<strong>Miembro</strong><br />
+	<strong>Identificación del Miembro</strong><br />
+	<strong>Fecha de Nacimiento</strong>
+</p>
+</td>
+<td style="width: 25%;" valign="top">
+<p>
+	{{ member.name }}<br />
+	{{ member.id} }<br />
+	{{ utils.render_date_inline(member.dob) }}
+</p>
+</td>
+
+
+ {% else %}
+
+ <!-- default to english language  -->
+
+
+<td style="width: 25%;" valign="top">
+<p>
+	<strong>Case ID</strong><br />
+	<strong>Requested Service</strong><br />
+	<strong>Request Received</strong><br />
+	<strong>Servicing Provider</strong>
+</p>
+</td>
+<td style="width: 27%;" valign="top">
+<p>
+	{{ member.case_id }}<br />
+	{{ member.requested_service }}<br />
+	{{ utils.render_date_inline(member.requested_service_date) }}. <br />
+	{{ provider.name }}</p>
+</td>
+<td style="width: 20%;" valign="top">
+<p>
+	<strong>Member</strong><br />
+	<strong>Member ID</strong><br />
+	<strong>Date of Birth</strong>
+</p>
+</td>
+<td style="width: 25%;" valign="top">
+<p>
+	{{ member.name }}<br />
+	{{ member.id} }<br />
+	{{ member.dob }}
+</p>
+</td>
+
+ {% endif %}
+ </tr>
+</tbody>
+</table>
+ 
+ 
+
+<p>&nbsp;</p>
+
+ <p class="greeting-date">{{ current_date().strftime("%B %d, %Y") }}</p>
+  <p class="greeting-line">{{ _('Dear') }} {{ member.name }}:</p>
+
+{% endblock %}
+
+
+
+{% block message %}
+
+{% if locale() == "es" %}
+ <!-- spanish language  -->
+
+<p>Le escribo en respuesta a su pedido de una Solicitud de autorizaci&oacute;n previa para los servicios mencionados m&aacute;s arriba.</p>
+<p>Nuestro revisor no puede tomar una decisi&oacute;n con respecto a la solicitud de servicio sobre la base de la informaci&oacute;n disponible recibida. Necesitamos la siguiente informaci&oacute;n para completar nuestra revisi&oacute;n:</p>
+
+<p>{{ _(Requested_info) }}</p>
+
+
+<p>Env&iacute;e por fax la informaci&oacute;n solicitada al (732) 412-4317 dentro del plazo de 24 horas a partir de la recepci&oacute;n de este aviso. Aseg&uacute;rese de incluir una copia de este aviso con su respuesta. Si no recibimos la informaci&oacute;n adicional solicitada dentro del plazo de 24 horas a partir de la recepci&oacute;n de este aviso, es posible que debamos denegar la solicitud.</p>
+<p>Ll&aacute;menos al 1-888-995-1690 entre las 9am y las 5pm, de lunes a viernes (excepto los d&iacute;as feriados) si tiene alguna pregunta.</p>
+
+ {% else %}
+
+ <!-- default to english language  -->
+
+<p>This correspondence is in response to your request for a Prior Authorization Request regarding the services noted above.</p>
+<p>Our reviewer is unable to make a determination on the service request based on the available information received. The following information is needed to complete our review:</p>
+
+<p>{{Requested_info}}</p>
+
+
+<p>Please fax the requested information to (732) 412-4317 within 24 hours of receipt of this notice. Be sure to include a copy of this notice with your reply. If we do not receive the requested additional information by within 24 hours of receipt of this notice, we may have to issue a denial.</p>
+<p>Please feel free to call 1-888-995-1690 between the hours of 9:00 AM to 5:00 PM, Monday through Friday (except holidays) if you have any questions.</p>
+
+
+ {% endif %}
+
+
+  {% include "guac/shared/customer/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+  {{ footer.render(model_numbers={locale(): 'H5141_Additional_Information_Requested'}) }}
+{% endblock %}
