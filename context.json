@@ -31,20 +31,12 @@
         "bill_amt":"2560.00",
         "requested_service":"Service that was requested",
         "requested_service_date":"2018-9-01"
-<<<<<<< HEAD
-        
-=======
->>>>>>> f2e51256058de74b0dfd88983521beaec52e6980
     },
 
     "prior_auth":{
     	"denial_rationale":"Rationale or explanation of determination goes here."
-<<<<<<< HEAD
     	},
-=======
-    },
-
->>>>>>> f2e51256058de74b0dfd88983521beaec52e6980
+   
     "PDR":{
 	    "received_date":"",
 	    "case_num":"12351243",
@@ -54,10 +46,6 @@
 		"determ_rationale":"Rationale or explanation of determination goes here.",
 		"curr_services":"medical or other"
     },
-<<<<<<< HEAD
-=======
-
->>>>>>> f2e51256058de74b0dfd88983521beaec52e6980
     "values":{
 	    "clinical_questions":"Additional details being requested",
 	    "denial_facts":"Description of facts",
