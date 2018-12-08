@@ -5,22 +5,14 @@
 
 
 {% block member_and_case_info %}
-
-<p style="text-align: center;">
-	<strong>Clover Health Customer Services&emsp;1-888-657-1207</strong><br />
-	<strong>PO Box 471, Jersey City, NJ 07303-9919</strong>
-	</p>
+{% include "guac/shared/Clover_address_block.html" %}
 <h2 class="document-title" style="text-align: center;">{{ _('Detailed Explanation of Non-Coverage') }}</h2>
-<p style="text-align: center;">
-	<strong>{{ _('Servicing Provider') }}:</strong> {{ provider.name }}&nbsp;({{ provider.phone }})<br />
-	{{ provider.address }},{{ provider.city }},{{ provider.state }}{{ provider.zip }}</p>
-
-
   {% include "guac/shared/customer/greeting_info_patient.html" %}
-
-
 {% endblock %}
 
+{% block greeting %}
+ {% include "guac/shared/greeting.html" %}
+{% endblock %}
 
 {% block message %}
 
@@ -45,6 +37,11 @@
   {% include "guac/shared/customer/signature.html" %}
 {% endblock %}
 
-{% block footer %}
-  {{ footer.render(model_numbers={locale(): 'Form CMS 10124-DENC (Approved 12/31/2011)    OMB Approval 0938-0953     H5141_DENC'}) }}
+{% block footer %}  
+      {{ footer.render(model_numbers={
+    'en': 'Form CMS 10124-DENC (Approved 12/31/2011)    OMB Approval 0938-0953     H5141_DENC_EN',
+    'es': 'Form CMS 10124-DENC (Approved 12/31/2011)    OMB Approval 0938-0953     H5141_DENC_ESP',
+  }, include_language=False)}}
+  
+  
 {% endblock %}

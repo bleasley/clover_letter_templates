@@ -2244,7 +2244,8 @@ msgstr "Si desea más información sobre este aviso, consulte la página 2."
 msgid "How to Ask For an Immediate Appeal"
 msgstr "Cómo Pedir una Apelación Inmediata"
 
-#: src/templates/guac/prior_auths/nomnc.html:124
+#: OLD src/templates/guac/prior_auths/nomnc.html:124
+#: NEW src/templates/guac/Priority_2/6_UM_NOMNC.html:52
 msgid ""
 "You must make your request to your Quality Improvement Organization (also "
 "known as a QIO). A QIO is the independent reviewer authorized by Medicare to "
@@ -2255,6 +2256,7 @@ msgstr ""
 "por Medicare para revisar la decisión de finalizar los servicios."
 
 #: src/templates/guac/prior_auths/nomnc.html:125
+#: NEW src/templates/guac/Priority_2/6_UM_NOMNC.html:53
 msgid ""
 "Your request for an immediate appeal should be made as soon as possible, but "
 "no later than noon of the day before the effective date indicated above."
@@ -2264,6 +2266,7 @@ msgstr ""
 "arriba."
 
 #: src/templates/guac/prior_auths/nomnc.html:126
+#: NEW src/templates/guac/Priority_2/6_UM_NOMNC.html:54
 msgid ""
 "The QIO will notify you of its decision as soon as possible, generally no "
 "later than two days after the effective date of this notice if you are in "
@@ -2278,6 +2281,7 @@ msgstr ""
 #: src/templates/guac/prior_auths/nomnc.html:128
 #: src/templates/guac/prior_auths/nomnc.html:130
 #: src/templates/guac/prior_auths/nomnc.html:132
+#: NEW src/templates/guac/Priority_2/6_UM_NOMNC.html:56, etc
 #, python-format
 msgid ""
 "Call your QIO at: %(name)s %(phone)s, TTY %(tty)s to appeal, or if you have "

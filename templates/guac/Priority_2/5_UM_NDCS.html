@@ -4,15 +4,15 @@
 
 
 {% block member_and_case_info %}
-
-<p style="text-align: center;"><strong>Clover Health Customer Services&emsp;1-888-657-1207</strong><br /> <strong>PO Box 471, Jersey City, NJ 07303-9919</strong></p>
+{% include "guac/shared/Clover_address_block.html" %}
 <h2 class="document-title" style="text-align: center;">{{ _('Detailed Explanation of Non-Coverage') }}</h2>
-
 <p style="text-align: center;"><strong>Important: This notice is to inform you of the service request which you submitted to Clover on &lt;XX/XX/XXXX&gt; in reference to the request for payment of &lt;Service Description&gt; that was denied.</strong></p>
-
-
   {% include "guac/shared/customer/greeting_info_patient.html" %}
+{% endblock %}
 
+
+{% block greeting %}
+ {% include "guac/shared/greeting.html" %}
 {% endblock %}
 
 

@@ -1,0 +1,111 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/provider/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block member_and_case_info %}
+{% include "guac/shared/provider_address_block.html" %}
+<h2 class="document-title" style="text-align: center;">{{ _('Notice of Medicare Non-Coverage') }}</h2>
+  {% include "guac/shared/customer/greeting_info_patient.html" %}
+{% endblock %}
+
+
+{% block message %}
+
+<p>
+    <strong>
+      {{ _('Effective Date of Coverage of your current %(services)s services will end: %(high_date)s',
+        services=utils.render_text_inline(values.service_description),
+        high_date=utils.render_date_inline(prior_auth.approved_to_date))}}
+    </strong>
+  </p>
+
+  <p>
+    {{ _('Your Medicare provider and/or health plan have determined that Medicare probably will not pay for your current %(services)s services after the effective date indicated above.', services=utils.render_text_inline(values.service_description)) }}
+  </p>
+
+  <p>{{ _('You may have to pay for any services you receive after the above date.') }}</p>
+
+  <hr />
+
+<ul>
+    <li>{{ _('You have the right to an immediate, independent medical review (appeal) of the decision to end Medicare coverage of these services. Your services will continue during the appeal.') }}</li>
+    <li>{{ _('If you choose to appeal, the independent reviewer will ask for your opinion. The reviewer also will look at your medical records and/or other relevant information. You do not have to prepare anything in writing, but you have the right to do so if you wish.') }}</li>
+    <li>{{ _('If you choose to appeal, you and the independent reviewer will each receive a copy of the detailed explanation about why your coverage for services should not continue. You will receive this detailed notice only after you request an appeal.') }}</li>
+    <li>{{ _('If you choose to appeal, and the independent reviewer agrees services should no longer be covered after the effective date indicated above;') }}
+      <ul>
+        <li>{{ _('Neither Medicare nor your plan will pay for these services after that date.') }}</li>
+      </ul>
+    </li>
+    <li>{{ _('If you stop services no later than the effective date indicated above, you will avoid financial liability.') }}</li>
+  </ul>
+
+  <hr />
+
+  <p><strong>{{ _('See page 2 of this notice for more information.') }}</strong></p>
+
+  <span class="page-break"></span>
+
+  <h2>{{ _('How to Ask For an Immediate Appeal') }}</h2>
+
+  <ul>
+    <li>{{ _('You must make your request to your Quality Improvement Organization (also known as a QIO). A QIO is the independent reviewer authorized by Medicare to review the decision to end these services.') }}</li>
+    <li>{{ _('Your request for an immediate appeal should be made as soon as possible, but no later than noon of the day before the effective date indicated above.') }}</li>
+    <li>{{ _('The QIO will notify you of its decision as soon as possible, generally no later than two days after the effective date of this notice if you are in Original Medicare. If you are in a Medicare health plan, the QIO generally will notify you of its decision by the effective date of this notice.') }}</li>
+      {% if values.servicingState == 'TX' %}
+          <li>{{ _('Call your QIO at: %(name)s %(phone)s, TTY %(tty)s to appeal, or if you have questions.', name='Kepro', phone='1-844-430-9504', tty='1-855-843-4776') }}</li>
+      {% elif values.servicingState == 'GA' %}
+          <li>{{ _('Call your QIO at: %(name)s %(phone)s, TTY %(tty)s to appeal, or if you have questions.', name='Kepro', phone='1-844-455-8708', tty='1-855-843-4776') }}</li>
+      {% else %}
+          <li>{{ _('Call your QIO at: %(name)s %(phone)s, TTY %(tty)s to appeal, or if you have questions.', name='Livanta', phone='1-866-815-5440', tty='1-866-868-2289') }}</li>
+      {% endif %}
+  </ul>
+
+  <h2>{{ _('If You Miss the Deadline to Request an Immediate Appeal, You May Have Other Appeal Rights:') }}</h2>
+
+  <ul>
+    <li>{{ _('If you have Original Medicare: call the QIO listed on page 1.') }}</li>
+    <li>{{ _('If you belong to a Medicare health plan: call your plan at the number given below.') }}</li>
+  </ul>
+
+  <p>{{ _('Plan contact information: Clover Health Customer Services at 1-888-657-1207. TTY users should call 711. Open 8 a.m. – 8 p.m., local time, 7 days a week from February 15th through September 30th, alternate technologies (for example, voicemail) will be used on the weekends and holidays.') }}</p>
+
+  <p><b>
+    {{ _('Additional Information') }}:
+    {{ _('Last Approved Date') }} {{ utils.render_date_inline(prior_auth.approved_to_date) }},
+    {{ _('Denial Begins') }} {{ utils.render_date_inline(add_timedelta(prior_auth.approved_to_date, 1)) }}
+  </b></p>
+
+  <p>
+    <strong>
+      {{ _('Please sign below to indicate you received and understood this notice.') }}
+    </strong>
+  </p>
+
+  <p>
+    {{ _('I have been notified that coverage of my services will end on the effective date indicated on this notice and that I may appeal this decision by contacting my QIO.') }}
+  </p>
+
+  <br /><br /><br /><br /><br />
+
+  <table>
+    <tr>
+      <td class="signature-line signature-line-wide">
+        {{ _('Signature of Patient or Representative') }}
+      </td>
+      <td class="signature-spacer">&nbsp;</td>
+      <td class="signature-line">
+        {{ _('Date') }}
+      </td>
+    </tr>
+  </table>
+
+{% endblock %}
+
+{% block footer %}
+    {{ footer.render(model_numbers={
+    'en': 'Form CMS 10123-NOMNC (Approved 12/31/2011) - OMB Approval 0938-0953 - H5141_NOMNC_EN',
+    'es': 'Form CMS 10123-NOMNC (Approved 12/31/2011) - OMB Approval 0938-0953 - H5141_NOMNC_ESP',
+  }, include_language=False)}}
+
+{% endblock %}

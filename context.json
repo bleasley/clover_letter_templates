@@ -41,6 +41,7 @@
 	        "account":"ABC123",
 	    },
 	    "description":"Description of prior auth services goes here.",
+	    "approved_to_date":"2018-05-22",
 	    "member_denial_determination":"denied",
     	"denial_rationale":"Rationale or explanation of determination goes here.",
     	"procedures":{
