@@ -1,3 +1,38 @@
+{% if use_large_font() %}
+
+<table width="98%">
+<tbody>
+	<tr>
+	<td style="width: 24%;" valign="top">
+<p>
+	<strong>{{ _('Case ID') }}</strong><br />
+	<strong>{{ _('Requested Service') }}</strong><br />
+	<strong>{{ _('Request Received') }}</strong><br />
+	<strong>{{ _('Servicing Provider') }}</strong>
+		<strong>{{ _('Member') }}</strong><br />
+	<strong>{{ _('Member ID') }}</strong><br />
+	<strong>{{ _('Date of Birth') }}</strong>
+</p>
+</td>
+<td style="" valign="top">
+<p>
+	{{ member.case_id }}<br />
+	{{ member.requested_service }}<br />
+	{{ utils.render_date_inline(member.requested_service_date) }} <br />
+	{{ provider.name }}
+		{{ member.name }} <br />
+	{{ member.id }} <br />
+	{{ member.dob }}
+	</p>
+</td>
+
+	</tr>
+</tbody>
+</table>
+
+
+{% else %}
+
 <table width="98%">
 <tbody>
 	<tr>
@@ -34,3 +69,5 @@
 	</tr>
 </tbody>
 </table>
+
+{% endif}
