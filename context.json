@@ -1,83 +1,78 @@
 {
-    "provider": {
-        "name": "Sample Provider",
-        "first-name":"Sample",
-	    "last-name":"Provider",
-        "recipient": "Office Manager",
-        "department": "Provider Department",
-        "address": "1234 State Street",
-        "address1": "",
-        "city":"Smalltown",
-        "state":"ST",
-        "zip":"000000",
-        "phone":"555-555-5555",
-        "num_days":"100 days",
-        "date_sent":"2018-7-12"
-    },
-
+  "provider": {
+    "name": "Sample Provider",
+    "first-name": "Sample",
+    "last-name": "Provider",
+    "recipient": "Office Manager",
+    "department": "Provider Department",
+    "address": "1234 State Street",
+    "address1": "",
+    "city": "Smalltown",
+    "state": "ST",
+    "zip": "000000",
+    "phone": "555-555-5555",
+    "num_days": "100 days",
+    "date_sent": "2018-7-12"
+  },
+  "member": {
+    "name": "John Doe",
+    "id": "43523r32235",
+    "dob": "2018-11-27",
+    "account": "ABC123",
+    "case_id": "123abc",
+    "facility": "Local Clinic",
+    "dept": "Clinic Dept",
+    "date_service": "2018-8-12",
+    "service_start": "2018-1-1",
+    "service_end": "2019-1-1",
+    "claim_num": "0123456789",
+    "date_to_recieve": "2018-12-10",
+    "bill_amt": "2560.00",
+    "requested_service": "Service that was requested",
+    "requested_service_date": "2018-9-01"
+  },
+  "prior_auth": {
     "member": {
-	    "name":"John Doe",
-	    "id":"43523r32235",
-        "dob": "2018-11-27",
-        "account":"ABC123",
-        "case_id":"123abc",
-        "facility": "Local Clinic",
-        "dept": "Clinic Dept",
-        "date_service":"2018-8-12",
-        "service_start": "2018-1-1",
-        "service_end": "2019-1-1",
-        "claim_num": "0123456789",
-        "date_to_recieve": "2018-12-10",
-        "bill_amt":"2560.00",
-        "requested_service":"Service that was requested",
-        "requested_service_date":"2018-9-01"
+      "name": "John Doe",
+      "id": "43523r32235",
+      "dob": "2018-11-27",
+      "account": "ABC123"
     },
-
-    "prior_auth":{
-	    "member": {
-		    "name":"John Doe",
-		    "id":"43523r32235",
-	        "dob": "2018-11-27",
-	        "account":"ABC123",
-	    },
-	    "description":"Description of prior auth services goes here.",
-	    "approved_to_date":"2018-05-22",
-	    "member_denial_determination":"denied",
-    	"denial_rationale":"Rationale or explanation of determination goes here.",
-    	"procedures":{
-	    	{
-		    	"code":"Proc1",
-				"description":"description",
-				"requested_units":"units"
-				
-	    	},
-	    	{
-		    	"code":"Proc2",
-				"description":"description",
-				"requested_units":"units"
-	    	}
-    	}
-    	},
-   
-    "PDR":{
-	    "received_date":"",
-	    "case_num":"12351243",
-	    "appeal_status":"partially overturned",
-	    "pay_amount":"1845.00",
-	    "pay_reason":"Description of the service that must be given and/or the reason for the payment.",
-		"determ_rationale":"Rationale or explanation of determination goes here.",
-		"curr_services":"medical or other"
-    },
-    "values":{
-	    "clinical_questions":"Additional details being requested",
-	    "denial_facts":"Description of facts",
-	    "denial_policy":"Policy language related to determination",
-	    "approved_date":"2018-11-15",
-		"denial_begins_date":"2018-11-16",
-		"service_description":"service description goes here"
-    },
-
-    "prior_auth_formatted_id":"1231238928",
-    "is_auth_denied_expedite":"true",
-    "service_type":"Service type item goes here"
+    "description": "Description of prior auth services goes here.",
+    "approved_to_date": "2018-05-22",
+    "member_denial_determination": "denied",
+    "denial_rationale": "Rationale or explanation of determination goes here.",
+    "procedures": [
+      {
+        "code": "Proc1",
+        "description": "description",
+        "requested_units": "units"
+      },
+      {
+        "code": "Proc2",
+        "description": "description",
+        "requested_units": "units"
+      }
+    ]
+  },
+  "PDR": {
+    "received_date": "",
+    "case_num": "12351243",
+    "appeal_status": "partially overturned",
+    "pay_amount": "1845.00",
+    "pay_reason": "Description of the service that must be given and/or the reason for the payment.",
+    "determ_rationale": "Rationale or explanation of determination goes here.",
+    "curr_services": "medical or other"
+  },
+  "values": {
+    "clinical_questions": "Additional details being requested",
+    "denial_facts": "Description of facts",
+    "denial_policy": "Policy language related to determination",
+    "approved_date": "2018-11-15",
+    "denial_begins_date": "2018-11-16",
+    "service_description": "service description goes here"
+  },
+  "prior_auth_formatted_id": "1231238928",
+  "is_auth_denied_expedite": "true",
+  "service_type": "Service type item goes here"
 }
