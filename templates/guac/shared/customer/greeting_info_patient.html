@@ -1,29 +1,43 @@
+
+{% if use_large_font() %}
 <table width="98%">
 <tbody>
 <tr>
-<td valign="top" width="25%">
-<p>
-	<strong>{{ _('Patient Name') }}</strong><br />
-	<strong>{{ _('Case ID') }}</strong>
-</p>
-</td>
-<td valign="top">
-<p>
-	{{ member.name }}<br />
-	{{ member.case_id }}
-</p>
-</td>
-<td valign="top" width="25%">
-<p>
-	<strong>{{ _('Patient ID') }}</strong><br />
-	<strong>{{ _('Patient DOB') }}</strong>
-</p>
-</td>
-<td valign="top">
-<p>
-	{{ member.id }}<br />
-	{{ utils.render_date_inline(member.dob) }}</p>
-</td>
+<td style="width: 55%;" valign="top" width="55%"><strong>{{ _('Patient Name') }}</strong></td>
+<td valign="top">{{ member.name }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Case ID') }}</strong></td>
+<td valign="top">{{ member.case_id }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Patient ID') }}</strong></td>
+<td valign="top">{{ member.id }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Patient DOB') }}</strong></td>
+<td valign="top">{{ utils.render_date_inline(member.dob) }}</td>
 </tr>
 </tbody>
 </table>
+
+{% else %}
+<table width="98%">
+<tbody>
+<tr>
+<td valign="top" width="25%"><strong>{{ _('Patient Name') }}</strong></td>
+<td valign="top">{{ member.name }}</td>
+<td valign="top" width="25%"><strong>{{ _('Patient ID') }}</strong></td>
+<td valign="top">{{ member.id }}</td>
+</tr>
+<tr>
+<td valign="top" ><strong>{{ _('Case ID') }}</strong></td>
+<td valign="top">{{ member.case_id }}</td>
+<td valign="top"><strong>{{ _('Patient DOB') }}</strong></td>
+<td valign="top">{{ utils.render_date_inline(member.dob) }}</td>
+</tr>
+</tbody>
+</table>
+
+
+{% endif %}

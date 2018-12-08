@@ -1,32 +1,68 @@
+{% if use_large_font() %}
+
 <table width="98%">
 <tbody>
 <tr>
-<td style="width: 25%;" valign="top">
-<p>
-	<strong>{{ _('Member Name') }}</strong><br /> 
-	<strong>{{ _('Provider/Facility') }}</strong><br /> 
-	<strong>{{ _('Request Received') }}</strong><br /> 
-	<strong>{{ _('Service Date(s)') }}</strong></p>
-</td>
-<td style="width: 27%;" valign="top">
-<p>
-	{{ prior_auth.member.first_name }} {{prior_auth.member.last_name }}<br /> 
-	{{ values.provider_name }}<br /> 
-	{{ utils.render_date_inline(member.requested_service_date) }}. <br /> 
-	{{ service_dates }}</p>
-</td>
-<td style="width: 20%;" valign="top">
-<p>
-	<strong>{{ _('Member Number') }}</strong><br /> 
-	<strong>{{ _('Case Number') }}</strong><br /> 
-	<strong>{{ _('Date of Birth') }}</strong></p>
-</td>
-<td style="width: 25%;" valign="top">
-<p>
-	{{ prior_auth.member_carepoint_id }}<br /> 
-	{{ prior_auth_formatted_id }}<br /> 
-	{{ utils.render_date_inline(prior_auth.member.birthdate) }}</p>
-</td>
+<td style="width: 55%;" valign="top" ><strong>{{ _('Member Name') }}</strong></td>
+<td valign="top">{{ prior_auth.member.first_name }} {{prior_auth.member.last_name }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Provider/Facility') }}</strong></td>
+<td valign="top">{{ values.provider_name }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Request Received') }}</strong></td>
+<td valign="top">{{ utils.render_date_inline(member.requested_service_date) }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Service Date(s)') }}</strong></td>
+<td valign="top">{{ service_dates }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Member Number') }}</strong></td>
+<td valign="top">{{ prior_auth.member_carepoint_id }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Case Number') }}</strong></td>
+<td valign="top">{{ prior_auth_formatted_id }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Date of Birth') }}</strong></td>
+<td valign="top">{{ utils.render_date_inline(prior_auth.member.birthdate) }}</td>
 </tr>
 </tbody>
 </table>
+
+
+{% else %}
+<table width="98%">
+<tbody>
+<tr>
+<td style="width: 25%;" valign="top"><strong>{{ _('Member Name') }}</strong></td>
+<td style="width: 27%;" valign="top">{{ prior_auth.member.first_name }} {{prior_auth.member.last_name }}</td>
+<td style="width: 20%;" valign="top"><strong>{{ _('Member Number') }}</strong></td>
+<td style="width: 25%;" valign="top">{{ prior_auth.member_carepoint_id }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Provider/Facility') }}</strong></td>
+<td valign="top">{{ values.provider_name }}</td>
+<td valign="top"><strong>{{ _('Case Number') }}</strong></td>
+<td  valign="top">{{ prior_auth_formatted_id }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Request Received') }}</strong></td>
+<td valign="top">{{ utils.render_date_inline(member.requested_service_date) }}</td>
+<td valign="top"><strong>{{ _('Date of Birth') }}</strong></td>
+<td valign="top">{{ utils.render_date_inline(prior_auth.member.birthdate) }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Service Date(s)') }}</strong></td>
+<td valign="top">{{ service_dates }}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+
+{% endif %}

@@ -2,31 +2,34 @@
 
 <table width="98%">
 <tbody>
-	<tr>
-	<td style="width: 50%;" valign="top">
-<p>
-	<strong>{{ _('Case ID') }}</strong><br />
-	<strong>{{ _('Requested Service') }}</strong><br />
-	<strong>{{ _('Request Received') }}</strong><br />
-	<strong>{{ _('Servicing Provider') }}</strong>
-		<strong>{{ _('Member') }}</strong><br />
-	<strong>{{ _('Member ID') }}</strong><br />
-	<strong>{{ _('Date of Birth') }}</strong>
-</p>
-</td>
-<td style=""align="top">
-<p>
-	{{ member.case_id }}<br />
-	{{ member.requested_service }}<br />
-	{{ utils.render_date_inline(member.requested_service_date) }} <br />
-	{{ provider.name }}
-		{{ member.name }} <br />
-	{{ member.id }} <br />
-	{{ member.dob }}
-	</p>
-</td>
-
-	</tr>
+<tr>
+<td width="55%" valign="top"><strong>{{ _('Case ID') }}</strong></td>
+<td align="top">{{ member.case_id }}</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><strong>{{ _('Requested Service') }}</strong></td>
+<td align="top">{{ member.requested_service }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Request Received') }}</strong></td>
+<td align="top">{{ utils.render_date_inline(member.requested_service_date) }}</td>
+</tr>
+<tr>
+<td  valign="top"><strong>{{ _('Servicing Provider') }}</strong></td>
+<td align="top">{{ provider.name }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Member') }}</strong></td>
+<td align="top">{{ member.name }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Member ID') }}</strong></td>
+<td align="top">{{ member.id }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Date of Birth') }}</strong></td>
+<td align="top">{{ member.dob }}</td>
+</tr>
 </tbody>
 </table>
 
@@ -35,39 +38,32 @@
 
 <table width="98%">
 <tbody>
-	<tr>
-	<td style="width: 24%;" valign="top">
-<p>
-	<strong>{{ _('Case ID') }}</strong><br />
-	<strong>{{ _('Requested Service') }}</strong><br />
-	<strong>{{ _('Request Received') }}</strong><br />
-	<strong>{{ _('Servicing Provider') }}</strong>
-</p>
-</td>
-<td style="" valign="top">
-<p>
-	{{ member.case_id }}<br />
-	{{ member.requested_service }}<br />
-	{{ utils.render_date_inline(member.requested_service_date) }} <br />
-	{{ provider.name }}</p>
-</td>
-<td style="width: 15%;" valign="top">
-<p>
-	<strong>{{ _('Member') }}</strong><br />
-	<strong>{{ _('Member ID') }}</strong><br />
-	<strong>{{ _('Date of Birth') }}</strong>
-</p>
-</td>
-<td style="width: 25%;" valign="top">
-<p>
-
-	{{ member.name }} <br />
-	{{ member.id }} <br />
-	{{ member.dob }}
-</p>
-</td>
-	</tr>
+<tr>
+<td style="width: 24%;" valign="top"><strong>{{ _('Case ID') }}</strong></td>
+<td valign="top">{{ member.case_id }}</td>
+<td style="width: 15%;" valign="top"><strong>{{ _('Member') }}</strong></td>
+<td style="width: 25%;" valign="top">{{ member.name }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Requested Service') }}</strong></td>
+<td valign="top">{{ member.requested_service }}</td>
+<td valign="top"><strong>{{_('Member ID') }}</strong></td>
+<td valign="top">{{ member.id }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Request Received') }}</strong></td>
+<td valign="top">{{ utils.render_date_inline(member.requested_service_date) }}&nbsp;</td>
+<td valign="top"><strong>{{ _('Date of Birth') }}</strong></td>
+<td valign="top">{{ member.dob }}</td>
+</tr>
+<tr>
+<td valign="top"><strong>{{ _('Servicing Provider') }}</strong></td>
+<td valign="top">{{ provider.name }}</td>
+<td valign="top">&nbsp;</td>
+<td valign="top">&nbsp;</td>
+</tr>
 </tbody>
 </table>
+
 
 {% endif %}
