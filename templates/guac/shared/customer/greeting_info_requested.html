@@ -28,7 +28,7 @@
 </tr>
 <tr>
 <td valign="top"><strong>{{ _('Date of Birth') }}</strong></td>
-<td align="top">{{ member.dob }}</td>
+<td align="top"> {{ utils.render_date_inline(prior_auth.member.birthdate) }} </td>
 </tr>
 </tbody>
 </table>

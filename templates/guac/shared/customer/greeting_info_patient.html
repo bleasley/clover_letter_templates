@@ -34,7 +34,7 @@
 <td valign="top" ><strong>{{ _('Case ID') }}</strong></td>
 <td valign="top">{{ member.case_id }}</td>
 <td valign="top"><strong>{{ _('Patient DOB') }}</strong></td>
-<td valign="top">{{ utils.render_date_inline(member.dob) }}</td>
+<td valign="top">{{ utils.render_date_inline(prior_auth.member.birthdate) }}</td>
 </tr>
 </tbody>
 </table>
