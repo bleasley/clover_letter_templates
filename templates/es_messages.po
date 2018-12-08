@@ -1568,6 +1568,7 @@ msgstr ""
 
 #: src/templates/guac/prior_auths/denial_letter.html:9
 #: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:9
+#: NEW src/templates/guac/Priority_2/customer/denial_letter.html:21
 msgid "Your request was denied."
 msgstr "Su petición fue denegada."
 
@@ -2106,10 +2107,12 @@ msgstr ""
 "solicitados por usted o su médico:"
 
 #: src/templates/guac/prior_auths/ndcs.html:98
+#: NEW src/templates/guac/Priority_2/customer/5_UM_NDCS.html:41
 msgid "Why did we deny your request?"
-msgstr ""
+msgstr "¿Por qué negamos su solicitud?"
 
 #: src/templates/guac/prior_auths/ndcs.html:100
+#: NEW src/templates/guac/Priority_2/customer/5_UM_NDCS.html:43
 #, python-format
 msgid ""
 "Based upon the clinical information provided, the request for payment of "
@@ -2117,16 +2120,25 @@ msgid ""
 msgstr ""
 
 #: src/templates/guac/prior_auths/ndcs.html:105
+#: NEW src/templates/guac/Priority_2/customer/5_UM_NDCS.html:47
 msgid "What if I don't agree with this decision?"
-msgstr ""
+msgstr "¿Qué pasa si no estoy de acuerdo con esta decisión?"
 
 #: src/templates/guac/prior_auths/ndcs.html:107
+#: NEW src/templates/guac/Priority_2/customer/5_UM_NDCS.html:49
 msgid ""
 "As a contracted provider, your rights to dispute the decision above are "
 "defined in your contract with Clover. If you have any questions or concerns, "
 "you may contact Provider Services at <span class=\"disable-wrap"
 "\"><b>1-877-853-8019</b></span> for more information."
-msgstr ""
+msgstr "Como proveedor contratado, sus derechos para disputar la decisión "
+"anterior se definen en su contrato con Clover. Si tiene alguna pregunta "
+"o inquietud, puede ponerse en contacto con el proveedor de servicios "
+"en <span class=\"disable-wrap"
+"\"><b>1-877-853-8019</b></span> para obtener más información."
+
+
+
 
 #: src/templates/guac/prior_auths/nomnc.html:42
 #: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:72

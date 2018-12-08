@@ -19,17 +19,41 @@
 {% block message %}
 
 <p><strong>{{ _(“Your request was denied”) }}</strong></p>
-<p>{{ _(“After completing our review, we've denied the medical services/items listed below requested by you or your doctor/provider:”) }}</p>
-<p><strong>{{ _(“ Why did we deny your request?”) }}</strong></p>
-<p>{{ _(“Based upon the clinical information provided, the request for payment of is denied because:”) }}</p>
+<p>{{ _("After completing our review, we've %(verb)s the medical services/items listed below requested by you or your doctor/provider:",
+         verb=prior_auth.member_denial_determination.value.lower()) }}
+         
+         <ul>
+      <li>{{ service_type }} {% if prior_auth.description != None %}{{ prior_auth.description }}{% endif %}
+          {% for procedure in prior_auth.procedures %}
+            {% if not procedure.is_deleted %}
+              <ul>
+                <li>{{ procedure.code }} {{ procedure.procedure_code.description }}</li>
+                  <ul>
+                      <li>{{ _("Units:") }} {{ procedure.requested_units }} {% if procedure.modifiers != None %} {{ _("Modifiers:") }} {{ procedure.modifiers }} {% endif %}</li>
+                  </ul>
+              </ul>
+            {% endif %}
+          {% endfor %}
+      </li>
+    </ul>
+         </p>
+
+<p><strong>{{ _(“Why did we deny your request?”) }}</strong></p>
+
+<p>{{ _('Based upon the clinical information provided, the request for payment of %(service_description)s is denied because:',
+         service_description=utils.render_text_inline(values.service_description)) }}</p>
+         <p style="white-space: pre-line">{{ values.denial_rationale }}</p>
+
 <p><strong> {{ _(“What if I don't agree with this decision?”) }}</strong></p>
-<p>{{ _(“As a contracted provider, your rights to dispute the decision above are defined in your contract with Clover. If you have any questions or concerns, you may contact Provider Services at”) }} 1-877-853-8019 {{ _(“for more information.”) }}</p>
+<p>
+	    {{ _('As a contracted provider, your rights to dispute the decision above are defined in your contract with Clover. If you have any questions or concerns, you may contact Provider Services at <span class="disable-wrap"><b>1-877-853-8019</b></span> for more information.') }}
+	</p>
 <p>{{ _(“Respectfully,”) }}</p>
-<p>, {{ _(“Medical Director”) }}</p>
+<p>{{ utils.render_text_inline(values.medical_director.label) }}, {{ _('Medical Director') }}</p>
 
 {% endblock %}
 
 {% block footer %}
-    {{ footer.render(model_numbers={'en': 'H5141_Additional_Information_Requested', 'es': 'H5141_Additional_Information_Requested_SPA'}) }}
+    {{ footer.render(model_numbers={'en': 'H5141_NDCS_EN', 'es': 'H5141_NDCS_ES'}) }}
 
 {% endblock %}
