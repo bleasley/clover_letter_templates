@@ -1,5 +1,5 @@
 {% import "base.html" as utils %}
-{% extends "guac/shared/provider/base_letter_customer.html" %}
+{% extends "guac/shared/customer/base_letter_customer.html" %}
 {% import "guac/shared/footer.html" as footer with context %}
 
 
@@ -20,14 +20,14 @@
 
 <p><strong>{{ _("Your request was denied") }}</strong></p>
 <p>{{ _("After completing our review, we've %(verb)s the medical services/items listed below requested by you or your doctor/provider:",
-         verb=prior_auth.member_denial_determination.value.lower()) }}
-         
+         verb=prior_auth.member_denial_determination.lower()) }}
+
          <ul>
       <li>{{ service_type }} {% if prior_auth.description != None %}{{ prior_auth.description }}{% endif %}
           {% for procedure in prior_auth.procedures %}
             {% if not procedure.is_deleted %}
               <ul>
-                <li>{{ procedure.code }} {{ procedure.procedure_code.description }}</li>
+                <li>{{ procedure.code }} {{ procedure.code.description }}</li>
                   <ul>
                       <li>{{ _("Units:") }} {{ procedure.requested_units }} {% if procedure.modifiers != None %} {{ _("Modifiers:") }} {{ procedure.modifiers }} {% endif %}</li>
                   </ul>

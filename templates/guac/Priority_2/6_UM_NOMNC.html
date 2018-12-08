@@ -1,5 +1,5 @@
 {% import "base.html" as utils %}
-{% extends "guac/shared/provider/base_letter_customer.html" %}
+{% extends "guac/shared/customer/base_letter_customer.html" %}
 {% import "guac/shared/footer.html" as footer with context %}
 
 
@@ -73,7 +73,7 @@
   <p><b>
     {{ _('Additional Information') }}:
     {{ _('Last Approved Date') }} {{ utils.render_date_inline(prior_auth.approved_to_date) }},
-    {{ _('Denial Begins') }} {{ utils.render_date_inline(add_timedelta(prior_auth.approved_to_date, 1)) }}
+    {{ _('Denial Begins') }} {{ utils.render_date_inline(prior_auth.approved_to_date) }}
   </b></p>
 
   <p>

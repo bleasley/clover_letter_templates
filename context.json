@@ -70,7 +70,10 @@
     "denial_policy": "Policy language related to determination",
     "approved_date": "2018-11-15",
     "denial_begins_date": "2018-11-16",
-    "service_description": "service description goes here"
+    "service_description": "service description goes here",
+    "medical_director": {
+        "label": "Dr. Medical Director"
+    }
   },
   "prior_auth_formatted_id": "1231238928",
   "is_auth_denied_expedite": "true",
