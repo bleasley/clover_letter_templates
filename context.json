@@ -33,6 +33,9 @@
         "requested_service_date":"2018-9-01",
         
     },
+    "prior_auth":{
+    	"denial_rationale":"Rationale or explanation of determination goes here.",
+    	},
     "PDR":{
 	    "received_date":"",
 	    "case_num":"12351243",
@@ -40,10 +43,14 @@
 	    "pay_amount":"1845.00",
 	    "pay_reason":"Description of the service that must be given and/or the reason for the payment.",
 		"determ_rationale":"Rationale or explanation of determination goes here.",
-		"denial_facts":"Description of facts",
-		"policy":"Policy language related to determination",
-		"approved_date":"2018-11-15",
-		"denial_begins_date","2018-11-16",
 		"curr_services":"medical or other"
-    }
+    }.
+    "values":{
+	    "clinical_questions":"Additional details being requested",
+	    "denial_facts":"Description of facts", ,
+	    "denial_policy":"Policy language related to determination",
+	    "approved_date":"2018-11-15",
+		"denial_begins_date","2018-11-16"
+    },
+    "prior_auth_formatted_id":"1231238928"
 }

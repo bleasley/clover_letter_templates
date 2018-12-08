@@ -1,0 +1,32 @@
+<table width="98%">
+<tbody>
+<tr>
+<td style="width: 25%;" valign="top">
+<p>
+	<strong>{{ _('Member Name') }}</strong><br /> 
+	<strong>{{ _('Provider/Facility') }}</strong><br /> 
+	<strong>{{ _('Request Received') }}</strong><br /> 
+	<strong>{{ _('Service Date(s)') }}</strong></p>
+</td>
+<td style="width: 27%;" valign="top">
+<p>
+	{{ prior_auth.member.first_name }} {{prior_auth.member.last_name }}<br /> 
+	{{ values.provider_name }}<br /> 
+	{{ utils.render_date_inline(member.requested_service_date) }}. <br /> 
+	{{ service_dates }}</p>
+</td>
+<td style="width: 20%;" valign="top">
+<p>
+	<strong>{{ _('Member Number') }}</strong><br /> 
+	<strong>{{ _('Case Number') }}</strong><br /> 
+	<strong>{{ _('Date of Birth') }}</strong></p>
+</td>
+<td style="width: 25%;" valign="top">
+<p>
+	{{ prior_auth.member_carepoint_id }}<br /> 
+	{{ prior_auth_formatted_id }}<br /> 
+	{{ utils.render_date_inline(prior_auth.member.birthdate) }}</p>
+</td>
+</tr>
+</tbody>
+</table>

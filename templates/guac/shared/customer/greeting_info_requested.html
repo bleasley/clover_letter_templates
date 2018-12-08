@@ -1,0 +1,35 @@
+<table width="98%">
+<tbody>
+	<tr>
+	<td style="width: 25%;" valign="top">
+<p>
+	<strong>{{ _('Case ID') }}</strong><br />
+	<strong>{{ _('Requested Service') }}</strong><br />
+	<strong>{{ _('Request Received') }}</strong><br />
+	<strong>{{ _('Servicing Provider') }}</strong>
+</p>
+</td>
+<td style="width: 27%;" valign="top">
+<p>
+	{{ member.case_id }}<br />
+	{{ member.requested_service }}<br />
+	{{ utils.render_date_inline(member.requested_service_date) }}. <br />
+	{{ provider.name }}</p>
+</td>
+<td style="width: 20%;" valign="top">
+<p>
+	<strong>{{ _('Member') }}</strong><br />
+	<strong>{{ _('Member ID') }}</strong><br />
+	<strong>{{ _('Date of Birth') }}</strong>
+</p>
+</td>
+<td style="width: 25%;" valign="top">
+<p>
+	{{ member.name }}<br />
+	{{ member.id} }<br />
+	{{ member.dob }}
+</p>
+</td>
+	</tr>
+</tbody>
+</table>

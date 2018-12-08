@@ -1,0 +1,35 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/provider/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block member_and_case_info %}
+
+<p style="text-align: center;"><strong>Clover Health Customer Services&emsp;1-888-657-1207</strong><br /> <strong>PO Box 471, Jersey City, NJ 07303-9919</strong></p>
+<h2 class="document-title" style="text-align: center;">{{ _('Detailed Explanation of Non-Coverage') }}</h2>
+
+<p style="text-align: center;"><strong>Important: This notice is to inform you of the service request which you submitted to Clover on &lt;XX/XX/XXXX&gt; in reference to the request for payment of &lt;Service Description&gt; that was denied.</strong></p>
+
+
+  {% include "guac/shared/customer/greeting_info_patient.html" %}
+
+{% endblock %}
+
+
+{% block message %}
+
+<p><strong>{{ _(“Your request was denied”) }}</strong></p>
+<p>{{ _(“After completing our review, we've denied the medical services/items listed below requested by you or your doctor/provider:”) }}</p>
+<p><strong>{{ _(“ Why did we deny your request?”) }}</strong></p>
+<p>{{ _(“Based upon the clinical information provided, the request for payment of is denied because:”) }}</p>
+<p><strong> {{ _(“What if I don't agree with this decision?”) }}</strong></p>
+<p>{{ _(“As a contracted provider, your rights to dispute the decision above are defined in your contract with Clover. If you have any questions or concerns, you may contact Provider Services at”) }} 1-877-853-8019 {{ _(“for more information.”) }}</p>
+<p>{{ _(“Respectfully,”) }}</p>
+<p>, {{ _(“Medical Director”) }}</p>
+
+{% endblock %}
+
+{% block footer %}
+    {{ footer.render(model_numbers={'en': 'H5141_Additional_Information_Requested', 'es': 'H5141_Additional_Information_Requested_SPA'}) }}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/provider/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block member_and_case_info %}
+  {% include "guac/shared/customer/greeting_info_requested.html" %}
+{% endblock %}
+
+
+{% block message %}
+
+
+<p>{{ _("This correspondence is in response to your request for a Prior Authorization Request regarding the services noted above.") }}</p>
+<p>{{ _("Our reviewer is unable to make a determination on the service request based on the available information received. The following information is needed to complete our review:") }}</p>
+
+<p>{{ utils.render_text_block(values.clinical_questions) }}</p>
+
+
+<p>{{ _("Please fax the requested information to") }} (732) 412-4317 {{ _("within 24 hours of receipt of this notice. Be sure to include a copy of this notice with your reply. If we do not receive the requested additional information by within 24 hours of receipt of this notice, we may have to issue a denial.") }}</p>
+<p>{{ _("Please feel free to call") }} 1-888-995-1690 {{ _("between the hours of 9:00 AM to 5:00 PM, Monday through Friday (except holidays) if you have any questions.") }}</p>
+
+
+  {% include "guac/shared/customer/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+    {{ footer.render(model_numbers={'en': 'H5141_Additional_Information_Requested', 'es': 'H5141_Additional_Information_Requested_SPA'}) }}
+
+{% endblock %}

@@ -1,0 +1,2723 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-01-01 12:00-0800\n"
+"PO-Revision-Date: 2018-12-06 12:00-0800\n"
+"Last-Translator: \n"
+"Language-Team: es <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.3.4\n"
+"X-Generator: Poedit 1.8.9\n"
+
+#: src/templates/test_letter.html:9
+msgid "Lob Template Test"
+msgstr "Spanish Lob Template Test"
+
+#: src/templates/guac/appeals/acknowledgment_letter.html:7
+#, python-format
+msgid ""
+"Thank you for contacting Clover Health. This letter is to inform you that we "
+"received your appeal on %(date)s, regarding %(appeal_description)s. An "
+"appeal is a formal way of asking us to review and change a decision we have "
+"made."
+msgstr ""
+"Gracias por comunicarse con Clover Health. Esta carta es para informarle que "
+"recibimos su reconsideración (apelación) el %(date)s con respecto a"
+"%(appeal_description)s.  Una apelación es una manera formal de pedirnos "
+"revisar y modificar una decisión que hayamos tomado."
+
+#: src/templates/guac/appeals/acknowledgment_letter.html:11
+#, python-format
+msgid ""
+"We take your appeal seriously and will work towards resolving the issue(s) "
+"to your satisfaction. Within %(days)s calendar days of receiving your "
+"appeal, we will provide you with a written response about the findings of "
+"the investigation and the action(s) taken to address your concerns."
+msgstr ""
+"Para garantizar la imparcialidad y la pronta tramitación, el proceso de "
+"apelación tiene un conjunto de normas, procedimientos y plazos que usted y "
+"nosotros debemos seguir. Dentro de los %(days)s días calendario de la "
+"recepción de su apelación, le enviaremos una carta con la decisión."
+
+#: src/templates/guac/appeals/aor_cover_letter.html:6
+#: src/templates/guac/appeals/aor_followup_letter.html:6
+#, python-format
+msgid ""
+"On %(date)s, we received a reconsideration (appeal) regarding "
+"%(appeal_description)s, which was submitted on your behalf by "
+"%(reporter_name)s."
+msgstr ""
+"El %(date)s recibimos una reconsideración (apelación) sobre"
+"%(appeal_description)s, que presentó %(reporter_name)s a su nombre."
+
+#: src/templates/guac/appeals/aor_cover_letter.html:11
+#, python-format
+msgid ""
+"In compliance with the Centers for Medicare &amp; Medicaid (CMS) guidelines, "
+"we will not be able to proceed with this appeal unless we receive "
+"documentation appointing %(reporter_name)s as your representative. We have "
+"enclosed an Appointment of Representative (AOR) Form for your convenience. "
+"The Appointment of Representative (AOR) form must be dated and signed by "
+"both you and %(reporter_name)s to be valid."
+msgstr ""
+"En conformidad con las pautas de los Centros de Medicare y Medicaid (CMS), "
+"no podremos continuar con esta apelación a menos que recibamos la "
+"documentación en laque se designa a %(reporter_name)s como su representante. "
+"Para su conveniencia, hemos adjuntado un Formulario de nombramiento de un "
+"representante (AOR). Para que el formulario de nombramiento de un "
+"representante (AOR) sea válido, debe estar fechado y firmado por usted y "
+"%(reporter_name)s."
+
+#: src/templates/guac/appeals/aor_cover_letter.html:14
+#: src/templates/guac/grievances/aor_cover_letter.html:14
+#: src/templates/guac/grievances/aor_followup_letter.html:14
+#: src/templates/guac/prior_auths/aor_cover_letter.html:14
+#: src/templates/guac/prior_auths/aor_followup_letter.html:15
+msgid ""
+"In the case where a member is incapacitated or legally incompetent, legal "
+"documentation such as a court-ordered guardianship or conservatorship, "
+"durable power of attorney, or healthcare power of attorney should be "
+"submitted."
+msgstr ""
+"En el caso de que el miembro sea discapacitado o incapaz desde el punto de "
+"vista legal, se debe enviar la documentación legal, como una tutela o "
+"custodia ordenada judicialmente, un poder de representación duradero o un "
+"poder de representación para la atención médica."
+
+#: src/templates/guac/appeals/aor_cover_letter.html:16
+#: src/templates/guac/appeals/aor_followup_letter.html:21
+#: src/templates/guac/grievances/aor_cover_letter.html:16
+#: src/templates/guac/grievances/aor_followup_letter.html:20
+msgid ""
+"You may return the form and/or legal appointment of representative "
+"documentation either via facsimile at (732) 412-9706 or mail at:"
+msgstr ""
+"Puede enviar el formulario o la documentación legal del nombramiento de un "
+"representante por fax al (732) 412-9706 o por correo a:"
+
+#: src/templates/guac/appeals/aor_cover_letter.html:20
+#: src/templates/guac/appeals/aor_followup_letter.html:25
+#: src/templates/guac/grievances/aor_cover_letter.html:20
+#: src/templates/guac/grievances/aor_followup_letter.html:24
+#: src/templates/guac/prior_auths/aor_cover_letter.html:20
+#: src/templates/guac/prior_auths/aor_followup_letter.html:25
+msgid ""
+"We value your membership with Clover Health and look forward to continuing "
+"to service your medical needs."
+msgstr ""
+"Valoramos su membresía en Clover Health y esperamos seguir brindándole "
+"servicios para sus necesidades médicas."
+
+#: src/templates/guac/appeals/aor_followup_letter.html:11
+#, python-format
+msgid ""
+"I am writing to follow up on the letter we sent you on "
+"%(previous_aor_date)s. As stated in this letter, in compliance with Centers "
+"for Medicare &amp; Medicaid (CMS) guidelines, we will not be able to proceed "
+"with your appeal unless we receive documentation appointing "
+"%(reporter_name)s as your representative. Authorization must be in the form "
+"of a signed written Appointment of Representative (AOR) form. The "
+"Appointment of Representation form must be dated and signed by both the "
+"member and %(reporter_name)s to be valid."
+msgstr ""
+"Le escribimos para hacer un seguimiento de la carta que le enviamos el "
+"%(previous_aor_date)s. Tal como se establece en esta carta, en conformidad "
+"con las pautas de los Centros de Medicare y Medicaid (CMS), no podremos "
+"continuar con su apelación a menos que recibamos la documentación en la que "
+"se designa a %(reporter_name)s como su representante. La autorización debe "
+"realizarse a través de un formulario de nombramiento de un representante "
+"(AOR) firmado y por escrito. Para que el formulario de nombramiento de un "
+"representante sea válido, debe estar fechado y firmado por el miembro y "
+"%(reporter_name)s."
+
+#: src/templates/guac/appeals/aor_followup_letter.html:15
+msgid ""
+"In the case where a member is incapacitated or legally incompetent, legal "
+"documentation such as a court-ordered guardianship or conservatorship, "
+"durable power of attorney or healthcare power of attorney should be "
+"submitted."
+msgstr ""
+"En el caso de que el miembro sea discapacitado o incapaz desde el punto de "
+"vista legal, se debe enviar la documentación legal, como una tutela o "
+"custodia ordenada judicialmente, un poder de representación duradero o un "
+"poder de representación para la atención médica."
+
+#: src/templates/guac/appeals/aor_followup_letter.html:17
+#, python-format
+msgid ""
+"As of today, our records show that you have not submitted documentation "
+"appointing %(reporter_name)s as your representative.  In accordance with CMS "
+"guidelines, we are extending the timeframe for submitting this documentation "
+"by an additional 14 calendar days. If we do not receive the appropriate "
+"documentation by %(dismissal_date)s, we will dismiss your appeal case."
+msgstr ""
+"Hasta el momento, nuestros registros indican que usted no ha enviado la "
+"documentación en la que se designa a %(reporter_name)s como su "
+"representante. Según las pautas de los CMS, extenderemos el plazo para "
+"enviar esta documentación a 14 días calendario adicionales. Si no recibimos "
+"la documentación correspondiente antes del %(dismissal_date)s, rechazaremos "
+"el caso de su apelación."
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:6
+msgid "CLOVER HEALTH PROVIDER APPEAL UPHOLD LETTER"
+msgstr ""
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:10
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:9
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:10
+#: src/templates/guac/prior_auths/ndcs.html:49
+msgid "Member Name"
+msgstr "Nombre de miembro"
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:13
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:12
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:14
+msgid "Total Billed Amount"
+msgstr ""
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:18
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:22
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:17
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:19
+#: src/templates/guac/appeals/post_service_acknowledgment.html:17
+#: src/templates/guac/shared/appeals/member_and_case_info.html:14
+msgid "Date of Service"
+msgstr "Fecha de Servicio"
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:21
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:20
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:23
+#: src/templates/guac/appeals/post_service_acknowledgment.html:20
+msgid "Claim #"
+msgstr ""
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:26
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:25
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:28
+msgid "PDR Received Date"
+msgstr "Fecha de recepción de la solicitud"
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:30
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:29
+#: src/templates/guac/appeals/post_service_acknowledgment.html:29
+msgid "PDR Case #"
+msgstr ""
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:38
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:37
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:40
+msgid "Dear Provider"
+msgstr "Proveedor"
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:43
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:45
+#, python-format
+msgid ""
+"Clover Health received a payment claim dispute regarding the claim "
+"referenced above. Upon careful review of this payment dispute, we have "
+"determined that the initial claim payment decision is being "
+"%(upheald_or_partial)s for the following reason(s):"
+msgstr ""
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:50
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:52
+msgid ""
+"This payment dispute is now closed. If you believe that this determination "
+"is not correct, you have the right to file a complaint with 1-800-MEDICARE."
+msgstr ""
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:55
+msgid ""
+"If you have any questions or additional information regarding the resolution "
+"of this dispute, please contact our Appeals Department at (888) 995-1692, "
+"Monday thru Friday from 9 am to 5 pm EST. Please use the PDR Case ID Number "
+"listed above to reference the case."
+msgstr ""
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:61
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:18
+#: src/templates/guac/prior_auths/denial_letter.html:111
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:109
+msgid "What happens next?"
+msgstr "¿Qué ocurre después?"
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:66
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:20
+msgid ""
+"Medicare requires us to send your case to MAXIMUS Federal Services, Inc. to "
+"make sure we made the right decision. MAXIMUS is an independent reviewer."
+msgstr ""
+"Medicare nos exige que enviemos su caso a MAXIMUS Federal Services, Inc. "
+"para asegurarse de que tomamos la decisión correcta. MAXIMUS es un revisor "
+"independiente."
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:71
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:22
+msgid ""
+"You have the right to submit additional information that may be important to "
+"the review."
+msgstr ""
+"Usted tiene derecho a presentar información adicional que puede ser "
+"importante para la revisión."
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:76
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:24
+msgid ""
+"MAXIMUS will contact you soon to let you know where to send any additional "
+"information and about other rights you may have."
+msgstr ""
+"MAXIMUS se comunicará con usted pronto para informarle adónde debe enviar la "
+"información adicional y sobre otros derechos que pueda tener"
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:81
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:26
+msgid ""
+"You have the right to get a copy of the case file we are sending to MAXIMUS. "
+"Call us at 1(888) 657-1207 to get a copy of your case file. TTY users should "
+"call 711. There may be a small fee to copy your file and send it to you. We "
+"are open 8 a.m. - 8 p.m. EST, 7 days a week. From February 15 through "
+"September 30, alternate technologies (for example, voicemail) will be used "
+"on the weekends and holidays."
+msgstr ""
+"Usted tiene derecho a obtener una copia del expediente del caso que le "
+"enviamos a MAXIMUS. Llámenos al 1 (888) 657-1207 para obtener una copia del "
+"expediente de su caso. Los usuarios de TTY deben llamar al 711. Es posible "
+"que deba pagar un cargo mínimo por fotocopiar el expediente y por enviárselo"
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:86
+#: src/templates/guac/appeals/denial_oon_letter.html:21
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:28
+msgid "Need more help?"
+msgstr "¿Necesita más ayuda?"
+
+#: src/templates/guac/appeals/denial_clinical_oon_letter.html:91
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:30
+msgid ""
+"Call 1-800-MEDICARE (1-800-633-4227) 24 hours a day, 7 days a week, for help "
+"or more information about the appeals process. TTY users should call "
+"1-877-486-2048."
+msgstr ""
+"Llame al 1-800- MEDICARE (1-800- 633-4227) durante las 24 horas, los 7 días "
+"de la semana para obtener ayuda o información adicional sobre el proceso de "
+"apelaciones. Los usuarios de TTY deben llamar al 1-877- 486-2048."
+
+#: src/templates/guac/appeals/denial_inn_letter.html:6
+#, python-format
+msgid ""
+"This notice is to inform you of the appeal request which you submitted to "
+"Clover on %(date_received)s in reference to the request for payment of "
+"%(appeal_description)s that was denied."
+msgstr ""
+"Este aviso es para informarle con respecto a la solicitud de apelación que "
+"envió a Clover el %(date_received)s en relación con la solicitud de pago de "
+"%(appeal_description)s que fue denegada."
+
+#: src/templates/guac/appeals/denial_inn_letter.html:11
+#, python-format
+msgid ""
+"Based upon the clinical information provided, the request for payment of "
+"%(appeal_description)s remains denied."
+msgstr ""
+"Sobre la base de la información clínica provista, la solicitud de pago de "
+"%(appeal_description)s sigue denegada."
+
+#: src/templates/guac/appeals/denial_inn_letter.html:16
+msgid ""
+"Clover’s Medical Director reviewed the facts in the case and the decision "
+"was made to uphold the denial for coverage and/or payment for the services "
+"requested and/or provided."
+msgstr ""
+"El Director Médico de Clover revisó la información de su caso y se tomó la "
+"decisión de mantener la denegación de cobertura/pago de los servicios "
+"solicitados/provistos."
+
+#: src/templates/guac/appeals/denial_inn_letter.html:18
+msgid ""
+"Per contract, as an in network provider, you are not entitled to a second "
+"level appeal. This is the final decision for an authorization. If you have "
+"any questions or concerns, you may contact the Appeals and Grievances "
+"Department."
+msgstr ""
+"Conforme al contrato, como proveedor de la red, usted no tiene derecho a una "
+"apelación de segundo nivel. Esta es la decisión final con respecto a la "
+"autorización. Si tiene preguntas o inquietudes, puede comunicarse con el "
+"Departamento de Apelaciones y Reclamos."
+
+#: src/templates/guac/appeals/denial_oon_letter.html:6
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:11
+#, python-format
+msgid ""
+"This notice tells you about the appeal request you sent to Clover Health "
+"regarding %(appeal_description)s"
+msgstr ""
+"En este aviso se le informa sobre la solicitud de apelación que envió a "
+"Clover Health sobre %(appeal_description)s"
+
+#: src/templates/guac/appeals/denial_oon_letter.html:9
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:14
+msgid ""
+"We looked at the facts in your case, and decided that our first decision to "
+"deny coverage and/or payment for the service was right"
+msgstr ""
+"Analizamos los datos de su caso, y llegamos a la conclusión de que nuestra "
+"primera decisión de negarle la cobertura o el pago del servicio era correcta."
+
+#: src/templates/guac/appeals/denial_oon_letter.html:11
+msgid "What happens next"
+msgstr "¿Qué sucede después?"
+
+#: src/templates/guac/appeals/denial_oon_letter.html:13
+msgid ""
+"Medicare requires us to send your case to MAXIMUS Federal Services, Inc. to "
+"make sure we made the right decision. MAXIMUS is an independent reviewer"
+msgstr ""
+"Medicare nos exige que enviemos su caso a MAXIMUS Federal Services, Inc. "
+"para asegurarse de que tomamos la decisión correcta. MAXIMUS es un revisor "
+"independiente."
+
+#: src/templates/guac/appeals/denial_oon_letter.html:15
+msgid ""
+"You have the right to submit additional information that may be important to "
+"the review"
+msgstr ""
+"Usted tiene derecho a presentar información adicional que puede ser "
+"importante para la revisión."
+
+#: src/templates/guac/appeals/denial_oon_letter.html:17
+msgid ""
+"MAXIMUS will contact you soon to let you know where to send any additional "
+"information and about other rights you may have"
+msgstr ""
+"MAXIMUS se comunicará con usted pronto para informarle adónde debe enviar la "
+"información adicional y sobre otros derechos que pueda tener"
+
+#: src/templates/guac/appeals/denial_oon_letter.html:19
+msgid ""
+"You have the right to get a copy of the case file we are sending to MAXIMUS. "
+"Call us at 1-888-657-1207 to get a copy of your case file. TTY users should "
+"call 711. There may be a small fee to copy your file and send it to you"
+msgstr ""
+"Usted tiene derecho a obtener una copia del expediente del caso que le "
+"enviamos a MAXIMUS. Llámenos al 1-888-657-1207 para obtener una copia del "
+"expediente de su caso. Los usuarios de TTY deben llamar al 711. Es posible "
+"que deba pagar un cargo mínimo por fotocopiar el expediente y por enviárselo."
+
+#: src/templates/guac/appeals/denial_oon_letter.html:23
+msgid ""
+"Call 1-800-MEDICARE (1-800-633-4227) 24 hours a day, 7 days a week, for help "
+"or more information about the appeals process. TTY users should call "
+"1-877-486-2048"
+msgstr ""
+"Llame al 1-800- MEDICARE (1-800- 633-4227) durante las 24 horas, los 7 días "
+"de la semana para obtener ayuda o información adicional sobre el proceso de "
+"apelaciones. Los usuarios de TTY deben llamar al 1-877- 486-2048."
+
+#: src/templates/guac/appeals/misclassified_letter.html:6
+msgid ""
+"We initially categorized your complaint as an Appeal but upon further review "
+"we have determined your complaint to be a Grievance. This change will not "
+"affect the quality or the timeliness of our review on your request."
+msgstr ""
+"Inicialmente, categorizamos su queja como una apelación, pero después de "
+"revisarla más en detalle hemos determinado que su queja es un reclamo . Este "
+"cambio no afectará la calidad ni la puntualidad de nuestra revisión de su "
+"solicitud."
+
+#: src/templates/guac/appeals/misclassified_letter.html:8
+#, python-format
+msgid ""
+"Your Appeal, which was received on %(date)s, has been forwarded to our "
+"Grievance and Appeals Department to be handled through the Grievance process."
+msgstr ""
+"Su reclamo, que recibimos el %(date)s, se ha enviado a nuestro Departamento "
+"de Reclamos y Apelaciones para poder trabajar mediante el proceso de "
+"reclamos."
+
+#: src/templates/guac/appeals/misclassified_letter.html:11
+#: src/templates/guac/grievances/misclassified_letter.html:12
+#, python-format
+msgid ""
+"We will thoroughly review your Appeal and respond to your concerns within "
+"%(calendar_days)s calendar days from our initial receipt date of your "
+"request. If we cannot reach a decision within this time frame, we will let "
+"you know in writing why the decision is being delayed."
+msgstr ""
+"Revisaremos minuciosamente su apelación y responderemos a sus inquietudes "
+"dentro de %(calendar_days)s días calendario a partir de la fecha de "
+"recepción inicial de su solicitud. Si no podemos tomar una decisión dentro "
+"de este plazo,le informaremos por escrito el motivo del retraso de la "
+"decisión."
+
+#: src/templates/guac/appeals/no_good_cause_denial_letter.html:6
+#, python-format
+msgid ""
+"We received your letter on %(date)s, in which you provided us additional "
+"information to support good cause for not submitting your appeal in a timely "
+"manner. We have considered your reason(s) for late submission and have "
+"determined that your reason(s) for the delay does not meet criteria because "
+"%(reason_description)s. Therefore, we are unable to consider your request."
+msgstr ""
+"Recibimos su carta el %(date)s, en la que nos brindó información adicional "
+"para respaldar una causa justificada por la cual no envió su apelación en "
+"forma oportuna. Hemos considerado su(s) motivo(s) para el envío tardío y "
+"hemos determinado que el (los) motivo(s) por el cual (los cuales) justifica "
+"su retraso no cumple(n) con los criterios porque %(reason_description)s.  "
+"Por lo tanto, no podemos considerar su solicitud."
+
+#: src/templates/guac/appeals/no_good_cause_denial_letter.html:10
+msgid ""
+"If you disagree with our decision, you have a right to file a grievance. You "
+"may file this request in writing or by contacting our Customer Service "
+"department at the phone number listed below. Additional information may be "
+"found in your Evidence of Coverage."
+msgstr ""
+"Si no está de acuerdo con nuestra decisión, usted tiene derecho a presentar "
+"un reclamo. Puede presentar esta solicitud por escrito o llamar a nuestro "
+"departamento de Servicio al cliente al número de teléfono que se detalla a "
+"continuación. Puede encontrar información adicional en la Evidencia de "
+"cobertura."
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:6
+msgid "DISMISSAL LETTER"
+msgstr ""
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:9
+#: src/templates/guac/appeals/wol_letter.html:110
+#: src/templates/guac/prior_auths/denc.html:62
+#: src/templates/guac/prior_auths/ndcs.html:45
+#: src/templates/guac/prior_auths/nomnc.html:71
+#: src/templates/guac/prior_auths/nomnc.html:170
+#: src/templates/guac/shared/appeals/member_and_case_info.html:5
+#: src/templates/guac/shared/grievances/member_and_case_info.html:5
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:11
+msgid "Date"
+msgstr "Fecha"
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:12
+#: src/templates/guac/appeals/post_service_acknowledgment.html:9
+#: src/templates/guac/shared/appeals/member_and_case_info.html:8
+#: src/templates/guac/shared/grievances/member_and_case_info.html:9
+msgid "Name"
+msgstr "Nombre"
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:15
+#: src/templates/guac/appeals/post_service_acknowledgment.html:12
+#: src/templates/guac/shared/appeals/member_and_case_info.html:9
+#: src/templates/guac/shared/grievances/member_and_case_info.html:13
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:64
+msgid "Member ID"
+msgstr "Identificación del Miembro"
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:18
+#: src/templates/guac/prior_auths/denc.html:70
+#: src/templates/guac/prior_auths/nomnc.html:79
+#: src/templates/guac/shared/appeals/member_and_case_info.html:12
+#: src/templates/guac/shared/grievances/member_and_case_info.html:14
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:13
+msgid "Case ID"
+msgstr "No. de ident. de caso"
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:26
+msgid "Health Plan Name/Medicare Contract Number"
+msgstr "Nombre del plan de salud/Número de contrato de Medicare"
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:29
+msgid "Health Plan Contact Fax Number"
+msgstr "Número de fax de contacto del plan de salud"
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:35
+#, python-format
+msgid ""
+"We dismissed the appeal request you filed on %(date)s. We can’t process your "
+"appeal request because %(reason_description)s."
+msgstr ""
+"Rechazamos la solicitud de apelación que presentó el %(date)s. No podemos "
+"procesar su solicitud de apelación porque %(reason_description)s"
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:39
+msgid ""
+"If you have any further questions or concerns regarding this notice or your "
+"appeal, please contact Customer Service at 1-888-657-1207. TTY users should "
+"call 711. We are open 8 a.m. - 8 p.m. EST, 7 days a week. From February 15 "
+"through September 30, alternate technologies (for example, voicemail) will "
+"be used on the weekends and holidays."
+msgstr ""
+"Si tiene alguna pregunta o información adicional relacionada con esta "
+"revisión entretanto, llame al Servicio al cliente al 1-888-657-1207. Los "
+"usuarios de TTY deben llamar al 711. Estamos disponibles los 7 días de la "
+"semana de 8 a.m.a 8 p.m., hora del este. Desde el 15 de febrero hasta el 30 "
+"de septiembre, se usarán tecnologías alternativas (por ejemplo, correo de "
+"voz) los fines de semana y los feriados."
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:40
+msgid ""
+"If you disagree with our decision to dismiss your appeal request, you have "
+"the right to ask an independent reviewer contracted with Medicare to review "
+"our decision. You must mail or fax your written request within 60 calendar "
+"days of receipt of this Notice of Dismissal of Appeal Request to:"
+msgstr ""
+"Si no está de acuerdo con nuestra decisión de rechazar su solicitud de "
+"apelación, usted tiene derecho a solicitar que un revisor independiente "
+"contratado por Medicare revise nuestra decisión. Debe enviar la solicitud "
+"escrita por correo o por fax dentro de los 60 días calendario de recibido "
+"este Aviso de rechazo de solicitud de apelación a la siguiente dirección:"
+
+#: src/templates/guac/appeals/notice_of_dismissal_of_request_letter.html:57
+msgid ""
+"Include a copy of this letter along with any supporting information with "
+"your request for review. The independent reviewer will send you a notice of "
+"its decision. If the independent reviewer agrees that your appeal should not "
+"have been dismissed, your appeal request will be returned to Clover Health "
+"Plan for processing."
+msgstr ""
+"Incluya una copia de este Aviso de rechazo de solicitud de apelación junto "
+"con la información de respaldo con su solicitud para su revisión. El revisor "
+"independiente le enviará un aviso de su decisión. Si el revisor "
+"independiente está de acuerdo con que su apelación no debería haber sido "
+"rechazada, se enviará su solicitud de apelación nuevamente al plan Clover "
+"Health para su procesamiento."
+
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:6
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:6
+msgid "CLOVER HEALTH PAYMENT DISPUTE UPHOLD LETTER"
+msgstr ""
+
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:43
+msgid ""
+"Clover Health received a payment claim dispute regarding the claim "
+"referenced above.  Upon careful review of this dispute, we have determined "
+"that the initial claim payment decision is being upheld for the following "
+"reason(s):"
+msgstr ""
+
+#: src/templates/guac/appeals/pd_denial_inn_letter.html:52
+msgid ""
+"This dispute is now closed. If you require additional information regarding "
+"the resolution of this dispute, please contact our Provider Services at "
+"(877) 853-8019, Monday thru Friday from 8 am to 5:30 pm EST.  Please use the "
+"PDR Case ID Number listed above to reference the claim."
+msgstr ""
+
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:32
+msgid "Clover PDR Case #"
+msgstr ""
+
+#: src/templates/guac/appeals/pd_denial_oon_letter.html:57
+msgid ""
+"If you have any questions or additional information regarding the resolution "
+"of this dispute, please contact our Provider Services at (877) 853-8019, "
+"Monday thru Friday from 9 am to 5 pm EST. Please use the PDR Case ID Number "
+"listed above to reference the case."
+msgstr ""
+
+#: src/templates/guac/appeals/post_service_acknowledgment.html:6
+msgid "POST-SERVICE PAYMENT DISPUTE ACKNOWLEDGMENT LETTER"
+msgstr ""
+
+#: src/templates/guac/appeals/post_service_acknowledgment.html:25
+msgid "Received Date"
+msgstr "Fecha de recepción de la solicitud"
+
+#: src/templates/guac/appeals/post_service_acknowledgment.html:37
+#: src/templates/guac/shared/appeals/base_letter.html:6
+#: src/templates/guac/shared/grievances/base_letter.html:6
+#: src/templates/guac/shared/prior_auths/base_letter.html:6
+msgid "Dear"
+msgstr "Estimado/a"
+
+#: src/templates/guac/appeals/post_service_acknowledgment.html:43
+#, python-format
+msgid ""
+"Thank you for contacting Clover Health. This letter is to inform you that we "
+"received your %(dispute_or_appeal)s regarding the service referenced above. "
+"The case will be reviewed and a resolution will be sent."
+msgstr ""
+"Gracias por comunicarse con Clover Health. Esta carta es para informarle que "
+"recibimos su reconsideración (apelación) el %(date)s con respecto a"
+"%(appeal_description)s.  Una apelación es una manera formal de pedirnos "
+"revisar y modificar una decisión que hayamos tomado."
+
+#: src/templates/guac/appeals/post_service_acknowledgment.html:49
+#, python-format
+msgid ""
+"If you have not received a response or resolution within %(num_days)s "
+"calendar days from the date of receipt, please contact Provider Services at "
+"(877) 853-8019, Monday thru Friday from 8 am to 5:30 pm EST.  Please use the "
+"PDR Case ID Number listed above to reference the claim."
+msgstr ""
+
+#: src/templates/guac/appeals/post_service_appeal_overturn_letter.html:6
+#, python-format
+msgid ""
+"We are writing in response to your appeal received on %(date)s regarding the "
+"request for approval of service %(appeal_description)s. We appreciate the "
+"opportunity to review your concern."
+msgstr ""
+"Nos dirigimos a usted en respuesta a su apelación recibida el %(date)s sobre "
+"la solicitud de aprobación de un servicio %(appeal_description)s. Le "
+"agradecemos la oportunidad de poder revisar su inquietud."
+
+#: src/templates/guac/appeals/post_service_appeal_overturn_letter.html:10
+#, python-format
+msgid ""
+"After a thorough review of your concern and your plan benefits, we have "
+"reconsidered our original decision and approved your request for payment of "
+"%(type_of_service)s. You will receive an Explanation of Benefits (EOB) "
+"showing the approval of service(s) and check in the amount of "
+"%(claim_amount)s in the mail."
+msgstr ""
+"Después de revisar minuciosamente su inquietud y los beneficios de su plan,"
+"hemos reconsiderado nuestra decisión original y aprobado su solicitud de "
+"pago de %(type_of_service)s. Le enviaremos por correo una Explicación de "
+"beneficios (EOB) en la que se detalla la aprobación del (de los) servicio(s) "
+"y un cheque por un monto de %(claim_amount)s."
+
+#: src/templates/guac/appeals/post_service_appeal_overturn_letter.html:14
+msgid ""
+"Thank you for bringing your concerns to our attention. We apologize for any "
+"inconvenience this matter may have caused you."
+msgstr ""
+"Gracias por comunicarnos sus inquietudes. Le pedimos disculpas por cualquier "
+"inconveniente que pudo haberle ocasionado este asunto."
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:5
+msgid "Pre-Service Overturn Letter"
+msgstr "Carta de anulación previa al servicio"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:10
+#, python-format
+msgid "Member: %(member_firstname)s %(member_lastname)s"
+msgstr "Miembro: %(member_firstname)s %(member_lastname)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:15
+#, python-format
+msgid "Member ID: %(member_id)s"
+msgstr "Identificación del Miembro: %(member_id)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:18
+#, python-format
+msgid "Case ID: %(appeal_id)s"
+msgstr "No. de ident. de caso: %(appeal_id)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:21
+#, python-format
+msgid "DOS: %(date_of_service)s"
+msgstr "Fecha de Servicio: %(date_of_service)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:24
+#, python-format
+msgid "Auth Number: %(auth_number)s"
+msgstr "Número de Autorización: %(auth_number)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:32
+#, python-format
+msgid ""
+"We completed the review of our initial decision to deny or discontinue a "
+"service based on your Request for Reconsideration (appeal) on %(date)s. "
+"Clover Health has decided in your favor and overturned the original denial."
+msgstr ""
+"Completamos la revisión de nuestra decisión inicial de denegar o suspender "
+"un servicio en función de su Solicitud de reconsideración (apelación) el "
+"%(date)s.Clover Health ha decidido a su favor y anuló la denegación original."
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:35
+msgid ""
+"The denied or discontinued service that was under dispute has now been "
+"authorized. The authorization was processed as follows:"
+msgstr ""
+"El servicio denegado o suspendido que estaba en litigio ha sido autorizado. "
+"La autorización se procesó de la siguiente manera:"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:37
+#, python-format
+msgid "Date(s) of Service: %(service_date)s"
+msgstr "Fecha(s) del servicio: %(service_date)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:39
+#, python-format
+msgid "Provider Authorization Number(s): %(auth_number)s"
+msgstr "Número(s) de autorización del proveedor: %(auth_number)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:42
+#, python-format
+msgid "Number of Visits Approved: %(number_of_visits)s"
+msgstr "Cantidad de visitas aprobadas: %(number_of_visits)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:45
+#, python-format
+msgid "Type of Service(s): %(auth_description)s"
+msgstr "Tipo de servicio(s): %(auth_description)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:47
+#, python-format
+msgid "Begin/End and Approval Date(s): %(start_date)s - %(end_date)s"
+msgstr ""
+"Fecha(s) de comienzo/finalización y de aprobación: %(start_date)s - "
+"%(end_date)s"
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:51
+msgid ""
+"We appreciate your patience while we investigated your appeal, and we "
+"apologize for any inconvenience this may have caused you."
+msgstr ""
+"Le agradecemos su paciencia mientras investigamos su apelación y le pedimos "
+"disculpas por cualquier inconveniente que esto pudo haberle ocasionado."
+
+#: src/templates/guac/appeals/pre_service_appeal_overturn_letter.html:54
+msgid ""
+"If you have any further questions or additional information related\n"
+"    to this review in the interim, please call Appeals Department at\n"
+"    1-888-995-1692. TTY users should call 711. We are open 8 a.m. - 8 p.m. "
+"EST,\n"
+"    7 days a week. From February 15 through September 30, alternate "
+"technologies\n"
+"    (for example, voicemail) will be used on the weekends and holidays."
+msgstr ""
+"Si tiene alguna pregunta o necesita información adicional, llame a "
+"Departamento de Apelaciones al 1-888-657-1207. Los usuarios de TTY deben "
+"llamar al 711. Estamos disponibles los 7 días de la semana, de 8.00 a. m. a "
+"8.00 p. m., hora local. Desde el 15 de febrero hasta el 30 de septiembre, se "
+"usarán tecnologías alternativas (por ejemplo, correo de voz) los fines de "
+"semana y los feriados."
+
+#: src/templates/guac/appeals/pre_service_upheld_letter.html:6
+msgid "Your Appeal Status"
+msgstr "Estado de su apelación"
+
+#: src/templates/guac/appeals/request_to_contact_plan_letter.html:7
+#, python-format
+msgid ""
+"This letter is to inform you that the Clover Health Grievance and Appeals "
+"Department received an Appeal from you and/or your appointed representative "
+"on %(date)s; however, we need additional information from you in order to "
+"process your request. We have made numerous attempts to contact you by phone "
+"but we have been unsuccessful in reaching you."
+msgstr ""
+"Esta carta es para informarle que el Departamento de Reclamos y Apelaciones "
+"de Clover Health recibió una apelación que usted o su representante "
+"designado nos envió el %(date)s. No obstante, necesitamos que nos envíe "
+"información adicional para poder procesar su solicitud. Hemos intentado "
+"comunicarnos por teléfono con usted varias veces pero no hemos podido hablar "
+"con usted."
+
+#: src/templates/guac/appeals/request_to_contact_plan_letter.html:10
+#, python-format
+msgid ""
+"Please contact Customer Service at 1-888-657-1207 by %(compliance_date)s so "
+"that we can get the additional information that we need in order to process "
+"your appeal."
+msgstr ""
+"Comuníquese con el Servicio al cliente al 1-888-657-1207 antes del "
+"%(compliance_date)s para que podamos obtener la información adicional que "
+"necesitamos para poder procesar su apelación."
+
+#: src/templates/guac/appeals/request_to_withdraw_appeal_response_letter.html:6
+#, python-format
+msgid ""
+"This correspondence is in response to your request to withdraw your "
+"reconsideration (appeal) of %(appeal_description)s."
+msgstr ""
+"Esta carta es en respuesta a su solicitud para retirar su "
+"reconsideración(apelación) de %(appeal_description)s."
+
+#: src/templates/guac/appeals/request_to_withdraw_appeal_response_letter.html:9
+#, python-format
+msgid ""
+"On %(date)s, we discussed the request to withdraw the reconsideration "
+"(appeal) for the following reason: %(withdraw_reason)s."
+msgstr ""
+"El %(date)s, analizamos su decisión de retirar la reconsideración "
+"(apelación)por el siguiente motivo: %(withdraw_reason)s."
+
+#: src/templates/guac/appeals/request_to_withdraw_appeal_response_letter.html:13
+#, python-format
+msgid ""
+"Guidance set forth by the Centers for Medicare and Medicaid Services (CMS) "
+"states that the party who files a request for reconsideration (appeal) may "
+"withdraw the request at any time before a decision on the appeal is made by "
+"submitting a written request. Please sign both copies of the enclosed "
+"Request to Withdraw Appeal Form and return one copy by %(withdraw_date)s. "
+"Once your written request is received, your appeal will be formally "
+"withdrawn and your case will be closed. Please retain one copy of the signed "
+"form for your records."
+msgstr ""
+"Las pautas estipuladas por los Centros de Servicios de Medicare y "
+"Medicaid(CMS) establecen que la parte que presenta una solicitud de "
+"reconsideración(apelación) puede retirar la solicitud en cualquier momento "
+"antes de que se tome una decisión sobre la apelación mediante una solicitud "
+"por escrito.  Firme las dos copias del Formulario de solicitud para retirar "
+"una apelación adjunto y envíe una copia antes del %(withdraw_date)s. Una vez "
+"que recibamos su solicitud por escrito, esta será formalmente retirada y se "
+"cerrará su caso. Guarde una copia del formulario firmado para sus archivos."
+
+#: src/templates/guac/appeals/request_to_withdraw_appeal_response_letter.html:16
+msgid ""
+"You may fax the signed form to (732) 412-9706, or send the plan’s copy via "
+"First Class Mail using the enclosed self-addressed and postage paid envelope "
+"to the following address:"
+msgstr ""
+"Puede enviar el formulario firmado por fax al (732) 412-9706, o enviar la "
+"copia del plan a través de First Class Mail con el sobre adjunto con "
+"estampilla postal y franqueo pagado a la siguiente dirección:"
+
+#: src/templates/guac/appeals/wol_letter.html:60
+msgid "WAIVER OF LIABILITY STATEMENT"
+msgstr "DECLARACIÓN DE RENUNCIA DE RESPONSABILIDAD"
+
+#: src/templates/guac/appeals/wol_letter.html:69
+msgid "Enrollee's Name"
+msgstr "Nombre del inscrito"
+
+#: src/templates/guac/appeals/wol_letter.html:71
+msgid "Medicare/HIC Number"
+msgstr "Número de Medicare/HIC"
+
+#: src/templates/guac/appeals/wol_letter.html:79
+msgid "Provider"
+msgstr "Proveedor"
+
+#: src/templates/guac/appeals/wol_letter.html:81
+msgid "Dates of Service"
+msgstr "Fechas de servicio"
+
+#: src/templates/guac/appeals/wol_letter.html:89
+msgid "Health Plan"
+msgstr "Plan de salud"
+
+#: src/templates/guac/appeals/wol_letter.html:98
+msgid ""
+"I hereby waive any right to collect payment from the above-mentioned member "
+"for the aforementioned services for which payment has been denied by the "
+"above-referenced health plan. I understand that the signing of this waiver "
+"does not negate my right to request further appeal under 42 CFR 422.600."
+msgstr ""
+"Por medio de la presente renuncio a cualquier derecho a cobrarle al miembro "
+"mencionado anteriormente por los servicios descritos anteriormente cuyos "
+"pagos han sido denegados por el plan de salud indicado anteriormente. "
+"Comprendo que la firma de esta renuncia no invalida mi derecho a solicitar "
+"una apelación en el futuro, conforme al Título 42, Sección 422.600 del "
+"Código de Regulaciones Federales (CFR)."
+
+#: src/templates/guac/appeals/wol_letter.html:108
+msgid "Signature"
+msgstr "Firma"
+
+#: src/templates/guac/grievances/acknowledgment_letter.html:6
+#, python-format
+msgid ""
+"Thank you for contacting Clover Health. This letter is to inform you that we "
+"received your grievance on %(date)s regarding %(description)s."
+msgstr ""
+"Gracias por comunicarse con Clover Health. Esta carta es para informarle que "
+"recibimos su reclamo el %(date)s sobre %(description)s."
+
+#: src/templates/guac/grievances/acknowledgment_letter.html:10
+msgid ""
+"We take your grievance seriously and will work towards resolving the "
+"issue(s) to your satisfaction. Within thirty (30) calendar days of receiving "
+"your grievance, we will provide you with a written response about the "
+"findings of the investigation and the action(s) taken to address your "
+"concerns."
+msgstr ""
+"Tomamos su reclamo de manera seria y trabajaremos para resolver el "
+"(los)problema(s) a su satisfacción. Dentro de los treinta (30) días "
+"calendario posteriores a la recepción de su reclamo, le enviaremos una "
+"respuesta por escrito sobre los hallazgos de la investigación y la(s) "
+"medida(s) que se tomará(n) para tratar sus inquietudes."
+
+#: src/templates/guac/grievances/acknowledgment_letter.html:12
+#: src/templates/guac/grievances/decision_letter.html:13
+#: src/templates/guac/grievances/general_qoc_resolution_letter.html:25
+#: src/templates/guac/grievances/provider_qoc_resolution_letter.html:35
+msgid ""
+"Thank you for taking the time to bring your concerns to our attention. We "
+"value your membership and appreciate the opportunity to serve your "
+"healthcare needs."
+msgstr ""
+"Gracias por tomarse el tiempo para comunicarnos sus inquietudes. Valoramos "
+"su membresía y apreciamos la oportunidad de poder satisfacer sus necesidades "
+"de atención médica."
+
+#: src/templates/guac/grievances/aor_cover_letter.html:5
+#: src/templates/guac/grievances/aor_followup_letter.html:5
+#, python-format
+msgid ""
+"On %(date)s, we received a grievance (complaint) regarding %(description)s, "
+"which was submitted on your behalf by %(reporter_name)s."
+msgstr ""
+"El %(date)s, recibimos un reclamo (queja) sobre %(description)s, que "
+"presentó %(reporter_name)s a su nombre."
+
+#: src/templates/guac/grievances/aor_cover_letter.html:11
+#, python-format
+msgid ""
+"In compliance with the Centers for Medicare &amp; Medicaid (CMS) guidelines, "
+"we will not be able to proceed with this grievance unless we receive "
+"documentation appointing %(reporter_name)s as your representative. We have "
+"enclosed an Appointment of Representative (AOR) Form for your convenience. "
+"The Appointment of Representative (AOR) form must be dated and signed by "
+"both you and %(reporter_name)s to be valid."
+msgstr ""
+"En conformidad con las pautas de los Centros de Medicare y Medicaid (CMS), "
+"no podremos continuar con este reclamo a menos que recibamos la "
+"documentación en la  que se designa a %(reporter_name)s como su "
+"representante. Para su conveniencia, hemos adjuntado un Formulario de "
+"nombramiento de un representante (AOR). Para que el formulario de "
+"nombramiento de un representante (AOR) sea válido, debe estar fechado y "
+"firmado por usted y %(reporter_name)s."
+
+#: src/templates/guac/grievances/aor_followup_letter.html:10
+#, python-format
+msgid ""
+"I am writing to follow up on the letter we sent you on "
+"%(previous_aor_date)s. In compliance with the Centers for Medicare &amp; "
+"Medicaid (CMS) guidelines, we will not be able to proceed with this "
+"grievance unless we receive documentation appointing %(reporter_name)s as "
+"your representative. We have enclosed an Appointment of Representative (AOR) "
+"Form for your convenience. The Appointment of Representative (AOR) form must "
+"be dated and signed by both you and %(reporter_name)s to be valid."
+msgstr ""
+"Le escribimos para hacer un seguimiento de la carta que le enviamos el "
+"%(previous_aor_date)s. Tal como se establece en esta carta, en conformidad "
+"con las pautas de los Centros de Medicare y Medicaid (CMS), no podremos "
+"continuar con su reclamo a menos que recibamos la documentación en la que se "
+"designa a %(reporter_name)s como su representante. La autorización debe "
+"realizarse a través de un formulario de nombramiento de un representante "
+"(AOR) firmado y por escrito. Para que el formulario de nombramiento de un "
+"representante sea válido, debe estar fechado y firmado por el miembro y "
+"%(reporter_name)s."
+
+#: src/templates/guac/grievances/aor_followup_letter.html:16
+#, python-format
+msgid ""
+"As of today, our records show that you have not submitted documentation "
+"appointing %(reporter_name)s as your representative.  In accordance with CMS "
+"guidelines, we are extending the timeframe for submitting this documentation "
+"by an additional 14 calendar days. If we do not receive the appropriate "
+"documentation by %(dismissal_date)s, we will dismiss your grievance."
+msgstr ""
+"Hasta el momento, nuestros registros indican que usted no ha enviado la "
+"documentación en la que se designa a %(reporter_name)s como su "
+"representante. Según las pautas de los CMS, extenderemos el plazo para "
+"enviar esta documentación a 14 días calendario adicionales. Si no recibimos "
+"la documentación correspondiente antes del %(dismissal_date)s, rechazaremos "
+"el caso de su reclamo."
+
+#: src/templates/guac/grievances/decision_extension_letter.html:4
+#, python-format
+msgid ""
+"This letter is in response to your grievance(s)/ complaint(s) you filed with "
+"us on %(date)s."
+msgstr ""
+"Esta carta es en respuesta al (a los) reclamo(s)/a la(s) queja(s) que nos "
+"envió el %(date)s."
+
+#: src/templates/guac/grievances/decision_extension_letter.html:7
+#, python-format
+msgid ""
+"Based upon our review, we are extending the time frame for making a decision "
+"until %(due_datetime)s (up to 14 additional calendar days), because "
+"%(extension_reason)s."
+msgstr ""
+"Conforme a nuestra revisión, extenderemos el plazo para tomar una decisión "
+"hasta %(due_datetime)s (hasta 14 días calendario adicionales), porque "
+"%(extension_reason)s."
+
+#: src/templates/guac/grievances/decision_letter.html:5
+#: src/templates/guac/grievances/general_qoc_resolution_letter.html:4
+#: src/templates/guac/grievances/provider_qoc_resolution_letter.html:4
+#, python-format
+msgid ""
+"On %(date)s we received your grievance concerning %(description)s. Your "
+"feedback is a vital element in our quality improvement processes. We strive "
+"to improve our members' experience with Clover Health."
+msgstr ""
+"El %(date)s, recibimos su reclamo acerca de %(description)s. Sus comentarios "
+"son un elemento fundamental en nuestros procesos para la mejora de la "
+"calidad. Nos esforzamos por mejorar la experiencia de nuestros miembros con "
+"Clover Health."
+
+#: src/templates/guac/grievances/decision_letter.html:9
+#: src/templates/guac/grievances/general_qoc_resolution_letter.html:8
+#: src/templates/guac/grievances/provider_qoc_resolution_letter.html:8
+msgid ""
+"Clover Health staff conducted an investigation of the issue. The information "
+"gathered has been shared with the appropriate operational department as part "
+"of our continuous quality improvement process."
+msgstr ""
+"El personal de Clover Health llevó a cabo una investigación del problema. La "
+"información recopilada ha sido compartida con el departamento de operaciones "
+"correspondiente como parte de nuestro proceso constante para la mejora de la "
+"calidad."
+
+#: src/templates/guac/grievances/dismissal_letter.html:5
+#, python-format
+msgid ""
+"This letter follows requests we sent you on %(first_aor)s and %(second_aor)s "
+"asking for a completed Appointment of Representative (AOR) form. In "
+"accordance with Centers for Medicare and Medicaid (CMS) guidelines, an "
+"authorization filed on your behalf must be accompanied by a completed AOR, "
+"dated and signed by both the member and your representative. Legal "
+"documentation such as a court ordered guardianship or conservatorship, "
+"durable power of attorney, or healthcare power of attorney may also be "
+"submitted."
+msgstr ""
+"Enviamos esta carta luego de haberle enviado solicitudes el %(first_aor)s y "
+"el%(second_aor)s para que nos envíe un Formulario de nombramiento de "
+"representante (Appointment of Representative, AOR) completo. De acuerdo con "
+"las pautas de los Centros de Servicios de Medicare y Medicaid (Centers for "
+"Medicareand Medicaid Services, CMS), las autorizaciones que se presentan en "
+"su nombre deben estar acompañadas de un formulario de AOR completo, con "
+"fecha y firmado por el miembro y su representante. También puede presentar "
+"documentación legal, como una tutela o custodia ordenada judicialmente, un "
+"poder de representación duradero o un poder de representación para la "
+"atención médica."
+
+#: src/templates/guac/grievances/dismissal_letter.html:9
+#, python-format
+msgid ""
+"As of today, our records show that you have not submitted documents "
+"appointing %(representative)s as your representative. You were given 30 "
+"calendar days to send Clover a valid AOR form, which has now expired. "
+"Therefore, your case has been dismissed."
+msgstr ""
+"Hasta el momento, nuestros registros indican que usted no ha enviado "
+"documentos en los que se designe a %(representative)s como su representante. "
+"Se le dio un plazo de 14 días calendario para enviar a Clover un formulario "
+"de AOR válido. Este plazo venció. Por lo tanto, su caso ha sido dado de baja."
+
+#: src/templates/guac/grievances/dismissal_letter.html:12
+msgid "You may resubmit your grievance if you have a completed AOR."
+msgstr ""
+"Puede volver a presentar una solicitud de servicios si tiene un formulario "
+"de AOR completo."
+
+#: src/templates/guac/grievances/general_qoc_resolution_letter.html:10
+msgid ""
+"Your case has been forwarded to our internal Clover Quality Improvement "
+"Department in order to determine and ensure that medical standards of care "
+"have been provided. The Clover Quality Improvement Department will "
+"investigate, review all events and will take any necessary corrective "
+"actions to promote continuous quality improvement."
+msgstr ""
+"Su caso ha sido enviado a nuestro Departamento para la mejora de la calidad "
+"para poder determinar y garantizar que se ha cumplido con los estándares de "
+"atención médica. El Departamento para la mejora de la calidad de Clover "
+"investigará, revisará todos los eventos y tomará todas las medidas "
+"correctivas necesarias para promover la constante mejora de la calidad."
+
+#: src/templates/guac/grievances/general_qoc_resolution_letter.html:12
+msgid ""
+"Please note you may also file a written grievance with the Quality "
+"Improvement Organization (QIO) outside of Clover, which is a group of "
+"doctors and other health care experts paid by the Federal Government in each "
+"state to check on and help improve the care given to Medicare patients. The "
+"QIO in the State of New Jersey is called Livanta. The doctors and healthcare "
+"experts at Livanta review certain types of complaints made by Medicare "
+"patients such as quality of care complaints. You may contact Livanta at the "
+"following address and telephone numbers:"
+msgstr ""
+"Tenga en cuenta que también puede presentar un reclamo por escrito ante la "
+"Organización para la mejora de la calidad (QIO), que es un grupo de médicos "
+"y otros expertos en atención médica a los cuales el Gobierno Federal les "
+"paga en cada estado para verificar y ayudar a mejorar la atención que se les "
+"brinda a los pacientes de Medicare. La QIO del estado de Nueva Jersey se "
+"llama Livanta. Los médicos y expertos en atención médica de Livanta revisan "
+"ciertos tipos de quejas presentadas por pacientes de Medicare, como quejas "
+"por la calidad de atención. Puede comunicarse con Livanta en la dirección y "
+"los números de teléfono que se detallan a continuación:"
+
+#: src/templates/guac/grievances/general_qoc_resolution_letter.html:23
+#: src/templates/guac/grievances/provider_qoc_resolution_letter.html:33
+msgid ""
+"If you make a complaint to this organization, we will work with them to "
+"resolve your complaint."
+msgstr ""
+"Si presenta una queja a esta organización, colaboraremos con ellos para "
+"resolver su queja. "
+
+#: src/templates/guac/grievances/misclassified_letter.html:4
+#, python-format
+msgid ""
+"This letter is in response to your complaint that you filed with us on "
+"%(date)s."
+msgstr "Esta carta es en respuesta a la queja que nos envió el %(date)s."
+
+#: src/templates/guac/grievances/misclassified_letter.html:7
+msgid ""
+"We initially categorized your complaint as a Grievance but upon further "
+"review we have determined your complaint to be an Appeal. This change will "
+"not affect the quality or the timeliness of our review on your request."
+msgstr ""
+"Inicialmente, categorizamos su queja como una reclamo, pero después de "
+"revisarla más en detalle hemos determinado que su queja es un apelación. "
+"Este cambio no afectará la calidad ni la puntualidad de nuestra revisión de "
+"su solicitud."
+
+#: src/templates/guac/grievances/misclassified_letter.html:9
+#, python-format
+msgid ""
+"Your Grievance, which was received on %(date)s has been forwarded to our "
+"Grievance and Appeals Department to be handled through the Appeals process."
+msgstr ""
+"Su apelación, que recibimos el %(date)s, se ha enviado a nuestro "
+"Departamento de Reclamos y Apelaciones para poder trabajar mediante el "
+"proceso de apelaciones."
+
+#: src/templates/guac/grievances/provider_qoc_resolution_letter.html:10
+msgid ""
+"We recognize that the physician/patient relationship is an integral part of "
+"any treatment plan. For this reason, we are happy to assist you if you wish "
+"to select a new clinician or facility for your care."
+msgstr ""
+"Reconocemos que la relación entre el médico y el paciente es una parte "
+"fundamental de cualquier plan de tratamiento. Por esta razón, con gusto le "
+"ayudaremos si desea seleccionar un nuevo médico de atención primaria/"
+"especialista de Clover."
+
+#: src/templates/guac/grievances/provider_qoc_resolution_letter.html:13
+#, python-format
+msgid ""
+"As an ongoing part of our operation, Clover Health monitors the quality of "
+"service and care provided to our members. All issues are reviewed and the "
+"appropriate corrective action is taken as deemed necessary.  Your concerns "
+"regarding %(description)s have been carefully noted and forwarded to "
+"%(department)s for confidential review."
+msgstr ""
+"Como parte constante de nuestras operaciones, Clover Health controla la "
+"calidad del servicio y la atención que se proporciona a nuestros miembros. "
+"Se revisan todos los problemas y se toman las medidas correctivas "
+"apropiadas, según sea necesario. Sus inquietudes sobre el reclamo han sido "
+"cuidadosamente constatadas y se enviaron a %(department)s para realizar una "
+"revisión confidencial."
+
+#: src/templates/guac/grievances/provider_qoc_resolution_letter.html:22
+msgid ""
+"Please note you may also file a written grievance with the Quality "
+"Improvement Organization (QIO), which is a group of doctors and other health "
+"care experts paid by the Federal Government in each state to check on and "
+"help improve the care given to Medicare patients. The QIO in the State of "
+"New Jersey is called Livanta. The doctors and healthcare experts at Livanta "
+"review certain types of complaints made by Medicare patients such as quality "
+"of care complaints. You may contact Livanta at the following address and "
+"telephone numbers:"
+msgstr ""
+"Tenga en cuenta que también puede presentar un reclamo por escrito ante la "
+"Organización para la mejora de la calidad (QIO), que es un grupo de médicos "
+"y otros expertos en atención médica a los cuales el Gobierno Federal les "
+"paga en cada estado para verificar y ayudar a mejorar la atención que se les "
+"brinda a los pacientes de Medicare. La QIO del estado de Nueva Jersey se "
+"llama Livanta. Los médicos y expertos en atención médica de Livanta revisan "
+"ciertos tipos de quejas presentadas por pacientes de Medicare, como quejas "
+"por la calidad de atención. Puede comunicarse con Livanta en la dirección y "
+"los números de teléfono que se detallan a continuación:"
+
+#: src/templates/guac/grievances/request_to_contact_plan_letter.html:4
+#, python-format
+msgid ""
+"This letter is to inform you that the Clover Health Grievance and Appeals "
+"Department received a grievance from you and/or your appointed "
+"representative on %(date)s; however, we need additional information from you "
+"in order to process your request. We have made numerous attempts to contact "
+"you by phone but we have been unsuccessful in reaching you."
+msgstr ""
+"Esta carta es para informarle que el Departamento de Reclamos y Apelaciones "
+"de Clover Health recibió un reclamo que usted o su representante designado "
+"nos envió el %(date)s. No obstante, necesitamos que nos envíe información "
+"adicional para poder procesar su solicitud. Hemos intentado comunicarnos por "
+"teléfono con usted varias veces pero no hemos podido hablar con usted."
+
+#: src/templates/guac/prior_auths/additional_clinicals_requested_letter.html:9
+msgid ""
+"This correspondence is in response to your request for a Prior Authorization "
+"Request regarding the services noted above."
+msgstr ""
+"Le escribo en respuesta a su pedido de una Solicitud de autorización previa "
+"para los servicios mencionados más arriba."
+
+#: src/templates/guac/prior_auths/additional_clinicals_requested_letter.html:11
+msgid ""
+"Our reviewer is unable to make a determination on the service request based "
+"on the available information received. The following information is needed "
+"to complete our review:"
+msgstr ""
+"Nuestro revisor no puede tomar una decisión con respecto a la solicitud de "
+"servicio sobre la base de la información disponible recibida. Necesitamos la "
+"siguiente información para completar nuestra revisión:"
+
+#: src/templates/guac/prior_auths/additional_clinicals_requested_letter.html:15
+msgid "Please fax the requested information to "
+msgstr "Envíe por fax la información solicitada al "
+
+#: src/templates/guac/prior_auths/additional_clinicals_requested_letter.html:15
+msgid ""
+" within 24 hours of receipt of this notice. Be sure to include a copy of "
+"this notice with your reply. If we do not receive the requested additional "
+"information by within 24 hours of receipt of this notice, we may have to "
+"issue a denial."
+msgstr ""
+" dentro del plazo de 24 horas a partir de la recepción de este aviso. "
+"Asegúrese de incluir una copia de este aviso con su respuesta. Si no "
+"recibimos la información adicional solicitada dentro del plazo de 24 horas a "
+"partir de la recepción de este aviso, es posible que debamos denegar la "
+"solicitud."
+
+#: src/templates/guac/prior_auths/additional_clinicals_requested_letter.html:18
+msgid "Please feel free to call "
+msgstr "Llámenos al "
+
+#: src/templates/guac/prior_auths/additional_clinicals_requested_letter.html:18
+msgid ""
+" between the hours of 9:00 AM to 5:00 PM, Monday through Friday (except "
+"holidays) if you have any questions."
+msgstr ""
+" entre las 9am y las 5pm, de lunes a viernes (excepto los días feriados) si "
+"tiene alguna pregunta."
+
+#: src/templates/guac/prior_auths/aor_cover_letter.html:6
+#: src/templates/guac/prior_auths/aor_followup_letter.html:6
+#, python-format
+msgid ""
+"On %(date)s, we received a pre-authorization request regarding "
+"%(service_description)s, which was submitted on your behalf by %(rep_name)s."
+msgstr ""
+"El %(date)s, recibimos una solicitud de autorización previa sobre "
+"%(service_description)s que presentó %(rep_name)s a su nombre."
+
+#: src/templates/guac/prior_auths/aor_cover_letter.html:11
+#, python-format
+msgid ""
+"In compliance with the Centers for Medicare and Medicaid (CMS) guidelines, "
+"we will not be able to proceed with this pre-authorization unless we receive "
+"documentation appointing %(rep_name)s as your representative. We have "
+"enclosed an Appointment of Representative (AOR) Form for your convenience. "
+"The Appointment of Representative (AOR) form must be dated and signed by "
+"both you and %(rep_name)s to be valid."
+msgstr ""
+"En conformidad con las pautas de los Centros de Medicare y Medicaid (Centers "
+"for Medicare & Medicaid, CMS), no podremos continuar con esta solicitud a "
+"menos que recibamos la documentación en la que se designe a %(rep_name)s "
+"como su representante. Para su comodidad, hemos adjuntado un Formulario de "
+"nombramiento de un representante (Appointment of Representative, AOR). Para "
+"que el Formulario de AOR sea válido, debe estar fechado y firmado por usted "
+"y %(rep_name)s."
+
+#: src/templates/guac/prior_auths/aor_cover_letter.html:16
+#: src/templates/guac/prior_auths/aor_followup_letter.html:21
+msgid ""
+"You may return the form and/or legal appointment of representative "
+"documentation either via facsimile at"
+msgstr ""
+"Puede enviar el formulario o la documentación legal del nombramiento de un "
+"representante por fax al"
+
+#: src/templates/guac/prior_auths/aor_cover_letter.html:16
+#: src/templates/guac/prior_auths/aor_followup_letter.html:21
+msgid "or mail at:"
+msgstr "o por correo a:"
+
+#: src/templates/guac/prior_auths/aor_followup_letter.html:11
+#, python-format
+msgid ""
+"I am writing to follow up on the letter we sent you on "
+"%(previous_aor_date)s. In compliance with the Centers for Medicare and "
+"Medicaid (CMS) guidelines, we will not be able to proceed with this pre-"
+"authorization unless we receive documentation appointing %(rep_name)s as "
+"your representative. We have enclosed an Appointment of Representative (AOR) "
+"Form for your convenience. The Appointment of Representative (AOR) form must "
+"be dated and signed by both you and %(rep_name)s to be valid."
+msgstr ""
+"Le escribimos para hacer un seguimiento de la carta que le enviamos el "
+"%(previous_aor_date)s. Tal como se establece en esta carta, en conformidad "
+"con las pautas de los Centros de Medicare y Medicaid (CMS), no podremos "
+"continuar con su preautorización a menos que recibamos la documentación en "
+"la que se designa a %(rep_name)s como su representante. La autorización debe "
+"realizarse a través de un formulario de nombramiento de un representante "
+"(AOR) firmado y por escrito. Para que el formulario de nombramiento de un "
+"representante sea válido, debe estar fechado y firmado por el miembro y "
+"%(rep_name)s."
+
+#: src/templates/guac/prior_auths/aor_followup_letter.html:17
+#, python-format
+msgid ""
+"As of today, our records show that you have not submitted documentation "
+"appointing %(rep_name)s as your representative.  In accordance with CMS "
+"guidelines, we are extending the timeframe for submitting this documentation "
+"by an additional 14 calendar days. If we do not receive the appropriate "
+"documentation by %(dismissal_date)s, we will dismiss your pre-authorization "
+"request."
+msgstr ""
+"Hasta el momento, nuestros registros indican que usted no ha enviado la "
+"documentación en la que se designa a %(rep_name)s como su representante. "
+"Según las pautas de los CMS, extenderemos el plazo para enviar esta "
+"documentación a 14 días calendario adicionales. Si no recibimos la "
+"documentación correspondiente antes del %(dismissal_date)s, rechazaremos el "
+"caso de su preautorización."
+
+#: src/templates/guac/prior_auths/approval_letter.html:7
+msgid "This notice is to inform you that the coverage for the requested"
+msgstr "Por medio de la presente se le avisa que el servicio pedido"
+
+#: src/templates/guac/prior_auths/approval_letter.html:7
+msgid "service has been approved."
+msgstr "se ha aprobado."
+
+#: src/templates/guac/prior_auths/approval_letter.html:8
+#: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:8
+#: src/templates/guac/prior_auths/snf_approval_letter.html:12
+msgid "Authorized Service"
+msgstr "Servicio Autorizado"
+
+#: src/templates/guac/prior_auths/approval_letter.html:17
+msgid "Units"
+msgstr "Número de Servicios Autorizados"
+
+#: src/templates/guac/prior_auths/approval_letter.html:17
+#: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:17
+msgid "Modifiers"
+msgstr "Modificadores"
+
+#: src/templates/guac/prior_auths/approval_letter.html:25
+#: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:25
+#, python-format
+msgid ""
+"Authorization/Date of Service Valid from: %(low_date)s to %(high_date)s "
+"(last date approved)"
+msgstr ""
+"Autorización/Fecha del servicio válida desde: %(low_date)s hasta "
+"%(high_date)s (último día de la cobertura)"
+
+#: src/templates/guac/prior_auths/approval_letter.html:29
+#: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:29
+msgid ""
+"Requests for coverage of additional visits, treatments, testing or surgery "
+"may require a new authorization/precertification. Failure to obtain "
+"authorization/ precertification, when required, may result in a reduction of "
+"benefits in accordance with the terms of your plan."
+msgstr ""
+"Las peticiones para cobertura de consultas, tratamientos, análisis o "
+"cirugías adicionales podrían requerir otra autorización/certificación "
+"anterior nueva. Si no se obtiene la autorización/certificación anterior, "
+"cuando ésta se necesita, podrían reducirse los beneficios según los términos "
+"de su plan."
+
+#: src/templates/guac/prior_auths/approval_letter.html:31
+#: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:31
+#: src/templates/guac/prior_auths/snf_approval_letter.html:29
+msgid ""
+"Prior authorization/precertification requests are reviewed for medical "
+"necessity and plan benefits. All prior authorization/precertification is "
+"administered in accordance with applicable state and federal law. The intent "
+"of this authorization is to establish medical necessity and is not a "
+"guarantee of payment. Coverage is also dependent on your eligibility. "
+"Payment will be based on the Provider Contract or the prevailing Medicare "
+"Methodology."
+msgstr ""
+"Las peticiones de autorización previa/certificación anterior se analizan en "
+"vista de la necesidad médica y los beneficios del plan. Se administra toda "
+"autorización previa/certificación anterior según las leyes estatales y "
+"federales correspondientes. El objetivo de esta autorización es establecer "
+"la necesidad medíca y no es una garantía de pago.  La cobertura tambien "
+"depende de su elegibilidad. El pago se basa en el Contrato de Proveedores o "
+"el Medicare Metodología imperante."
+
+#: src/templates/guac/prior_auths/denc.html:59
+msgid "Detailed Explanation of Non-Coverage"
+msgstr "Explicación Detallada No-Cobertura"
+
+#: src/templates/guac/prior_auths/denc.html:66
+#: src/templates/guac/prior_auths/nomnc.html:75
+msgid "Patient Name"
+msgstr "Nombre del paciente"
+
+#: src/templates/guac/prior_auths/denc.html:76
+#: src/templates/guac/prior_auths/nomnc.html:76
+msgid "Patient Number"
+msgstr "Número del paciente"
+
+#: src/templates/guac/prior_auths/denc.html:79
+#: src/templates/guac/prior_auths/nomnc.html:80
+msgid "Patient DOB"
+msgstr "Fecha de nacimiento"
+
+#: src/templates/guac/prior_auths/denc.html:89
+msgid ""
+"This notice gives a detailed explanation of why Clover Health has determined "
+"Medicare coverage for your current services should end."
+msgstr ""
+"Por medio de este aviso se le da una explicación detallada del motivo por el "
+"cual Clover Health ha determinado que la cobertura de Medicare por sus "
+"servicios actuales debe terminar."
+
+#: src/templates/guac/prior_auths/denc.html:90
+msgid "This notice is not the decision on your appeal."
+msgstr "Este aviso no es la decisión sobre su apelación."
+
+#: src/templates/guac/prior_auths/denc.html:91
+msgid ""
+"The decision on your appeal will come from your Quality Improvement "
+"Organization (QIO)."
+msgstr ""
+"La decisión sobre su apelación la emitirá la Organización de Mejoramiento de "
+"la Calidad (QIO, por sus siglas en inglés)."
+
+#: src/templates/guac/prior_auths/denc.html:95
+#, python-format
+msgid ""
+"We have reviewed your case and decided that Medicare coverage of your "
+"current %(service_description)s services should end."
+msgstr ""
+"Hemos revisado su caso y decidimos que la cobertura actual de Medicare de "
+"sus servicios de %(service_description)s, debe terminar."
+
+#: src/templates/guac/prior_auths/denc.html:101
+msgid "The facts used to make this decision:"
+msgstr "Para tomar esta decisión nos hemos basado en:"
+
+#: src/templates/guac/prior_auths/denc.html:106
+msgid ""
+"Detailed explanation of why your current services are no longer covered, and "
+"the specific Medicare coverage rules and policy used to make this decision:"
+msgstr ""
+"Explicación detallada del motivo por el cual sus servicios actuales ya no "
+"serán cubiertos y sobre las normas o pólizas de cobertura utilizadas para "
+"tomar esta decisión:"
+
+#: src/templates/guac/prior_auths/denc.html:112
+msgid "Plan policy, provision, or rationale used in making the decision:"
+msgstr "Pólizas, normas y razón del plan utilizadas para tomar esta decisión:"
+
+#: src/templates/guac/prior_auths/denc.html:115
+#, python-format
+msgid ""
+"It was determined that there was no medical necessity for this request. This "
+"decision was based on medical criteria %(denial_policy)s. The last approved "
+"date is %(auth_end)s, and denial begins %(denial_start)s."
+msgstr ""
+"Determinamos que no había necesidad médica para esta solicitud. Esta "
+"decisión se basa en criterios médicos %(denial_policy)s. La última fecha de "
+"aprobación es de %(auth_end)s, y la negación comienza %(denial_start)s."
+
+#: src/templates/guac/prior_auths/denc.html:124
+msgid ""
+"If you would like a copy of the policy or coverage guidelines used to make "
+"this decision, or a copy of the documents sent to the QIO, please call us "
+"at: Clover Health Customer Services 1-888-657-1207. TTY users should call "
+"711. Open 8 a.m. - 8 p.m., local time, 7 days a week from February "
+"15<sup>th</sup> through September 30<sup>th</sup>, alternate technologies "
+"(for example, voicemail) will be used on the weekends and holidays."
+msgstr ""
+"Si desea una copia de la política de cobertura y normas utilizadas para "
+"tomar la decisión, o una copia de los documentos mandados a la QIO, llame, "
+"por favor, a Servicio al Cliente al 1-888-657-1207. Los usuarios de TTY "
+"deben llamar al 711. Atendemos de las 8 a.m. - 8 p.m., hora local, 7 días a "
+"la semana. Del 15 de febrero al 30 de septiembre, incluídos, se usará la "
+"tecnología alternativa (por ejemplo, buzón de voz) los fines de semana y "
+"días feriados."
+
+#: src/templates/guac/prior_auths/denc.html:132
+#: src/templates/guac/shared/appeals/footer.html:2
+#: src/templates/guac/shared/footer.html:4
+#: src/templates/guac/shared/prior_auths/footer.html:2
+msgid ""
+"Clover Health is a Preferred Provider Organization (PPO) plan and a Health "
+"Maintenance Organization (HMO) plan with a Medicare contract. Enrollment in "
+"Clover Health depends on contract renewal. This information is not a "
+"complete description of benefits. Call 1-888-657-1207 (TTY 711) for more "
+"information."
+msgstr ""
+"Clover Health es un plan de Organización de Proveedores Preferidos "
+"(Preferred Provider Organization, PPO) y un plan de Organización para el "
+"Mantenimiento de la Salud (Health Maintenance Organization, HMO), cada uno "
+"con su propio contrato con Medicare. La inscripción en Clover Health depende "
+"de la renovación del contrato. Esta información no es una descripción "
+"completa de los beneficios. Llame al 1-888-657-1207 (TTY 711) para obtener "
+"más información."
+
+#: src/templates/guac/prior_auths/denial_letter.html:9
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:9
+msgid "Your request was denied."
+msgstr "Su petición fue denegada."
+
+#: src/templates/guac/prior_auths/denial_letter.html:11
+#, python-format
+msgid ""
+"We %(member_denial_determination)s the medical services/items listed below "
+"requested by you or your doctor/provider:"
+msgstr ""
+"Hemos denegado los servicios/artículos médicos listados, que fueron "
+"solicitados por usted o su médico:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:21
+#: src/templates/guac/prior_auths/ndcs.html:89
+msgid "Units:"
+msgstr "Número de Servicios Autorizados:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:21
+#: src/templates/guac/prior_auths/ndcs.html:89
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:20
+msgid "Modifiers:"
+msgstr "Modificadores:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:29
+#, python-format
+msgid ""
+"Why did we deny your request?  We %(member_denial_determination)s the "
+"medical services/items listed above because:"
+msgstr ""
+"¿Por qué hemos denegado la petición? Hemos denegado los servicios/artículos "
+"médicos listados arriba porque:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:36
+#: src/templates/guac/prior_auths/nomnc.html:146
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:34
+msgid "Additional Information"
+msgstr "Información adicional"
+
+#: src/templates/guac/prior_auths/denial_letter.html:37
+#: src/templates/guac/prior_auths/nomnc.html:147
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:35
+msgid "Last Approved Date"
+msgstr "Los servicios terminarán el"
+
+#: src/templates/guac/prior_auths/denial_letter.html:38
+#: src/templates/guac/prior_auths/nomnc.html:148
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:36
+msgid "Denial Begins"
+msgstr "La negación comienza el"
+
+#: src/templates/guac/prior_auths/denial_letter.html:42
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:40
+msgid ""
+"You should share a copy of this decision with your doctor so you and your "
+"doctor can discuss next steps. If your doctor requested coverage on your "
+"behalf, we have sent a copy of this decision to your doctor."
+msgstr ""
+"Entregue una copia de esta decisión a su médico para que puedan conversar "
+"sobre los próximos pasos. Si su médico/a solicitó cobertura por usted, le "
+"hemos enviado una copia de la decisión a él/ella."
+
+#: src/templates/guac/prior_auths/denial_letter.html:44
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:42
+msgid "You have the right to appeal our decision."
+msgstr "Usted tiene el derecho de apelar la decisión."
+
+#: src/templates/guac/prior_auths/denial_letter.html:44
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:42
+msgid ""
+"You have the right to ask Clover Health to review our decision by asking us "
+"for an appeal:"
+msgstr ""
+"Usted tiene el derecho de pedirle a Clover Health que evalúe su decisión a "
+"través de su apelación:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:46
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:44
+msgid "Appeal"
+msgstr "Apelación"
+
+#: src/templates/guac/prior_auths/denial_letter.html:46
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:44
+msgid ""
+"Ask Clover Health for an appeal within <strong>60 days</strong> of the date "
+"of this notice. We can give you more time if you have a good reason for "
+"missing the deadline."
+msgstr ""
+"Solicite a Clover Health una apelación en un plazo de <strong>60 días</"
+"strong> a partir de la fecha de este aviso. Podemos extenderle el plazo si "
+"tiene algún motivo válido para no cumplirlo."
+
+#: src/templates/guac/prior_auths/denial_letter.html:48
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:46
+msgid ""
+"If you want someone else to act for you, you can name a relative, friend, "
+"attorney, doctor, or someone else to act as your representative.  If you "
+"want someone else to act for you, call us at: 1-888-657-1207 to learn how to "
+"name your representative. TTY users call 711. Both you and the person you "
+"want to act for you must sign and date a statement confirming this is what "
+"you want. You'll need to mail or fax this statement to us."
+msgstr ""
+"Si desea que alguien lo represente usted puede nombrar a un familiar, amigo, "
+"abogado, médico o cualquier otra persona como su representante legal. Si "
+"desea nombrar un representante, llámenos al 1-888-657-1207 para que le "
+"expliquemos cómo hacerlo. Los usuarios de TTY deberán llamar al 711. Usted y "
+"su representante deben enviarnos una declaración firmada y fechada. Puede "
+"enviarnos la declaración por correo electrónico o fax."
+
+#: src/templates/guac/prior_auths/denial_letter.html:48
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:46
+msgid "Keep a copy for your records."
+msgstr "Guarde una copia para sus archivos."
+
+#: src/templates/guac/prior_auths/denial_letter.html:51
+#: src/templates/guac/prior_auths/ndcs.html:110
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:49
+msgid "Respectfully,"
+msgstr "Sinceramente,"
+
+#: src/templates/guac/prior_auths/denial_letter.html:53
+#: src/templates/guac/prior_auths/ndcs.html:111
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:51
+msgid "Medical Director"
+msgstr "Director Médico"
+
+#: src/templates/guac/prior_auths/denial_letter.html:55
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:53
+msgid "Important Information About Your Appeal Rights"
+msgstr "Información importante sobre sus derechos de apelación"
+
+#: src/templates/guac/prior_auths/denial_letter.html:57
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:55
+msgid "There are 2 kinds of appeals"
+msgstr "Hay dos tipos de apelación que puede solicitar"
+
+#: src/templates/guac/prior_auths/denial_letter.html:59
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:57
+msgid "Standard Appeal"
+msgstr "Estándar"
+
+#: src/templates/guac/prior_auths/denial_letter.html:59
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:57
+msgid ""
+"We'll give you a written decision on a standard appeal within <strong>30 "
+"days</strong> after we get your appeal. Our decision might take longer if "
+"you ask for an extension, or if we need more information about your case. "
+"We'll tell you if we're taking extra time and will explain why more time is "
+"needed. If your appeal is for payment of a service you've already received, "
+"we'll give you a written decision within <strong>60 days</strong>."
+msgstr ""
+"Puede solicitar una apelación estándar, lo que significa que a los "
+"<strong>30 días</strong> de recibir su solicitud de apelación debemos "
+"informarle sobre nuestra decisión. Este período podría extenderse si usted "
+"pide una extensión, o si nosotros necesitamos más información. Si "
+"necesitáramos una extensión, le avisaremos cuánto tiempo y porqué. Si está "
+"apelando por un pago de un servicio que ya recibió, le mandaremos nuestra "
+"decisión por escrito en un plazo de <strong>60 días</strong>."
+
+#: src/templates/guac/prior_auths/denial_letter.html:61
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:59
+msgid "Fast Appeal"
+msgstr "Rápida"
+
+#: src/templates/guac/prior_auths/denial_letter.html:61
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:59
+msgid ""
+"We'll give you a decision on a fast appeal within <strong>72 hours</strong> "
+"after we get your appeal. You can ask for a fast appeal if you or your "
+"doctor believe your health could be seriously harmed by waiting up to 30 "
+"days for a decision."
+msgstr ""
+"En caso de una apelación rápida se debe tomar una decisión a más tardar a "
+"las <strong>72 horas</strong> de haber recibido su pedido de apelación. "
+"Puede solicitar una apelación rápida si usted y/o su médico consideran que "
+"su salud podría estar en peligro si tiene que esperar 30 días hasta que se "
+"tome una decisión."
+
+#: src/templates/guac/prior_auths/denial_letter.html:63
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:61
+msgid ""
+"We'll automatically give you a fast appeal if a doctor asks for one for you "
+"or supports your request."
+msgstr ""
+"Automáticamente le daremos una decisión rápida si su médico lo solicita y "
+"justifica."
+
+#: src/templates/guac/prior_auths/denial_letter.html:63
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:61
+msgid ""
+"If you ask for a fast appeal without support from a doctor, we'll decide if "
+"your request requires a fast appeal. If we don't give you a fast appeal, "
+"we'll give you a decision within 30 days."
+msgstr ""
+"Si usted solicita una decisión rápida sin el apoyo apropiado de su médico, "
+"nosotros decidiremos si se la damos. Si decidimos lo contrario recibirá "
+"nuestra decisión final en 30 días."
+
+#: src/templates/guac/prior_auths/denial_letter.html:67
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:65
+msgid "How to ask for an appeal with Clover Health"
+msgstr "¿Cómo solicitar una apelación a Clover Health"
+
+#: src/templates/guac/prior_auths/denial_letter.html:69
+#: src/templates/guac/prior_auths/denial_letter.html:86
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:67
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:84
+msgid "Step"
+msgstr "Paso"
+
+#: src/templates/guac/prior_auths/denial_letter.html:69
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:67
+msgid ""
+"You, your representative, or your doctor/provider must ask us for an appeal. "
+"Your request must include:"
+msgstr ""
+"Usted, su representante o su médico debe solicitar la apelación. Su pedido "
+"de apelación debe incluir:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:73
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:71
+msgid "Your name"
+msgstr "Su nombre"
+
+#: src/templates/guac/prior_auths/denial_letter.html:74
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:72
+#: src/templates/guac/shared/grievances/member_and_case_info.html:10
+msgid "Address"
+msgstr "Dirección postal"
+
+#: src/templates/guac/prior_auths/denial_letter.html:75
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:73
+msgid "Member number"
+msgstr "Número de miembro"
+
+#: src/templates/guac/prior_auths/denial_letter.html:76
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:74
+msgid "Reasons for appealing"
+msgstr "Razones para apelar"
+
+#: src/templates/guac/prior_auths/denial_letter.html:77
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:75
+msgid ""
+"Whether you want a Standard or Fast Appeal (for a Fast Appeal, explain why "
+"you need one)"
+msgstr ""
+"Ya sea que desee una apelación estándar o rápida (para una apelación rápida, "
+"explique por qué la necesita)"
+
+#: src/templates/guac/prior_auths/denial_letter.html:78
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:76
+msgid ""
+"Any evidence you want us to review, such as medical records, doctors' "
+"letters, or other information that explains why you need the item or "
+"service. Call your doctor if you need this information."
+msgstr ""
+"Cualquier documento que sirva de evidencia, como expedientes médicos, cartas "
+"del proveedor u otra información que indique que usted necesita el servicio "
+"o artículo. Pídale la información a su médico."
+
+#: src/templates/guac/prior_auths/denial_letter.html:82
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:80
+msgid ""
+"You can ask to see the medical records and other documents we used to make "
+"our decision before or during the appeal. At no cost to you, you can also "
+"ask for a copy of the guidelines we used to make our decision."
+msgstr ""
+"Antes o durante la apelación, usted puede pedir que le muestren los "
+"expedientes médicos u otros documentos usados para tomar la decisión "
+"inicial. Puede solicitar (sin costo alguno) una copia de las pautas usadas "
+"para tomar nuestra decisión."
+
+#: src/templates/guac/prior_auths/denial_letter.html:84
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:82
+msgid "We recommend keeping a copy of everything you send us for your records."
+msgstr ""
+"Le recomendamos que conserve una copia de todo lo que nos envía para sus "
+"registros."
+
+#: src/templates/guac/prior_auths/denial_letter.html:86
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:84
+msgid "Mail, fax, or deliver your appeal or call us at"
+msgstr "Envíenos su apelación por correo, fax o en persona o llámenos a"
+
+#: src/templates/guac/prior_auths/denial_letter.html:88
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:86
+msgid "For a Standard Appeal:"
+msgstr "Para una apelación estándar:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:98
+#: src/templates/guac/prior_auths/denial_letter.html:107
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:96
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:105
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:99
+#: src/templates/guac/prior_auths/denial_letter.html:108
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:97
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:106
+msgid "Fax:"
+msgstr "Fax:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:102
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:100
+msgid ""
+"If you ask for a standard appeal by phone, we will send you a letter "
+"confirming what you told us."
+msgstr ""
+"Si solicita una apelación estándar por teléfono, le enviaremos una carta de "
+"confirmación sobre lo que nos informó."
+
+#: src/templates/guac/prior_auths/denial_letter.html:104
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:102
+msgid "For a Fast Appeal:"
+msgstr "Para una apelación rápida"
+
+#: src/templates/guac/prior_auths/denial_letter.html:113
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:111
+msgid ""
+"If you ask for an appeal and we continue to deny your request for a service, "
+"we'll send you a written decision and automatically send your case to an "
+"independent reviewer."
+msgstr ""
+"Si usted apela una decisión y nosotros aún seguimos denegando del servicio, "
+"le enviaremos una carta con la decisión y automáticamente enviaremos su caso "
+"a un revisor independiente."
+
+#: src/templates/guac/prior_auths/denial_letter.html:113
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:111
+msgid ""
+"If the independent reviewer denies your request, the written decision will "
+"explain if you have additional appeal rights."
+msgstr ""
+"Si la persona imparcial deniega su petición, en la decisión por escrito le "
+"informará si tiene otros."
+
+#: src/templates/guac/prior_auths/denial_letter.html:116
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:114
+msgid "Get help and more information"
+msgstr "Consiga ayuda y más información"
+
+#: src/templates/guac/prior_auths/denial_letter.html:118
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:116
+msgid "Toll Free:"
+msgstr "Número sin cargo:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:118
+#: src/templates/guac/prior_auths/denial_letter.html:119
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:116
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:117
+msgid "24 hours, 7 days a week. TTY users call:"
+msgstr "24 horas al dia, 7 días de la semana. Número para los usuarios de TTY:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:120
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:118
+msgid "Medicare Rights Center:"
+msgstr "Centro de Derechos de Medicare:"
+
+#: src/templates/guac/prior_auths/denial_letter.html:121
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:119
+msgid "Elder Care Locator:"
+msgstr "Localizador ElderCare:"
+
+#: src/templates/guac/prior_auths/dismissal_letter.html:6
+#, python-format
+msgid ""
+"This letter follows requests we sent you on %(first_letter_date)s and "
+"%(second_letter_date)s asking for a completed Appointment of Representative "
+"(AOR) form. In accordance with Centers for Medicare and Medicaid (CMS) "
+"guidelines, an authorization filed on your behalf must be accompanied by a "
+"completed AOR, dated and signed by both the member and your representative. "
+"Legal documentation such as a court ordered guardianship or conservatorship, "
+"durable power of attorney, or healthcare power of attorney may also be "
+"submitted."
+msgstr ""
+"Enviamos esta carta luego de haberle enviado solicitudes el "
+"%(first_letter_date)s y el %(second_letter_date)s para que nos envíe un "
+"Formulario de nombramiento de representante (Appointment of Representative, "
+"AOR) completo. De acuerdo con las pautas de los Centros de Servicios de "
+"Medicare y Medicaid (Centers for Medicare and Medicaid Services, CMS), las "
+"autorizaciones que se presentan en su nombre deben estar acompañadas de un "
+"formulario de AOR completo, con fecha y firmado por el miembro y su "
+"representante. También puede presentar documentación legal, como una tutela "
+"o custodia ordenada judicialmente, un poder de representación duradero o un "
+"poder de representación para la atención médica."
+
+#: src/templates/guac/prior_auths/dismissal_letter.html:10
+#, python-format
+msgid ""
+"As of today, our records show that you have not submitted documents "
+"appointing %(rep_name)s as your representative. You were given 14 calendar "
+"days to send Clover a valid AOR form, which has now expired. Therefore, your "
+"case has been dismissed."
+msgstr ""
+"Hasta el momento, nuestros registros indican que usted no ha enviado "
+"documentos en los que se designe a %(rep_name)s como su representante. Se le "
+"dio un plazo de 14 días calendario para enviar a Clover un formulario de AOR "
+"válido. Este plazo venció. Por lo tanto, su caso ha sido dado de baja."
+
+#: src/templates/guac/prior_auths/dismissal_letter.html:13
+msgid ""
+"You may resubmit your request for services if you have a completed AOR. We "
+"value your membership with Clover and look forward to continuing to service "
+"your medical needs."
+msgstr ""
+"Puede volver a presentar una solicitud de servicios si tiene un formulario "
+"de AOR completo."
+
+#: src/templates/guac/prior_auths/inquiry_letter.html:11
+#, python-format
+msgid ""
+"We're writing to inform you that the inquiry made about %(service)s on "
+"%(date)s does not require pre-authorization."
+msgstr ""
+"Le escribimos en relación con su consulta para informarle que el servicio "
+"%(service)s con fecha %(date)s no requiere autorización previa."
+
+#: src/templates/guac/prior_auths/lpuc.html:46
+#, python-format
+msgid "%(city)s, %(state)s %(zip)s"
+msgstr ""
+
+#: src/templates/guac/prior_auths/lpuc.html:55
+msgid ""
+"Clover Health received a claim for services rendered to one of our members. "
+"The Utilization Management Department at Clover Health is requesting "
+"supporting medical records to determine medical necessity for the service "
+"rendered. The details of the received claim can be found below:"
+msgstr ""
+
+#: src/templates/guac/prior_auths/lpuc.html:59
+msgid "Patient Name: "
+msgstr "Nombre del paciente"
+
+#: src/templates/guac/prior_auths/lpuc.html:60
+msgid "Date of Birth: "
+msgstr ""
+
+#: src/templates/guac/prior_auths/lpuc.html:61
+msgid "Patient Account: "
+msgstr ""
+
+#: src/templates/guac/prior_auths/lpuc.html:66
+msgid "Facility: "
+msgstr ""
+
+#: src/templates/guac/prior_auths/lpuc.html:67
+msgid "Department: "
+msgstr ""
+
+#: src/templates/guac/prior_auths/lpuc.html:68
+msgid "Date(s) of Service: "
+msgstr "Fechas de servicio"
+
+#: src/templates/guac/prior_auths/lpuc.html:75
+msgid "Claim Number: "
+msgstr "N.° de ident. de caso"
+
+#: src/templates/guac/prior_auths/lpuc.html:80
+msgid ""
+"Please provide copies of any relevant medical records pertaining to the date "
+"of service listed above. This includes, but is not limited to, admission "
+"orders, lab orders, radiology results, and any clinical review notes by the "
+"attending physician. "
+msgstr ""
+
+#: src/templates/guac/prior_auths/lpuc.html:82
+#, python-format
+msgid "%(additional_info)s Please fax or mail records to:"
+msgstr ""
+
+#: src/templates/guac/prior_auths/lpuc.html:85
+msgid "Please fax or mail records to:"
+msgstr ""
+
+#: src/templates/guac/prior_auths/lpuc.html:106
+#, python-format
+msgid ""
+"If we do not receive these medical records by %(records_due_date)s, your "
+"claim will be denied for a lack of clinical documentation.  You will have "
+"the right to request a reconsideration of this denial. Out-of-network "
+"providers in particular should know they have 60 days from the date of their "
+"remittance notice to request this reconsideration. For in-network providers, "
+"please refer to your contract or the Provider Manual for information on the "
+"dispute process. If you have any questions about the importance of these "
+"medical records for the processing of your claim, please call us at "
+"1-877-853-8019. "
+msgstr ""
+
+#: src/templates/guac/prior_auths/ndcs.html:29
+#, python-format
+msgid ""
+"Important:  This notice is to inform you of the service request which you "
+"submitted to Clover on %(received)s in reference to the request for payment "
+"of %(description)s that was denied."
+msgstr ""
+
+#: src/templates/guac/prior_auths/ndcs.html:41
+msgid "Notice of Denial of Coverage for Services"
+msgstr ""
+
+#: src/templates/guac/prior_auths/ndcs.html:46
+msgid "Member Number"
+msgstr "Número de miembro"
+
+#: src/templates/guac/prior_auths/ndcs.html:54
+msgid "Case Number"
+msgstr "N.° de ident. de caso"
+
+#: src/templates/guac/prior_auths/ndcs.html:57
+msgid "Provider/Facility"
+msgstr ""
+
+#: src/templates/guac/prior_auths/ndcs.html:62
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:78
+msgid "Date of Birth"
+msgstr "Fecha de Nacimiento"
+
+#: src/templates/guac/prior_auths/ndcs.html:66
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:86
+msgid "Service Date(s)"
+msgstr "Fecha(s) de Servicio"
+
+#: src/templates/guac/prior_auths/ndcs.html:78
+msgid "Your request was denied"
+msgstr "Su petición fue denegada."
+
+#: src/templates/guac/prior_auths/ndcs.html:80
+#, python-format
+msgid ""
+"After completing our review, we've %(verb)s the medical services/items "
+"listed below requested by you or your doctor/provider:"
+msgstr ""
+"Hemos denegado los servicios/artículos médicos listados, que fueron "
+"solicitados por usted o su médico:"
+
+#: src/templates/guac/prior_auths/ndcs.html:98
+msgid "Why did we deny your request?"
+msgstr ""
+
+#: src/templates/guac/prior_auths/ndcs.html:100
+#, python-format
+msgid ""
+"Based upon the clinical information provided, the request for payment of "
+"%(service_description)s is denied because:"
+msgstr ""
+
+#: src/templates/guac/prior_auths/ndcs.html:105
+msgid "What if I don't agree with this decision?"
+msgstr ""
+
+#: src/templates/guac/prior_auths/ndcs.html:107
+msgid ""
+"As a contracted provider, your rights to dispute the decision above are "
+"defined in your contract with Clover. If you have any questions or concerns, "
+"you may contact Provider Services at <span class=\"disable-wrap"
+"\"><b>1-877-853-8019</b></span> for more information."
+msgstr ""
+
+#: src/templates/guac/prior_auths/nomnc.html:42
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:72
+msgid "Servicing Provider"
+msgstr "Proveedor Pedido"
+
+#: src/templates/guac/prior_auths/nomnc.html:67
+msgid "Notice of Medicare Non-Coverage"
+msgstr "Aviso de Falta de Cobertura de Medicare"
+
+#: src/templates/guac/prior_auths/nomnc.html:86
+#, python-format
+msgid ""
+"Effective Date of Coverage of your current %(services)s services will end: "
+"%(high_date)s"
+msgstr ""
+"La fecha en que comenzó la cobertura de los servicios de %(services)s los "
+"servicios terminarán el %(high_date)s"
+
+#: src/templates/guac/prior_auths/nomnc.html:93
+#, python-format
+msgid ""
+"Your Medicare provider and/or health plan have determined that Medicare "
+"probably will not pay for your current %(services)s services after the "
+"effective date indicated above."
+msgstr ""
+"Su plan de Medicare o su proveedor ha determinado que Medicare probablemente "
+"no pagará por los servicios de %(services)s que usted está recibiendo, a "
+"partir de la fecha indicada arriba.
+"
+
+#: src/templates/guac/prior_auths/nomnc.html:97
+msgid "You may have to pay for any services you receive after the above date."
+msgstr ""
+"Después de esa fecha, usted quizás tendrá que pagar por cualquier servicio "
+"que reciba."
+
+#: src/templates/guac/prior_auths/nomnc.html:101
+msgid "Your Right to Appeal This Decision"
+msgstr "Su Derecho de Apelar Esta Decisión"
+
+#: src/templates/guac/prior_auths/nomnc.html:104
+msgid ""
+"You have the right to an immediate, independent medical review (appeal) of "
+"the decision to end Medicare coverage of these services. Your services will "
+"continue during the appeal."
+msgstr ""
+"Tiene el derecho a un repaso médico independiente e inmediata (apelación) de "
+"la decisión de finalizar la cobertura de Medicare de dichos servicios.  Los "
+"servicios continuarán durante la apelación."
+
+#: src/templates/guac/prior_auths/nomnc.html:105
+msgid ""
+"If you choose to appeal, the independent reviewer will ask for your opinion. "
+"The reviewer also will look at your medical records and/or other relevant "
+"information. You do not have to prepare anything in writing, but you have "
+"the right to do so if you wish."
+msgstr ""
+"Si escoge apelar, el revisor independiente le pedirá su opinión. El revisor "
+"también examinará sus registros médicos y/u otros datos pertinentes. No "
+"tiene que preparar nada por escrito, pero tiene el derecho de hacerlo si así "
+"lo quiere."
+
+#: src/templates/guac/prior_auths/nomnc.html:106
+msgid ""
+"If you choose to appeal, you and the independent reviewer will each receive "
+"a copy of the detailed explanation about why your coverage for services "
+"should not continue. You will receive this detailed notice only after you "
+"request an appeal."
+msgstr ""
+"Si escoge apelar, el revisor independiente recibirá una copia de la "
+"explicación detallada de por qué la cobertura de dichos servicios no debe "
+"continuar. Ud recibirá tal aviso detallado sólo después de pedir una "
+"apelación."
+
+#: src/templates/guac/prior_auths/nomnc.html:107
+msgid ""
+"If you choose to appeal, and the independent reviewer agrees services should "
+"no longer be covered after the effective date indicated above;"
+msgstr ""
+"Si escoge apelar, y el revisor independiente está de acuerdo que dichos "
+"servicios no deberán cubrirse después de la fecha de vigencia indicada "
+"arriba;"
+
+#: src/templates/guac/prior_auths/nomnc.html:109
+msgid ""
+"Neither Medicare nor your plan will pay for these services after that date."
+msgstr "Ni Medicare ni su plan pagarán los servicios después de dicha fecha."
+
+#: src/templates/guac/prior_auths/nomnc.html:112
+msgid ""
+"If you stop services no later than the effective date indicated above, you "
+"will avoid financial liability."
+msgstr ""
+"Si termina los servicios a más tardar para la fecha de vigencia susodicha, "
+"no incurrirá en ninguna responsabilidad financiera."
+
+#: src/templates/guac/prior_auths/nomnc.html:117
+msgid "See page 2 of this notice for more information."
+msgstr "Si desea más información sobre este aviso, consulte la página 2."
+
+#: src/templates/guac/prior_auths/nomnc.html:121
+msgid "How to Ask For an Immediate Appeal"
+msgstr "Cómo Pedir una Apelación Inmediata"
+
+#: src/templates/guac/prior_auths/nomnc.html:124
+msgid ""
+"You must make your request to your Quality Improvement Organization (also "
+"known as a QIO). A QIO is the independent reviewer authorized by Medicare to "
+"review the decision to end these services."
+msgstr ""
+"Debe presentar su petición a la Organización de Mejoramiento de Calidad "
+"(También conocido por QIO). Una QIO es un revisor independiente facultado "
+"por Medicare para revisar la decisión de finalizar los servicios."
+
+#: src/templates/guac/prior_auths/nomnc.html:125
+msgid ""
+"Your request for an immediate appeal should be made as soon as possible, but "
+"no later than noon of the day before the effective date indicated above."
+msgstr ""
+"Debe hacerse la petición para una apelación inmediata lo antes posible, pero "
+"a más tardar para el mediodía del día antes de la fecha de vigencia indicada "
+"arriba."
+
+#: src/templates/guac/prior_auths/nomnc.html:126
+msgid ""
+"The QIO will notify you of its decision as soon as possible, generally no "
+"later than two days after the effective date of this notice if you are in "
+"Original Medicare. If you are in a Medicare health plan, the QIO generally "
+"will notify you of its decision by the effective date of this notice."
+msgstr ""
+"La QIO le notificará su decisión lo antes posible, por lo general, no más de "
+"dos días después de la fecha de vigencia del presente aviso si está en "
+"Medicare Original. La QIO generalmente le notificará su decisión para la "
+"fecha de vigencia del presente aviso."
+
+#: src/templates/guac/prior_auths/nomnc.html:128
+#: src/templates/guac/prior_auths/nomnc.html:130
+#: src/templates/guac/prior_auths/nomnc.html:132
+#, python-format
+msgid ""
+"Call your QIO at: %(name)s %(phone)s, TTY %(tty)s to appeal, or if you have "
+"questions."
+msgstr ""
+"Llame a su QIO al: %(name)s %(phone)s, TTY %(tty)s para apelar la decisión o "
+"si tiene preguntas.
+"
+
+#: src/templates/guac/prior_auths/nomnc.html:136
+msgid ""
+"If You Miss the Deadline to Request an Immediate Appeal, You May Have Other "
+"Appeal Rights:"
+msgstr ""
+"Si pierde la fecha límite para pedir una apelación inmediata, podría tener "
+"otros derechos de apelación:"
+
+#: src/templates/guac/prior_auths/nomnc.html:139
+msgid "If you have Original Medicare: call the QIO listed on page 1."
+msgstr ""
+"Si tiene el Medicare Original: llame a la QIO mencionada en la página 1. "
+
+#: src/templates/guac/prior_auths/nomnc.html:140
+msgid ""
+"If you belong to a Medicare health plan: call your plan at the number given "
+"below."
+msgstr ""
+"Si tiene otro plan de salud de Medicare: llame al plan al número mencionado "
+"abajo. "
+
+#: src/templates/guac/prior_auths/nomnc.html:143
+msgid ""
+"Plan contact information: Clover Health Customer Services at 1-888-657-1207. "
+"TTY users should call 711. Open 8 a.m. – 8 p.m., local time, 7 days a week "
+"from February 15th through September 30th, alternate technologies (for "
+"example, voicemail) will be used on the weekends and holidays."
+msgstr ""
+"Si tiene preguntas, llame, por favor, a Servicio al Cliente de Clover Health "
+"al 1-888-657-1207 (Los usuarios de TTY deben llamar al 711).  Atendemos de "
+"las 8 a.m. - 8 p.m., hora local, 7 días a la semana. Del 15 de febrero al 30 "
+"de septiembre, incluídos, se usará la tecnología alternativa (por ejemplo, "
+"buzón de voz) los fines de semana y días feriados."
+
+#: src/templates/guac/prior_auths/nomnc.html:153
+msgid "Please sign below to indicate you received and understood this notice."
+msgstr "Por favor, firme abajo para indicar que recibió y entendió este aviso."
+
+#: src/templates/guac/prior_auths/nomnc.html:158
+msgid ""
+"I have been notified that coverage of my services will end on the effective "
+"date indicated on this notice and that I may appeal this decision by "
+"contacting my QIO."
+msgstr ""
+"Me han avisado que terminará la cobertura de mis servicios la fecha de "
+"vigencia indicada arriba en el presente aviso y que puedo apelar dicha "
+"decisión contactando a mi QIO."
+
+#: src/templates/guac/prior_auths/nomnc.html:166
+msgid "Signature of Patient or Representative"
+msgstr "Firma del Paciente o Representante"
+
+#: src/templates/guac/prior_auths/notice_of_reinstatement_letter.html:7
+#, python-format
+msgid ""
+"On %(nomnc_date)s you received a Notice of Medicare Non-Coverage indicating "
+"the above services would end effective %(approved_to_date)s and that you "
+"would have to pay for any services you receive after that date."
+msgstr ""
+"El %(nomnc_date)s, recibió un Aviso de no cobertura de Medicare que indicaba "
+"que los servicios arriba mencionados finalizarían a partir del "
+"%(approved_to_date)s y que usted tendría que pagar por los servicios que "
+"reciba después de esa fecha."
+
+#: src/templates/guac/prior_auths/notice_of_reinstatement_letter.html:11
+msgid ""
+"This Reinstatement Notice is to inform you that upon further review, it has "
+"been determined that the above services shall continue with no lapse in "
+"coverage until further notice. You will receive a new Notice of Medicare Non-"
+"Coverage indicating when your coverage will end, when it has been determined "
+"that you no longer require the above services."
+msgstr ""
+"El Aviso de reincorporación tiene como fin informarle que tras una nueva "
+"revisión, se ha determinado que los servicios arriba mencionados continuarán "
+"sin interrupción en la cobertura hasta nuevo aviso. Recibirá un nuevo Aviso "
+"de no cobertura de Medicare que indicará cuándo finalizará su cobertura, "
+"cuando se ha determinado que ya no requiere los servicios arriba mencionados."
+
+#: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:7
+msgid ""
+"This notice is to inform you that the coverage for the requested outpatient "
+"service has been approved."
+msgstr ""
+"Este aviso es para informarle que la cobertura para el servicio para "
+"pacientes internados mencionado más arriba que solicitó ha sido aprobada."
+
+#: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:17
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:20
+msgid "Visits"
+msgstr "Visitas"
+
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:11
+msgid ""
+"We denied the medical services/items listed below requested by you or your "
+"doctor/provider:"
+msgstr ""
+"Hemos denegado los servicios/artículos médicos listados, que fueron "
+"solicitados por usted o su médico:"
+
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:28
+msgid ""
+"Why did we deny your request? We denied the medical services/items listed "
+"above because:"
+msgstr ""
+"¿Por qué hemos denegado la petición? Hemos denegado los servicios/artículos "
+"médicos listados arriba porque:"
+
+#: src/templates/guac/prior_auths/snf_approval_letter.html:7
+msgid ""
+"This notice is to inform you that the coverage for the above-referenced "
+"requested inpatient service has been approved."
+msgstr ""
+"Este aviso es para informarle que la cobertura para el servicio para "
+"pacientes internados mencionado más arriba que solicitó ha sido aprobada."
+
+#: src/templates/guac/prior_auths/snf_approval_letter.html:13
+msgid "Authorization/date of service valid from"
+msgstr "Autorización/fecha del servicio válida desde"
+
+#: src/templates/guac/prior_auths/snf_approval_letter.html:16
+msgid "Skilled nursing at"
+msgstr "Enfermería especializada a"
+
+#: src/templates/guac/prior_auths/snf_approval_letter.html:17
+#, python-format
+msgid "%(low_date)s to %(high_date)s (last date approved)"
+msgstr "%(low_date)s hasta %(high_date)s (último día de la cobertura)"
+
+#: src/templates/guac/prior_auths/snf_approval_letter.html:24
+#, python-format
+msgid ""
+"This prospectively authorized RUG rate/Level of Care was based on the "
+"clinical documentation provided by the requesting provider at the time of "
+"prior authorization request. This rate is subject to change based on "
+"clinical documentation exhibiting the medical necessity of skilled nursing "
+"services beyond what was approved. Clinical documentation must be submitted "
+"to Clover Utilization Management and will be reviewed at the next review "
+"date on, %(next_review)s, where your authorized rate will be reassessed "
+"based on the information provided. Any changes to the authorized rate will "
+"apply retrospectively to the entire stay."
+msgstr ""
+"Esta tarifa de RUG/Nivel de atención autorizada en forma prospectiva se basó "
+"en la documentación clínica proporcionada por el proveedor solicitante en el "
+"momento de la solicitud de autorización previa. Esta tarifa está sujeta a "
+"modificación en función de la documentación clínica que demuestre la "
+"necesidad médica de recibir servicios de enfermería especializada "
+"adicionales a los aprobados. La documentación clínica debe enviarse al "
+"Departamento de Administración de Utilización de Clover, la cual se revisará "
+"en la siguiente fecha de revisión el, %(next_review)s, momento en que su "
+"tarifa autorizada se revaluará en función de la información proporcionada. "
+"Cualquier cambio en la tarifa autorizada se aplicará en forma retrospectiva "
+"a su estadía completa."
+
+#: src/templates/guac/prior_auths/snf_approval_letter.html:27
+msgid ""
+"Requests for coverage of additional visits, treatments, testing or surgery "
+"may require a new authorization/precertification. Failure to obtain "
+"authorization/precertification, when required, may result in a reduction of "
+"benefits in accordance with the terms of your plan."
+msgstr ""
+"Las peticiones para cobertura de consultas, tratamientos, análisis o "
+"cirugías adicionales podrían requerir otra autorización/certificación "
+"anterior nueva. Si no se obtiene la autorización/certificación anterior, "
+"cuando ésta se necesita, podrían reducirse los beneficios según los términos "
+"de su plan."
+
+#: src/templates/guac/shared/ag_signature.html:2
+#: src/templates/guac/shared/appeals/signature.html:2
+msgid "Thank you,"
+msgstr "Gracias,"
+
+#: src/templates/guac/shared/ag_signature.html:3
+msgid "Grievances and Appeals Department"
+msgstr "Departamento de Quejas y Apelaciones"
+
+#: src/templates/guac/shared/customer_service_closing.html:1
+#: src/templates/guac/shared/prior_auths/customer_service_closing.html:1
+msgid ""
+"If you have any further questions or additional information related to this "
+"review in the interim, please call Customer Service at 1-888-657-1207. TTY "
+"users should call 711. We are open 8 a.m. - 8 p.m. EST, 7 days a week. From "
+"February 15 through September 30, alternate technologies (for example, "
+"voicemail) will be used on the weekends and holidays."
+msgstr ""
+"Si tiene alguna pregunta o necesita información adicional, llame a "
+"Experiencia del Cliente al 1-888-657-1207. Los usuarios de TTY deben llamar "
+"al 711. Estamos disponibles los 7 días de la semana, de 8.00 a. m. a "
+"8.00 p. m., hora local. Desde el 15 de febrero hasta el 30 de septiembre, se "
+"usarán tecnologías alternativas (por ejemplo, correo de voz) los fines de "
+"semana y los feriados."
+
+#: src/templates/guac/shared/ndn.html:4
+msgid "https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p1.png"
+msgstr "https://cdn.cloverhealth.com/assets/img/letters/NDN_Span_p1.png"
+
+#: src/templates/guac/shared/ndn.html:7
+msgid "https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p2.png"
+msgstr "https://cdn.cloverhealth.com/assets/img/letters/NDN_Span_p2.png"
+
+#: src/templates/guac/shared/ndn.html:10
+msgid "https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p3.png"
+msgstr "https://cdn.cloverhealth.com/assets/img/letters/NDN_Span_p3.png"
+
+#: src/templates/guac/shared/ndn.html:13
+msgid "https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p4.png"
+msgstr "https://cdn.cloverhealth.com/assets/img/letters/NDN_Span_p4.png"
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:3
+msgid "You have the right to file an expedited (fast) grievance if:"
+msgstr ""
+"Usted tiene derecho a presentar un reclamo acelerado (rápido) en los "
+"siguientes casos:"
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:6
+msgid ""
+"You asked for a fast decision on a service, and we decided to process it "
+"under our regular (non-expedited) time frame. We will give you a fast "
+"decision if you resubmit it with a supporting statement from your doctor."
+msgstr ""
+"Usted solicitó una decisión rápida en relación con un servicio, y nosotros "
+"decidimos procesarla según los plazos regulares (no acelerados). Le "
+"brindaremos una decisión rápida si vuelve a enviar la solicitud con una "
+"declaración de respaldo de su médico."
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:10
+msgid ""
+"You asked for a fast appeal for a service, and we decided to process it "
+"under our regular (non-expedited) time frame. We will give you a fast "
+"decision on your appeal if you resubmit it with a supporting statement from "
+"your doctor."
+msgstr ""
+"Usted solicitó una apelación rápida en relación con un servicio, y nosotros "
+"decidimos procesarla según los plazos regulares (no acelerados). Le "
+"brindaremos una decisión rápida sobre su apelación si vuelve a enviarla con "
+"una declaración de respaldo de su médico."
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:14
+msgid "We need up to 14 more days to decide on your request for a service."
+msgstr ""
+"Necesitamos hasta 14 días más para tomar una decisión sobre su solicitud de "
+"servicio."
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:18
+msgid "We need up to 14 more days to consider your appeal for a service."
+msgstr ""
+"Necesitamos hasta 14 días más para considerar su apelación de un servicio."
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:21
+msgid ""
+"NOTE: When you request a fast grievance, we will make a quick decision on "
+"your request and notify you within 24 hours."
+msgstr ""
+"NOTA: Si solicita un reclamo rápido, tomaremos una decisión rápida sobre su "
+"solicitud y le enviaremos una notificación en un plazo de 24 horas."
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:23
+msgid "How to File an Expedited (Fast) Grievance"
+msgstr "Cómo presentar un reclamo acelerado (rápido)"
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:25
+msgid "Call us at"
+msgstr "Llámenos al"
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:25
+msgid "to file an expedited grievance or get more information."
+msgstr "si desea presentar un reclamo acelerado u obtener más información."
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:25
+msgid "You can also call"
+msgstr "También puede llamar al"
+
+#: src/templates/guac/shared/notice_of_denied_expedite_or_extension_letter.html:25
+msgid ""
+"24 hours a day, 7 days a week, for more information about the expedited "
+"grievance process. TTY users should call"
+msgstr ""
+"durante las 24 horas, los 7 días de la semana, para obtener más información "
+"sobre el proceso de reclamos acelerados. Los usuarios de TTY deben llamar al"
+
+#: src/templates/guac/shared/appeals/signature.html:5
+msgid "Clover Health"
+msgstr ""
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:17
+msgid "Requested Service"
+msgstr "Servicio solicitado"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:20
+msgid "Long Term Acute Care Hospital"
+msgstr "Hospital de cuidados agudos a largo plazo"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:22
+msgid "Transitional Care Unit"
+msgstr "Unidad de cuidados de transición"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:24
+msgid "Skilled Nursing"
+msgstr "Enfermería especializada"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:26
+msgid "Psychiatric Hospitalization"
+msgstr "Hospitalización psiquiátrica"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:28
+msgid "Partial Hospitalization Program"
+msgstr "Programa de hospitalización parcial"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:30
+msgid "Residential Rehabilitation - Substance Abuse"
+msgstr "Rehabilitación residencial - Abuso de sustancias"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:32
+msgid "Residential Rehabilitation - Psychiatric"
+msgstr "Rehabilitación residencial - Psiquiatría"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:34
+msgid "Outpatient Rehabilitation - Substance Abuse"
+msgstr "Rehabilitación para pacientes externos - Abuso de sustancias"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:36
+msgid "Inpatient Rehabilitation"
+msgstr "Rehabilitación para pacientes internados"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:38
+msgid "Outpatient Rehabilitation"
+msgstr "Rehabilitación para pacientes externos"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:40
+msgid "Inpatient Acute"
+msgstr "Cuidados agudos para pacientes internados"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:42
+msgid "Outpatient"
+msgstr "Paciente externo/a"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:44
+msgid "Inpatient"
+msgstr "Paciente internado/a"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:48
+msgid "Member"
+msgstr "Miembro"
+
+#: src/templates/guac/shared/prior_auths/prior_auth_member_info.html:58
+msgid "Request Received"
+msgstr "Fecha de recepción de la solicitud"
+
+#: src/templates/guac/shared/prior_auths/signature.html:1
+msgid "Sincerely,"
+msgstr "Muchas Gracias,"
+
+#~ msgid "Sessions"
+#~ msgstr "Número de Sesiones"
+
+#~ msgid ""
+#~ "This authorized rate was based on clinical documentation provided during "
+#~ "the medical necessity review process and will apply to the dates of "
+#~ "service listed above. If the member has a change in medical condition "
+#~ "requiring skilled nursing services beyond what was approved, please "
+#~ "submit clinical documentation demonstrating the medical necessity of "
+#~ "these services. Your authorized rate will be reassessed upon receipt of "
+#~ "additional clinical documentation."
+#~ msgstr ""
+#~ "La tarifa autorizada se basó en la documentación clínica proporcionada "
+#~ "durante el proceso de revisión de la necesidad médica y se aplicará a las "
+#~ "fechas de servicio mencionadas anteriormente. Si el miembro presenta un "
+#~ "cambio en la condición médica que requiera servicios de enfermería "
+#~ "especializada adicionales a los aprobados, envíe la documentación clínica "
+#~ "que demuestre la necesidad médica de estos servicios. Volveremos a "
+#~ "evaluar su tarifa autorizada cuando recibamos la documentación clínica "
+#~ "adicional."
+
+#~ msgid "DOB"
+#~ msgstr "Fecha de nacimiento"
+
+#~ msgid ""
+#~ "Please sign and return the attached Waiver of Liability Statement to:"
+#~ msgstr ""
+#~ "Por favor, firmar y devolver el adjunto Declaración de Renuncia de "
+#~ "Responsabilidad a:"
+
+#~ msgid ""
+#~ "Thank you for taking the time to bring your concerns to our attention. We "
+#~ "value your membership and appreciate the opportunity to serve your health "
+#~ "care needs."
+#~ msgstr ""
+#~ "Gracias por tomarse el tiempo para comunicarnos sus inquietudes. "
+#~ "Valoramos su membresía y apreciamos la oportunidad de poder satisfacer "
+#~ "sus necesidades de atención médica."
+
+#~ msgid "Beneficiary Name"
+#~ msgstr "Nombre del beneficiario"
+
+#~ msgid "Auth Tracking Number"
+#~ msgstr "Número de autorización"
+
+#~ msgid ""
+#~ "Call 1-800- MEDICARE (1-800- 633-4227) 24 hours a day, 7 days a week, for "
+#~ "help or more information about the appeals process. TTY users should call "
+#~ "1-877- 486-2048"
+#~ msgstr ""
+#~ "Llame al 1-800- MEDICARE (1-800- 633-4227) durante las 24 horas, los 7 "
+#~ "días dela semana para obtener ayuda o información adicional sobre el "
+#~ "proceso de apelaciones.  Los usuarios de TTY deben llamar al 1-877- "
+#~ "486-2048."
+
+#~ msgid ""
+#~ "If you have any further questions or additional information related to "
+#~ "this review in the interim, please call Customer Service at 1-888- "
+#~ "657-1207. TTY users should call 711. We are open 8 a.m. - 8 p.m. EST, 7 "
+#~ "days a week. From February 15 through September 30, alternate "
+#~ "technologies (for example, voicemail) will be used on the weekends and "
+#~ "holidays."
+#~ msgstr ""
+#~ "Si tiene preguntas o precisa de más información, llame, por favor, a "
+#~ "Servicio para Clientes al 1- 888-657- 1207 (Los usuarios de TTY deben "
+#~ "llamar al 711). Atendemos de las 8 a.m. - 8 p.m., hora local, 7 días a la "
+#~ "semana. Del 15 de febrero al 30 de septiembre, inclusive, se usará la "
+#~ "tecnología alternativa (por ejemplo, buzón de voz) los fines de semana y "
+#~ "días festivos."
+
+#~ msgid ""
+#~ "On %(date)s , we received a grievance (complaint) regarding "
+#~ "%(description)s , which was submitted on your behalf by "
+#~ "%(reporter_first_name)s %(reporter_last_name)s."
+#~ msgstr ""
+#~ "El %(date)s, recibimos un reclamo (queja) sobre %(description)s, que "
+#~ "presentó%(reporter_first_name)s %(reporter_last_name)s a su nombre."
+
+#~ msgid ""
+#~ "In compliance with the Centers for Medicare &amp; Medicaid (CMS) "
+#~ "guidelines, we will not be able to proceed with this grievance unless we "
+#~ "receive documentation appointing %(reporter_first_name)s "
+#~ "%(reporter_last_name)s as your representative. We have enclosed an "
+#~ "Appointment of Representative (AOR) Form for your convenience. The "
+#~ "Appointment of Representative (AOR) form must be dated and signed by both "
+#~ "you and %(reporter_first_name)s %(reporter_last_name)s to be valid."
+#~ msgstr ""
+#~ "En conformidad con las pautas de los Centros de Medicare y Medicaid "
+#~ "(CMS), no podremos continuar con este reclamo a menos que recibamos la "
+#~ "documentación en la que se designa a %(reporter_first_name)s "
+#~ "%(reporter_last_name)s como su representante. Para su conveniencia, hemos "
+#~ "adjuntado un Formulario de nombramiento de un representante (AOR). Para "
+#~ "que el formulario de nombramiento de un representante (AOR) sea válido, "
+#~ "debe estar fechado y firmado por usted y%(reporter_first_name)s "
+#~ "%(reporter_last_name)s."
+
+#~ msgid ""
+#~ "Authorization/Date of Service Valid from: %(low_date)s to %(high_date)s"
+#~ msgstr ""
+#~ "Autorización Válida/Fecha de Servicio del %(low_date)s al %(high_date)s"
+
+#~ msgid "Appeal Received on %(date_received)s"
+#~ msgstr "Solicitud de apelación presentada en la fecha %(date_received)s"
+
+#~ msgid "Grievance Acknowledgment"
+#~ msgstr "Acuse de recibo de reclamo"
+
+#~ msgid "Additional Clinical Information Requested"
+#~ msgstr "Se Solicita Información Clínica Adicional"
+
+#~ msgid "Notice of Prior Auth Inquiry"
+#~ msgstr "Aviso de la consulta sobre autorización previa"
+
+#~ msgid "Notice of Reinstatement"
+#~ msgstr "Aviso de reincorporación de la cobertura"
+
+#~ msgid "Member DOB"
+#~ msgstr "Fecha de nacimiento miembro"

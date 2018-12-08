@@ -1,0 +1,19 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/provider/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block member_and_case_info %}
+  {% include "guac/shared/customer/greeting_info_requested.html" %}
+{% endblock %}
+
+
+{% block message %}
+
+{% include "guac/shared/customer/notice_of_denied_expedite_or_extension_letter.html" %}
+{% include "guac/shared/customer/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+	{{ footer.render(model_numbers={'en': 'H5141_NotRightEGX', 'es': 'H5141_NotRightEGX_SP'}) }}
+{% endblock %}

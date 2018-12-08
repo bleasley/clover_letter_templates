@@ -1,0 +1,50 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/provider/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+
+{% block member_and_case_info %}
+
+<p style="text-align: center;">
+	<strong>Clover Health Customer Services&emsp;1-888-657-1207</strong><br />
+	<strong>PO Box 471, Jersey City, NJ 07303-9919</strong>
+	</p>
+<h2 class="document-title" style="text-align: center;">{{ _('Detailed Explanation of Non-Coverage') }}</h2>
+<p style="text-align: center;">
+	<strong>{{ _('Servicing Provider') }}:</strong> {{ provider.name }}&nbsp;({{ provider.phone }})<br />
+	{{ provider.address }},{{ provider.city }},{{ provider.state }}{{ provider.zip }}</p>
+
+
+  {% include "guac/shared/customer/greeting_info_patient.html" %}
+
+
+{% endblock %}
+
+
+{% block message %}
+
+<p>{{ _(“This notice gives a detailed explanation of why Clover Health has determined Medicare coverage for your current services should end.”) }} 
+	<strong><i>{{ _(“This notice is not the decision on your appeal”) }}</i></strong>. {{ _(“The decision on your appeal will come from your Quality Improvement Organization (QIO).”) }}</p>
+<p>{{ _(“We have reviewed your case and decided that Medicare coverage of your current {{ PDR.curr_services }} services should end.”) }}</p>
+
+<ul>
+	<li><strong>{{ _(“The facts used to make this decision:”) }}</strong><br />
+		{{ _(values.denial_facts) }}</li>
+	<li><strong>{{ _(“Detailed explanation of why your current services are no longer covered, and the specific Medicare coverage rules and policy used to make this decision:”) }}</strong><br /> 
+		{{ _(prior_auth.denial_rationale) }}</li>
+	<li><strong>{{ _(“Plan policy, provision, or rationale used in making the decision:”) }}</strong><br />
+		{{ _(“It was determined that there was no medical necessity for this request. This decision was based on medical criteria {{ values.denial_policy }}. The last approved date is {{ utils.render_date_inline(values.approved_date) }}, and denial begins {{ utils.render_date_inline(values.denial_begins_date) }}.”) }}</li>
+</ul>
+
+<p>{{ _(“If you would like a copy of the policy or coverage guidelines used to make this decision, or a copy of the documents sent to the QIO, please call us at: Clover Health Customer Services 1-888-657-1207. TTY users should call 711. Open 8 a.m. - 8 p.m., local time, 7 days a week from February 15<sup>th</sup> through September 30<sup>th</sup>, alternate technologies (for example, voicemail) will be used on the weekends and holidays.”) }}
+	
+</p>
+
+
+  {% include "guac/shared/customer/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+  {{ footer.render(model_numbers={locale(): 'Form CMS 10124-DENC (Approved 12/31/2011)    OMB Approval 0938-0953     H5141_DENC'}) }}
+{% endblock %}
