@@ -1,3 +1,5 @@
+{% # corresponds to /guac/prior_auths/denc.html in original setup %}
+
 {% import "base.html" as utils %}
 {% extends "guac/shared/customer/base_letter_customer.html" %}
 {% import "guac/shared/footer.html" as footer with context %}
@@ -18,16 +20,28 @@
 
 <p>{{ _("This notice gives a detailed explanation of why Clover Health has determined Medicare coverage for your current services should end.") }}
 	<strong><i>{{ _("This notice is not the decision on your appeal") }}</i></strong>. {{ _("The decision on your appeal will come from your Quality Improvement Organization (QIO).") }}</p>
-<p>{{ _("We have reviewed your case and decided that Medicare coverage of your current {{ PDR.curr_services }} services should end.") }}</p>
+	
+	{{ "<p class='page-break'></p>" if use_large_font()}}>
+	
+<p>{{ _('We have reviewed your case and decided that Medicare coverage of your current %(service_description)s services should end.',
+         service_description=utils.render_text_inline(values.service_description)) }}</p>
 
 <ul>
 	<li><strong>{{ _("The facts used to make this decision:") }}</strong><br />
 		{{ _(values.denial_facts) }}</li>
 	<li><strong>{{ _("Detailed explanation of why your current services are no longer covered, and the specific Medicare coverage rules and policy used to make this decision:") }}</strong><br />
 		{{ _(prior_auth.denial_rationale) }}</li>
-	<li><strong>{{ _("Plan policy, provision, or rationale used in making the decision:") }}</strong><br />
-		{{ _("It was determined that there was no medical necessity for this request. This decision was based on medical criteria {{ values.denial_policy }}. The last approved date is {{ utils.render_date_inline(values.approved_date) }}, and denial begins {{ utils.render_date_inline(values.denial_begins_date) }}.") }}</li>
+	<li><strong>{{ _("Plan policy, provision, or rationale used in making the decision:") }}</strong><br />		
+		{{ _('It was determined that there was no medical necessity for this request. This decision was based on medical criteria %(denial_policy)s. The last approved date is %(auth_end)s, and denial begins %(denial_start)s.',
+              denial_policy=utils.render_text_inline(values.denial_policy),
+              auth_end=utils.render_date_inline(prior_auth.approved_to_date),
+              denial_start=utils.render_date_inline(add_timedelta(prior_auth.approved_to_date, 1))) }}
+		
+		
+		</li>
 </ul>
+
+<p class='page-break'></p>
 
 <p>{{ _("If you would like a copy of the policy or coverage guidelines used to make this decision, or a copy of the documents sent to the QIO, please call us at: Clover Health Customer Services 1-888-657-1207. TTY users should call 711. Open 8 a.m. - 8 p.m., local time, 7 days a week from February 15<sup>th</sup> through September 30<sup>th</sup>, alternate technologies (for example, voicemail) will be used on the weekends and holidays.") }}
 
