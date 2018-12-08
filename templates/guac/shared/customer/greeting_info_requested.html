@@ -1,7 +1,7 @@
 <table width="98%">
 <tbody>
 	<tr>
-	<td style="width: 25%;" valign="top">
+	<td style="width: 24%;" valign="top">
 <p>
 	<strong>{{ _('Case ID') }}</strong><br />
 	<strong>{{ _('Requested Service') }}</strong><br />
@@ -9,14 +9,14 @@
 	<strong>{{ _('Servicing Provider') }}</strong>
 </p>
 </td>
-<td style="width: 27%;" valign="top">
+<td style="" valign="top">
 <p>
 	{{ member.case_id }}<br />
 	{{ member.requested_service }}<br />
 	{{ utils.render_date_inline(member.requested_service_date) }} <br />
 	{{ provider.name }}</p>
 </td>
-<td style="width: 20%;" valign="top">
+<td style="width: 15%;" valign="top">
 <p>
 	<strong>{{ _('Member') }}</strong><br />
 	<strong>{{ _('Member ID') }}</strong><br />
@@ -25,13 +25,9 @@
 </td>
 <td style="width: 25%;" valign="top">
 <p>
-<<<<<<< HEAD
+
 	{{ member.name }} <br />
 	{{ member.id }} <br />
-=======
-	{{ member.name }}<br />
-	{{ member.id }}<br />
->>>>>>> f2e51256058de74b0dfd88983521beaec52e6980
 	{{ member.dob }}
 </p>
 </td>
