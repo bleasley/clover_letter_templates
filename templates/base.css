@@ -215,3 +215,12 @@ footer.letter-id {
   height:9.5in !important;
   }
   
+  div.address-top-corner {
+	     width: 258px;
+    position: absolute;
+    top: 23px;
+    text-align: center;
+    right: 0;
+    /* background-color: bisque; */
+    font-size: 12pt;
+  }
