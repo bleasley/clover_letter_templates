@@ -5,7 +5,7 @@
 
 {% block member_and_case_info %}
 {% include "guac/shared/provider_address_block.html" %}
-<h2 class="document-title" style="text-align: center;">{{ _('Notice of Medicare Non-Coverage') }}</h2>
+<h1 class="page-title" style="text-align: center;">{{ _('Notice of Medicare Non-Coverage') }}</h1>
   {% include "guac/shared/customer/greeting_info_patient.html" %}
 {% endblock %}
 
@@ -24,13 +24,15 @@
     {{ _('Your Medicare provider and/or health plan have determined that Medicare probably will not pay for your current %(services)s services after the effective date indicated above.', services=utils.render_text_inline(values.service_description)) }}
   </p>
 
-  <p>{{ _('You may have to pay for any services you receive after the above date.') }}</p>
+  <p class="border-bottom">{{ _('You may have to pay for any services you receive after the above date.') }}</p>
 
-  <hr />
 
-<ul>
+<ul class="border-bottom">
     <li>{{ _('You have the right to an immediate, independent medical review (appeal) of the decision to end Medicare coverage of these services. Your services will continue during the appeal.') }}</li>
     <li>{{ _('If you choose to appeal, the independent reviewer will ask for your opinion. The reviewer also will look at your medical records and/or other relevant information. You do not have to prepare anything in writing, but you have the right to do so if you wish.') }}</li>
+    
+    {% </ul><span class="page-break"></span><ul> if use_large_font() %}
+    
     <li>{{ _('If you choose to appeal, you and the independent reviewer will each receive a copy of the detailed explanation about why your coverage for services should not continue. You will receive this detailed notice only after you request an appeal.') }}</li>
     <li>{{ _('If you choose to appeal, and the independent reviewer agrees services should no longer be covered after the effective date indicated above;') }}
       <ul>
@@ -40,11 +42,16 @@
     <li>{{ _('If you stop services no later than the effective date indicated above, you will avoid financial liability.') }}</li>
   </ul>
 
-  <hr />
 
-  <p><strong>{{ _('See page 2 of this notice for more information.') }}</strong></p>
+  <p><strong>
+	  {% if use_large_font() %}
+	  	{{ _('See page 3 of this notice for more information.') }}
+	  {% else %}
+	  	{{ _('See page 2 of this notice for more information.') }}
+	  {% endif %}
+	  	</strong></p>
 
-  <span class="page-break"></span>
+  <p class="page-break"></p>
 
   <h2>{{ _('How to Ask For an Immediate Appeal') }}</h2>
 
@@ -70,11 +77,11 @@
 
   <p>{{ _('Plan contact information: Clover Health Customer Services at 1-888-657-1207. TTY users should call 711. Open 8 a.m. – 8 p.m., local time, 7 days a week from February 15th through September 30th, alternate technologies (for example, voicemail) will be used on the weekends and holidays.') }}</p>
 
-  <p><b>
+  <p>
     {{ _('Additional Information') }}:
     {{ _('Last Approved Date') }} {{ utils.render_date_inline(prior_auth.approved_to_date) }},
     {{ _('Denial Begins') }} {{ utils.render_date_inline(prior_auth.approved_to_date) }}
-  </b></p>
+  </p>
 
   <p>
     <strong>
@@ -86,9 +93,8 @@
     {{ _('I have been notified that coverage of my services will end on the effective date indicated on this notice and that I may appeal this decision by contacting my QIO.') }}
   </p>
 
-  <br /><br /><br /><br /><br />
 
-  <table>
+  <table style="margin-top:70px;">
     <tr>
       <td class="signature-line signature-line-wide">
         {{ _('Signature of Patient or Representative') }}

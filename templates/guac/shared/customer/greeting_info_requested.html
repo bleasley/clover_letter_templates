@@ -8,23 +8,52 @@
 </tr>
 <tr>
 <td width="50%" valign="top"><strong>{{ _('Requested Service') }}</strong></td>
-<td align="top">{{ member.requested_service }}</td>
+<td align="top">
+	{% if service_type == 'Long Term Acute Care Hospital' %}
+          {{ _('Long Term Acute Care Hospital') }} {{ cpt_codes }}
+        {% elif service_type == 'Transitional Care Unit' %}
+          {{ _('Transitional Care Unit') }} {{ cpt_codes }}
+        {% elif service_type == 'Skilled Nursing' %}
+          {{ _('Skilled Nursing') }} {{ cpt_codes }}
+        {% elif service_type == 'Psychiatric Hospitalization' %}
+          {{ _('Psychiatric Hospitalization') }} {{ cpt_codes }}
+        {% elif service_type == 'Partial Hospitalization Program' %}
+          {{ _('Partial Hospitalization Program') }} {{ cpt_codes }}
+        {% elif service_type == 'Residential Rehabilitation - Substance Abuse' %}
+          {{ _('Residential Rehabilitation - Substance Abuse') }} {{ cpt_codes }}
+        {% elif service_type == 'Residential Rehabilitation - Psychiatric' %}
+          {{ _('Residential Rehabilitation - Psychiatric') }} {{ cpt_codes }}
+        {% elif service_type == 'Outpatient Rehabilitation - Substance Abuse' %}
+          {{ _('Outpatient Rehabilitation - Substance Abuse') }} {{ cpt_codes }}
+        {% elif service_type == 'Inpatient Rehabilitation' %}
+          {{ _('Inpatient Rehabilitation') }} {{ cpt_codes }}
+        {% elif service_type == 'Outpatient Rehabilitation' %}
+          {{ _('Outpatient Rehabilitation') }} {{ cpt_codes }}
+        {% elif service_type == 'Inpatient Acute' %}
+          {{ _('Inpatient Acute') }} {{ cpt_codes }}
+        {% elif service_type == 'Outpatient' %}
+          {{ _('Outpatient') }} {{ cpt_codes }}
+        {% elif service_type == 'Inpatient' %}
+          {{ _('Inpatient') }} {{ cpt_codes }}
+        {% endif %}
+	
+</td>
 </tr>
 <tr>
 <td valign="top"><strong>{{ _('Request Received') }}</strong></td>
-<td align="top">{{ utils.render_date_inline(member.requested_service_date) }}</td>
+<td align="top">{{ utils.render_date_inline(prior_auth.received_datetime) }}</td>
 </tr>
 <tr>
 <td  valign="top"><strong>{{ _('Servicing Provider') }}</strong></td>
-<td align="top">{{ provider.name }}</td>
+<td align="top">{{ values.provider_name }}</td>
 </tr>
 <tr>
 <td valign="top"><strong>{{ _('Member') }}</strong></td>
-<td align="top">{{ member.name }}</td>
+<td align="top">{{ prior_auth.member.first_name }} {{ prior_auth.member.last_name }}</td>
 </tr>
 <tr>
 <td valign="top"><strong>{{ _('Member ID') }}</strong></td>
-<td align="top">{{ member.id }}</td>
+<td align="top">{{ prior_auth.member_carepoint_id }}</td>
 </tr>
 <tr>
 <td valign="top"><strong>{{ _('Date of Birth') }}</strong></td>
@@ -46,19 +75,47 @@
 </tr>
 <tr>
 <td valign="top"><strong>{{ _('Requested Service') }}</strong></td>
-<td valign="top">{{ member.requested_service }}</td>
+<td valign="top">
+	{% if service_type == 'Long Term Acute Care Hospital' %}
+          {{ _('Long Term Acute Care Hospital') }} {{ cpt_codes }}
+        {% elif service_type == 'Transitional Care Unit' %}
+          {{ _('Transitional Care Unit') }} {{ cpt_codes }}
+        {% elif service_type == 'Skilled Nursing' %}
+          {{ _('Skilled Nursing') }} {{ cpt_codes }}
+        {% elif service_type == 'Psychiatric Hospitalization' %}
+          {{ _('Psychiatric Hospitalization') }} {{ cpt_codes }}
+        {% elif service_type == 'Partial Hospitalization Program' %}
+          {{ _('Partial Hospitalization Program') }} {{ cpt_codes }}
+        {% elif service_type == 'Residential Rehabilitation - Substance Abuse' %}
+          {{ _('Residential Rehabilitation - Substance Abuse') }} {{ cpt_codes }}
+        {% elif service_type == 'Residential Rehabilitation - Psychiatric' %}
+          {{ _('Residential Rehabilitation - Psychiatric') }} {{ cpt_codes }}
+        {% elif service_type == 'Outpatient Rehabilitation - Substance Abuse' %}
+          {{ _('Outpatient Rehabilitation - Substance Abuse') }} {{ cpt_codes }}
+        {% elif service_type == 'Inpatient Rehabilitation' %}
+          {{ _('Inpatient Rehabilitation') }} {{ cpt_codes }}
+        {% elif service_type == 'Outpatient Rehabilitation' %}
+          {{ _('Outpatient Rehabilitation') }} {{ cpt_codes }}
+        {% elif service_type == 'Inpatient Acute' %}
+          {{ _('Inpatient Acute') }} {{ cpt_codes }}
+        {% elif service_type == 'Outpatient' %}
+          {{ _('Outpatient') }} {{ cpt_codes }}
+        {% elif service_type == 'Inpatient' %}
+          {{ _('Inpatient') }} {{ cpt_codes }}
+        {% endif %}
+</td>
 <td valign="top"><strong>{{_('Member ID') }}</strong></td>
-<td valign="top">{{ member.id }}</td>
+<td valign="top">{{ prior_auth.member_carepoint_id }}</td>
 </tr>
 <tr>
 <td valign="top"><strong>{{ _('Request Received') }}</strong></td>
-<td valign="top">{{ utils.render_date_inline(member.requested_service_date) }}&nbsp;</td>
+<td valign="top">{{ utils.render_date_inline(prior_auth.received_datetime) }}&nbsp;</td>
 <td valign="top"><strong>{{ _('Date of Birth') }}</strong></td>
-<td valign="top">{{ member.dob }}</td>
+<td valign="top">{{ utils.render_date_inline(prior_auth.member.birthdate) }}</td>
 </tr>
 <tr>
 <td valign="top"><strong>{{ _('Servicing Provider') }}</strong></td>
-<td valign="top">{{ provider.name }}</td>
+<td valign="top">{{ values.provider_name }}</td>
 <td valign="top">&nbsp;</td>
 <td valign="top">&nbsp;</td>
 </tr>

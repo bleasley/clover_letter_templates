@@ -2240,6 +2240,10 @@ msgstr ""
 msgid "See page 2 of this notice for more information."
 msgstr "Si desea más información sobre este aviso, consulte la página 2."
 
+#: src/templates/guac/prior_auths/nomnc.html:117
+msgid "See page 3 of this notice for more information."
+msgstr "Si desea más información sobre este aviso, consulte la página 3."
+
 #: src/templates/guac/prior_auths/nomnc.html:121
 msgid "How to Ask For an Immediate Appeal"
 msgstr "Cómo Pedir una Apelación Inmediata"

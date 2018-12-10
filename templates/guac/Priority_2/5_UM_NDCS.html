@@ -5,7 +5,7 @@
 
 {% block member_and_case_info %}
 {% include "guac/shared/Clover_address_block.html" %}
-<h2 class="document-title" style="text-align: center;">{{ _('Detailed Explanation of Non-Coverage') }}</h2>
+<h1 class="page-title" style="text-align: center;">{{ _('Detailed Explanation of Non-Coverage') }}</h1>
 <p style="text-align: center;"><strong>Important: This notice is to inform you of the service request which you submitted to Clover on &lt;XX/XX/XXXX&gt; in reference to the request for payment of &lt;Service Description&gt; that was denied.</strong></p>
   {% include "guac/shared/customer/greeting_info_patient.html" %}
 {% endblock %}
@@ -20,34 +20,39 @@
 
 <p><strong>{{ _("Your request was denied") }}</strong></p>
 <p>{{ _("After completing our review, we've %(verb)s the medical services/items listed below requested by you or your doctor/provider:",
-         verb=prior_auth.member_denial_determination.lower()) }}
+         verb=prior_auth.member_denial_determination.lower()) }}</p>
 
-         <ul>
-      <li>{{ service_type }} {% if prior_auth.description != None %}{{ prior_auth.description }}{% endif %}
+    <p style="margin-left:35px">
+    {{ service_type }} {% if prior_auth.description != None %}{{ prior_auth.description }}{% endif %}
           {% for procedure in prior_auth.procedures %}
             {% if not procedure.is_deleted %}
-              <ul>
+              <ul style="margin-left:35px;">
                 <li>{{ procedure.code }} {{ procedure.code.description }}</li>
                   <ul>
-                      <li>{{ _("Units:") }} {{ procedure.requested_units }} {% if procedure.modifiers != None %} {{ _("Modifiers:") }} {{ procedure.modifiers }} {% endif %}</li>
+                      <li>{{ _("Units:") }} {{ procedure.requested_units }} 
+                      		{% if procedure.modifiers != None %} {{ _("Modifiers:") }} {{ procedure.modifiers }} {% endif %}
+                      </li>
                   </ul>
               </ul>
             {% endif %}
           {% endfor %}
-      </li>
-    </ul>
-         </p>
+    </p>
+  
+     
+<p><strong>{{ _("Why did we deny your request?") }}</strong><br/>
+		{{ _('Based upon the clinical information provided, the request for payment of %(service_description)s is denied because:',
+         service_description=utils.render_text_inline(values.service_description)) }}<br/>
+         <span style="white-space: pre-line">{{ values.denial_rationale }}</span>
+</p>
 
-<p><strong>{{ _("Why did we deny your request?") }}</strong></p>
 
-<p>{{ _('Based upon the clinical information provided, the request for payment of %(service_description)s is denied because:',
-         service_description=utils.render_text_inline(values.service_description)) }}</p>
-         <p style="white-space: pre-line">{{ values.denial_rationale }}</p>
+{% <p class="page-break"></p> if use_large_font() %}
 
-<p><strong> {{ _("What if I don't agree with this decision?") }}</strong></p>
-<p>
+
+<p><strong> {{ _("What if I don't agree with this decision?") }}</strong><br/>
 	    {{ _('As a contracted provider, your rights to dispute the decision above are defined in your contract with Clover. If you have any questions or concerns, you may contact Provider Services at <span class="disable-wrap"><b>1-877-853-8019</b></span> for more information.') }}
 	</p>
+
 <p>{{ _("Respectfully,") }}</p>
 <p>{{ utils.render_text_inline(values.medical_director.label) }}, {{ _('Medical Director') }}</p>
 

@@ -197,7 +197,8 @@ footer.letter-id {
 
 
 
-.greeting h1.page-title {text-align:center;font-size:15pt;margin-bottom:8pt;}
+.greeting h1.page-title {text-align:center;font-size:18pt;margin-bottom:8pt;}
+h2 {font-size:15pt}
 .letter-info {}
 .greeting .greeting-date {    margin-top: 20pt;    margin-bottom: 20pt;}
 .greeting .greeting-line {    margin-bottom: 0;margin-top:0}
@@ -215,12 +216,6 @@ footer.letter-id {
   height:9.5in !important;
   }
   
-  div.address-top-corner {
-	     width: 258px;
-    position: absolute;
-    top: 23px;
-    text-align: center;
-    right: 0;
-    /* background-color: bisque; */
-    font-size: 12pt;
-  }
+.signature-line {border-top:1px solid black;}
+
+.border-bottom {border-bottom: 6px solid;padding-bottom: 20px;}
