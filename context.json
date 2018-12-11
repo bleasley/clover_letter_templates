@@ -87,7 +87,7 @@
   },
   "prior_auth_formatted_id": "1231238928",
   "is_auth_denied_expedite": "true",
-  "service_type": "Outpatient", //used in /shared/customer/greeting_info_requested.html
-  "cpt_codes":"CODES" //used in /shared/customer/greeting_info_requested.html
-  
+  "service_type": "Outpatient",
+  "cpt_codes":"CODES"
+
 }
