@@ -1,4 +1,4 @@
-{% # corresponds to /guac/prior_auths/denc.html in original setup %}
+{# corresponds to /guac/prior_auths/denc.html in original setup #}
 
 {% import "base.html" as utils %}
 {% extends "guac/shared/customer/base_letter_customer.html" %}
@@ -21,7 +21,7 @@
 <p>{{ _("This notice gives a detailed explanation of why Clover Health has determined Medicare coverage for your current services should end.") }}
 	<strong><i>{{ _("This notice is not the decision on your appeal") }}</i></strong>. {{ _("The decision on your appeal will come from your Quality Improvement Organization (QIO).") }}</p>
 	
-	{{ "<p class='page-break'></p>" if use_large_font()}}>
+	{{ "<p class='page-break'></p>" if use_large_font() }}
 	
 <p>{{ _('We have reviewed your case and decided that Medicare coverage of your current %(service_description)s services should end.',
          service_description=utils.render_text_inline(values.service_description)) }}</p>
@@ -41,7 +41,7 @@
 		</li>
 </ul>
 
-<p class='page-break'></p>
+<p class="page-break"></p>
 
 <p>{{ _("If you would like a copy of the policy or coverage guidelines used to make this decision, or a copy of the documents sent to the QIO, please call us at: Clover Health Customer Services 1-888-657-1207. TTY users should call 711. Open 8 a.m. - 8 p.m., local time, 7 days a week from February 15<sup>th</sup> through September 30<sup>th</sup>, alternate technologies (for example, voicemail) will be used on the weekends and holidays.") }}
 

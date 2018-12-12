@@ -6,7 +6,15 @@
 {% block member_and_case_info %}
 {% include "guac/shared/Clover_address_block.html" %}
 <h1 class="page-title" style="text-align: center;">{{ _('Detailed Explanation of Non-Coverage') }}</h1>
-<p style="text-align: center;"><strong>Important: This notice is to inform you of the service request which you submitted to Clover on &lt;XX/XX/XXXX&gt; in reference to the request for payment of &lt;Service Description&gt; that was denied.</strong></p>
+
+
+ <p style="text-align: center; font-weight: bold">
+      {{ _('Important:  This notice is to inform you of the service request which you submitted to Clover on %(received)s in reference to the request for payment of %(description)s that was denied.',
+           received=utils.render_date_inline(prior_auth.received_datetime),
+           description=utils.render_text_inline(values.service_description)) }}
+    </p>
+
+
   {% include "guac/shared/customer/greeting_info_patient.html" %}
 {% endblock %}
 
@@ -46,7 +54,9 @@
 </p>
 
 
-{% <p class="page-break"></p> if use_large_font() %}
+
+	{{ "<p class='page-break'></p>" if use_large_font() }}
+
 
 
 <p><strong> {{ _("What if I don't agree with this decision?") }}</strong><br/>

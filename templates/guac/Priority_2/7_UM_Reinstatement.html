@@ -1,0 +1,30 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/customer/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block member_and_case_info %}
+  {% include "guac/shared/customer/greeting_info_requested.html" %}
+{% endblock %}
+{% block greeting %}
+ {% include "guac/shared/greeting.html" %}
+{% endblock %}
+
+{% block message %}
+
+<p>{{ _("On %(nomnc_date)s you received a Notice of Medicare Non-Coverage indicating the above services would end effective %(approved_to_date)s and that you would have to pay for any services you receive after that date.",
+          nomnc_date=utils.render_date_inline(values.nomnc_date),
+          approved_to_date=utils.render_date_inline(prior_auth.approved_to_date)) }}</p>
+          
+<p>{{ _("This Reinstatement Notice is to inform you that upon further review, it has been determined that the above services shall continue with no lapse in coverage until further notice. You will receive a new Notice of Medicare Non-Coverage indicating when your coverage will end, when it has been determined that you no longer require the above services.") }}</p>
+
+<p>{{ _('If you have any further questions or additional information related to this review in the interim, please call Customer Service at 1-888-657-1207. TTY users should call 711. We are open 8 a.m. - 8 p.m. EST, 7 days a week. From February 15 through September 30, alternate technologies (for example, voicemail) will be used on the weekends and holidays.') }}</p>
+
+
+  {% include "guac/shared/customer/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+    {{ footer.render(model_numbers={'en': 'ICE MA SNF-HHA- CORF NRC Approved by CMS Region IX (04/16/04) Rev (3.05, 6/11) H5141_5X082AC_Reinstatement_SNF_EN', 'es': 'ICE MA SNF-HHA- CORF NRC Approved by CMS Region IX (04/16/04) Rev (3.05, 6/11) H5141_5X082AC_Reinstatement_SNF_ESP'}) }}
+
+{% endblock %}

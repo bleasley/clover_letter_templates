@@ -1,13 +1,13 @@
 {% if use_large_font() %}
 
-<table width="98%">
+<table width="100%">
 <tbody>
 <tr>
-<td width="55%" valign="top"><strong>{{ _('Case ID') }}</strong></td>
+<td width= {{ "57%" if locale() == "es" else "55%" }}  valign="top"><strong>{{ _('Case ID') }}</strong></td>
 <td align="top">{{ member.case_id }}</td>
 </tr>
 <tr>
-<td width="50%" valign="top"><strong>{{ _('Requested Service') }}</strong></td>
+<td valign="top"><strong>{{ _('Requested Service') }}</strong></td>
 <td align="top">
 	{% if service_type == 'Long Term Acute Care Hospital' %}
           {{ _('Long Term Acute Care Hospital') }} {{ cpt_codes }}
@@ -68,10 +68,14 @@
 <table width="98%">
 <tbody>
 <tr>
-<td style="width: 24%;" valign="top"><strong>{{ _('Case ID') }}</strong></td>
+	
+<td {{ style="width: 28%;" if locale() == "es" else style="width: 24%;"  }}  valign="top"><strong>{{ _('Case ID') }}</strong></td>
 <td valign="top">{{ member.case_id }}</td>
-<td style="width: 15%;" valign="top"><strong>{{ _('Member') }}</strong></td>
-<td style="width: 25%;" valign="top">{{ member.name }}</td>
+<td {{ style="" if locale() == "es" else style="width: 15%;"  }} style="" valign="top"><strong>{{ _('Member') }}</strong></td>
+<td {{ style="width: 29%;" if locale() == "es" else style="width: 25%;"  }}  valign="top">{{ member.name }}</td>
+
+
+
 </tr>
 <tr>
 <td valign="top"><strong>{{ _('Requested Service') }}</strong></td>

@@ -2472,6 +2472,7 @@ msgstr "Departamento de Quejas y Apelaciones"
 
 #: src/templates/guac/shared/customer_service_closing.html:1
 #: src/templates/guac/shared/prior_auths/customer_service_closing.html:1
+#: NEW src/templates/guac/Priority_2/7_UM_Reinstatement.html:21
 msgid ""
 "If you have any further questions or additional information related to this "
 "review in the interim, please call Customer Service at 1-888-657-1207. TTY "
