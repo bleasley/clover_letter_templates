@@ -45,6 +45,7 @@
     "member_carepoint_id":"4123Gkd6Aw3",
     "description": "Description of prior auth services goes here.",
     "approved_to_date": "2018-05-22",
+    "denial_start_date": "2018-05-24",
     "member_denial_determination": "denied",
     "denial_rationale": "Rationale or explanation of determination goes here.",
     "received_datetime":"2018-9-01",

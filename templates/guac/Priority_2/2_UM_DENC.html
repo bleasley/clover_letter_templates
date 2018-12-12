@@ -35,8 +35,15 @@
 		{{ _('It was determined that there was no medical necessity for this request. This decision was based on medical criteria %(denial_policy)s. The last approved date is %(auth_end)s, and denial begins %(denial_start)s.',
               denial_policy=utils.render_text_inline(values.denial_policy),
               auth_end=utils.render_date_inline(prior_auth.approved_to_date),
-              denial_start=utils.render_date_inline(add_timedelta(prior_auth.approved_to_date, 1))) }}
-		
+              denial_start=utils.render_date_inline(prior_auth.denial_start_date)) }}
+	
+	{# 
+	
+	Lines above orginally had the following in the denial_start= section
+	denial_start=utils.render_date_inline(add_timedelta(prior_auth.approved_to_date, 1)))
+	
+	For testing purposes, we've edited it to use a string rather than an actual date object.
+	#}	
 		
 		</li>
 </ul>
