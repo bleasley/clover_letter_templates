@@ -84,7 +84,20 @@
         "label": "Dr. Medical Director"
     },
     "nomnc_date":"2017-12-11",
-    "provider_name":"Sample Provider"
+    "prev_admit_date":"2017-12-11",
+    "records_due_date":"2018-12-10",
+    "additional_info":"",
+    "provider_name":"Sample Provider",
+    "first-name": "Sample",
+    "last-name": "Provider",
+    "recipient": "Office Manager",
+    "department": "Provider Department",
+    "address": "1234 State Street",
+    "address1": "",
+    "recipient_street_1":"1234 State Street",
+    "recipient_city": "Smalltown",
+    "recipient_state": "ST",
+    "recipient_zip": "000000"
   },
   "prior_auth_formatted_id": "1231238928",
   "is_auth_denied_expedite": "true",
