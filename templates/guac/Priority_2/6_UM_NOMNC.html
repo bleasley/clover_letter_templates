@@ -30,10 +30,10 @@
 <ul class="border-bottom">
     <li>{{ _('You have the right to an immediate, independent medical review (appeal) of the decision to end Medicare coverage of these services. Your services will continue during the appeal.') }}</li>
     <li>{{ _('If you choose to appeal, the independent reviewer will ask for your opinion. The reviewer also will look at your medical records and/or other relevant information. You do not have to prepare anything in writing, but you have the right to do so if you wish.') }}</li>
-    	    
-	    	{{ "</ul><span class="page-break"></span><ul>" if use_large_font() }}
 
-    
+	    	{{ "</ul><span class='page-break'></span><ul>" if use_large_font() }}
+
+
     <li>{{ _('If you choose to appeal, you and the independent reviewer will each receive a copy of the detailed explanation about why your coverage for services should not continue. You will receive this detailed notice only after you request an appeal.') }}</li>
     <li>{{ _('If you choose to appeal, and the independent reviewer agrees services should no longer be covered after the effective date indicated above;') }}
       <ul>
@@ -45,7 +45,7 @@
 
 
   <p><strong>
-	  
+
 	{{ _("See page 3 of this notice for more information.") if use_large_font() else  _("See page 2 of this notice for more information.") }}
 
 

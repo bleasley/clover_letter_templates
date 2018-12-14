@@ -36,7 +36,7 @@
         {% elif service_type == 'Inpatient' %}
           {{ _('Inpatient') }} {{ cpt_codes }}
         {% endif %}
-	
+
 </td>
 </tr>
 <tr>
@@ -68,11 +68,11 @@
 <table width="98%">
 <tbody>
 <tr>
-	
-<td {{ style="width: 28%;" if locale() == "es" else style="width: 24%;"  }}  valign="top"><strong>{{ _('Case ID') }}</strong></td>
+
+<td {{ 'style="width: 28%;"' if locale() == "es" else 'style="width: 24%;"'  }}  valign="top"><strong>{{ _('Case ID') }}</strong></td>
 <td valign="top">{{ member.case_id }}</td>
-<td {{ style="" if locale() == "es" else style="width: 15%;"  }} style="" valign="top"><strong>{{ _('Member') }}</strong></td>
-<td {{ style="width: 29%;" if locale() == "es" else style="width: 25%;"  }}  valign="top">{{ member.name }}</td>
+<td {{ 'style=""' if locale() == "es" else 'style="width: 15%;"'  }} style="" valign="top"><strong>{{ _('Member') }}</strong></td>
+<td {{ 'style="width: 29%;"' if locale() == "es" else 'style="width: 25%;"'  }}  valign="top">{{ member.name }}</td>
 
 
 
