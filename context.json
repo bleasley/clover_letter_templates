@@ -81,6 +81,7 @@
     "denial_policy": "Policy language related to determination",
     "denial_rationale": "Rationale or explanation of determination",
     "approved_date": "2018-11-15",
+    "dismissal_date":"2018-11-28",
     "denial_begins_date": "2018-11-16",
     "extension_reason":"Reason for extension",
     "extension_description":"Description of extension",
@@ -89,6 +90,7 @@
         "label": "Dr. Medical Director"
     },
     "nomnc_date":"2017-12-11",
+    "previous_aor_date":"2018-07-03",
     "prev_admit_date":"2017-12-11",
     "records_due_date":"2018-12-10",
     "additional_info":"",
