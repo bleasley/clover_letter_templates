@@ -33,6 +33,9 @@
     "requested_service_date": "2018-9-01"
   },
   "prior_auth": {
+	  "kind":{
+		  "value":"outpatient"
+	  },
     "member": {
 	  "first_name":"John",
 	  "last_name":"Doe",
@@ -44,6 +47,7 @@
     },
     "member_carepoint_id":"4123Gkd6Aw3",
     "description": "Description of prior auth services goes here.",
+    "approved_from_date":"2018-02-03",
     "approved_to_date": "2018-05-22",
     "denial_start_date": "2018-05-24",
     "member_denial_determination": "denied",

@@ -1,0 +1,51 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/customer/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block member_and_case_info %}
+{% include "guac/shared/Clover_address_block.html" %}
+
+  {% include "guac/shared/customer/greeting_info_requested.html" %}
+{% endblock %}
+{% block greeting %}
+ {% include "guac/shared/greeting.html" %}
+{% endblock %}
+
+{% block message %}
+
+ <p>{{ _('This notice is to inform you that the coverage for the requested') }} {{ prior_auth.kind.value.lower() }} {{ _('service has been approved.') }}</p>
+  <p>{{ _('Authorized Service') }}</p>
+
+  <ul>
+    <li>{{ service_type }} {% if prior_auth.description != None %}{{ prior_auth.description }}{% endif %}
+      {% for procedure in prior_auth.procedures%}
+        {% if procedure.is_deleted == false %}
+          <ul>
+            <li>{{ procedure.code }} {{ procedure.procedure_code.description }}</li>
+            <ul>
+              <li>{{ _('Units') }}: {{ procedure.requested_units }} {% if procedure.modifiers != None %} {{ _('Modifiers') }}: {{ procedure.modifiers }} {% endif %}</li>
+            </ul>
+          </ul>
+        {% endif %}
+      {% endfor %}
+    </li>
+  </ul>
+
+  <p>{{ _('Authorization/Date of Service Valid from: %(low_date)s to %(high_date)s (last date approved)',
+    low_date=utils.render_date_inline(prior_auth.approved_from_date),
+    high_date=utils.render_date_inline(prior_auth.approved_to_date))}} </p>
+
+  <p>{{ _('Requests for coverage of additional visits, treatments, testing or surgery may require a new authorization/precertification. Failure to obtain authorization/ precertification, when required, may result in a reduction of benefits in accordance with the terms of your plan.') }}</p>
+
+  <p>{{ _('Prior authorization/precertification requests are reviewed for medical necessity and plan benefits. All prior authorization/precertification is administered in accordance with applicable state and federal law. The intent of this authorization is to establish medical necessity and is not a guarantee of payment. Coverage is also dependent on your eligibility. Payment will be based on the Provider Contract or the prevailing Medicare Methodology.') }}</p>
+
+
+
+  {% include "guac/shared/customer/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+    {{ footer.render(model_numbers={'en': 'H5141_5X082AD_Approval_AuthServices_18_EN', 'es': 'H5141_5X082AD_Approval_AuthServices_18_ESP'}) }}
+
+{% endblock %}
