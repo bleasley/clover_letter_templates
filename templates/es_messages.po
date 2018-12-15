@@ -1463,6 +1463,14 @@ msgstr "Número del paciente"
 msgid "Patient DOB"
 msgstr "Fecha de nacimiento"
 
+
+msgid "Patient Date of Birth"
+msgstr "Fecha de nacimiento"
+
+msgid "Member Date of Birth"
+msgstr "Fecha de nacimiento"
+
+
 #: OLD src/templates/guac/prior_auths/denc.html:89
 #: NEW src/templates/guac/Priority 2/2_UM_DENC.html:55
 msgid ""

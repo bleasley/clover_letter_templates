@@ -11,11 +11,11 @@
 <td valign="top">{{ member.case_id }}</td>
 </tr>
 <tr>
-<td valign="top"><strong>{{ _('Patient ID') }}</strong></td>
+<td valign="top"><strong>{{ _('Member ID') }}</strong></td>
 <td valign="top">{{ member.id }}</td>
 </tr>
 <tr>
-<td valign="top"><strong>{{ _('Patient DOB') }}</strong></td>
+<td valign="top"><strong>{{ _('Member Date of Birth') }}</strong></td>
 <td valign="top">{{ utils.render_date_inline(member.dob) }}</td>
 </tr>
 </tbody>
@@ -25,15 +25,15 @@
 <table width="98%">
 <tbody>
 <tr>
-<td valign="top" width="16%"><strong>{{ _('Patient Name') }}</strong></td>
+<td valign="top" width="16%"><strong>{{ _('Member Name') }}</strong></td>
 <td valign="top">{{ member.name }}</td>
-<td valign="top" width="16%"><strong>{{ _('Patient ID') }}</strong></td>
+<td valign="top" width="16%"><strong>{{ _('Member ID') }}</strong></td>
 <td valign="top">{{ member.id }}</td>
 </tr>
 <tr>
 <td valign="top" ><strong>{{ _('Case ID') }}</strong></td>
 <td valign="top">{{ member.case_id }}</td>
-<td valign="top"><strong>{{ _('Patient DOB') }}</strong></td>
+<td valign="top"><strong>{{ _('Member Date of Birth') }}</strong></td>
 <td valign="top">{{ utils.render_date_inline(prior_auth.member.birthdate) }}</td>
 </tr>
 </tbody>
