@@ -28,8 +28,15 @@
 
 <p class="no-bottom-space">Clover Health received a claim for services rendered to one of our members. The Utilization Management Department at Clover Health is requesting supporting medical records to complete a readmission review.
 	
-	{{ The details of the received claim can be found on the following page:</p><p class='page-break'></p> if use_large_font() else The details of the received claim can be found below:</p> }}
 	
+		{% if use_large_font() %}
+		The details of the received claim can be found on the following page:</p><p class='page-break'></p> 
+		
+		{% else %}
+		The details of the received claim can be found below:
+	{% endif %}
+	
+		
 	
 
 <table style="" width="100%">
