@@ -26,7 +26,11 @@
 {% block message %}
 <p>Clover Health received a claim for services rendered to one of our members. The Utilization Management Department at Clover Health is requesting supporting medical records to determine medical necessity for the service rendered. The details of the received claim can be found below:</p>
 
-<p>Clover Health received a claim for services rendered to one of our members. The Utilization Management Department at Clover Health is requesting supporting medical records to complete a readmission review. The details of the received claim can be found below:</p>
+<p class="no-bottom-space">Clover Health received a claim for services rendered to one of our members. The Utilization Management Department at Clover Health is requesting supporting medical records to complete a readmission review.
+	
+	{{ The details of the received claim can be found on the following page:</p><p class='page-break'></p> if use_large_font() else The details of the received claim can be found below:</p> }}
+	
+	
 
 <table style="" width="100%">
 <tbody>
@@ -50,7 +54,7 @@
 </tbody>
 </table>
 
-<p>Please provide copies of any relevant medical records pertaining to the date of service listed above as well as, the member's previous admission on {{ utils.render_date_inline(values.prev_admit_date) }}. This includes, but is not limited to, admission orders, lab orders, radiology results, and any clinical review notes by the attending physician. 
+<p class="no-top-space no-bottom-space">Please provide copies of any relevant medical records pertaining to the date of service listed above as well as, the member's previous admission on {{ utils.render_date_inline(values.prev_admit_date) }}. This includes, but is not limited to, admission orders, lab orders, radiology results, and any clinical review notes by the attending physician. 
 	 {% if values.additional_info %}
       {{ _('%(additional_info)s Please fax or mail records to:',
            additional_info=values.additional_info)}}
@@ -80,5 +84,5 @@
 {% endblock %}
 
 {% block footer %}
-  {{ footer.render(model_numbers={'en': 'letter identifier'}) }}
+  {{ footer.render(model_numbers={'en': 'missing letter identifier'}) }}
 {% endblock %}

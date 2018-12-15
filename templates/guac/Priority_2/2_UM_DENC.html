@@ -21,7 +21,7 @@
 <p>{{ _("This notice gives a detailed explanation of why Clover Health has determined Medicare coverage for your current services should end.") }}
 	<strong><i>{{ _("This notice is not the decision on your appeal") }}</i></strong>. {{ _("The decision on your appeal will come from your Quality Improvement Organization (QIO).") }}</p>
 	
-	{{ "<p class='page-break'></p>" if use_large_font() }}
+	{{ <p class='page-break'></p> if use_large_font() }}
 	
 <p>{{ _('We have reviewed your case and decided that Medicare coverage of your current %(service_description)s services should end.',
          service_description=utils.render_text_inline(values.service_description)) }}</p>

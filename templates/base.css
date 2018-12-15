@@ -218,4 +218,6 @@ h2 {font-size:15pt}
   
 .signature-line {border-top:1px solid black;}
 
-.border-bottom {border-bottom: 6px solid;padding-bottom: 20px;}
+.border-bottom {border-bottom: 3px solid;padding-bottom: 20px;}
+.no-bottom-space {margin-bottom:0px;}
+.no-bottom-space {margin-top:0px;}
