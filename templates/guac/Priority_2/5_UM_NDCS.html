@@ -26,15 +26,18 @@
 
 {% block message %}
 
-<p><strong>{{ _("Your request was denied") }}</strong></p>
-<p>{{ _("After completing our review, we've %(verb)s the medical services/items listed below requested by you or your doctor/provider:",
+<p><strong>{{ _("".") }}</strong>{{ _("After completing our review, we've %(verb)s the medical services/items listed below requested by you or your doctor/provider:",
          verb=prior_auth.member_denial_determination.lower()) }}</p>
+   
+    {% if use_large_font() %}
+		<span class='page-break'></span>
+	{% endif %}
 
-    <p style="margin-left:35px">
+    <p style="margin-left:35px" >
     {{ service_type }} {% if prior_auth.description != None %}{{ prior_auth.description }}{% endif %}
           {% for procedure in prior_auth.procedures %}
             {% if not procedure.is_deleted %}
-              <ul style="margin-left:35px;">
+              <ul style="margin-left:35px;" class="disable-split">
                 <li>{{ procedure.code }} {{ procedure.code.description }}</li>
                   <ul>
                       <li>{{ _("Units:") }} {{ procedure.requested_units }} 
@@ -45,7 +48,8 @@
             {% endif %}
           {% endfor %}
     </p>
-  
+
+	
      
 <p><strong>{{ _("Why did we deny your request?") }}</strong><br/>
 		{{ _('Based upon the clinical information provided, the request for payment of %(service_description)s is denied because:',
@@ -53,12 +57,7 @@
          <span style="white-space: pre-line">{{ values.denial_rationale }}</span>
 </p>
 
-
-	
-	{% if use_large_font() %}
-		<p class='page-break'></p> 
-	{% endif %}
-	
+		<span class='page-break'></span>
 
 <p><strong> {{ _("What if I don't agree with this decision?") }}</strong><br/>
 	    {{ _('As a contracted provider, your rights to dispute the decision above are defined in your contract with Clover. If you have any questions or concerns, you may contact Provider Services at <span class="disable-wrap"><b>1-877-853-8019</b></span> for more information.') }}

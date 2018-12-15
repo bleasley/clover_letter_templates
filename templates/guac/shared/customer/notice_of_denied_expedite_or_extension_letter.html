@@ -8,6 +8,7 @@
 
   <li>{{ utils.render_checkbox(checked=is_appeal_denied_expedite) }} {{ _("You asked for a fast appeal for a service, and we decided to process it under our regular (non-expedited) time frame. We will give you a fast decision on your appeal if you resubmit it with a supporting statement from your doctor.") }}</li>
 	</ul>
+	<span class="page-break"></span>
 	<ul class="checkboxes disable-split">
 
   <li>{{ utils.render_checkbox(checked=is_auth_extension) }} {{ _("We need up to 14 more days to decide on your request for a service.") }}  {{values.extension_reason}}</li>
@@ -16,7 +17,6 @@
 
 </ul>
 
-<p class="page-break"></p>
 
 <p>{{ _("NOTE: When you request a fast grievance, we will make a quick decision on your request and notify you within 24 hours.") }}</p>
 
@@ -36,7 +36,7 @@
 </ul>
 
 <p>{{ _("NOTE: When you request a fast grievance, we will make a quick decision on your request and notify you within 24 hours.") }}</p>
-<p class="page-break"></p>
+<span class="page-break"></span>
 
 {% endif %}
 
