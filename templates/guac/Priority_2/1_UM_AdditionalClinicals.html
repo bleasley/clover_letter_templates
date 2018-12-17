@@ -32,3 +32,8 @@
     {{ footer.render(model_numbers={'en': 'H5141_Additional_Information_Requested', 'es': 'H5141_Additional_Information_Requested_ESP'}) }}
 
 {% endblock %}
+
+{% block pdf_attachments %}
+{% include "guac/shared/ndn.html" %}
+
+{% endblock %}

@@ -49,3 +49,9 @@
     {{ footer.render(model_numbers={'en': 'H5141_5X082AD_Approval_AuthServices_18_EN', 'es': 'H5141_5X082AD_Approval_AuthServices_18_ESP'}) }}
 
 {% endblock %}
+
+
+{% block pdf_attachments %}
+{% include "guac/shared/ndn.html" %}
+
+{% endblock %}

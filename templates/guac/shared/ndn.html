@@ -1,15 +1,34 @@
-{% import "base.html" as utils %}
-{% block ndn %}
-    <div class="pdf-page" id="page-1">
-      <img class="pdf-attachment-margin" src="{{ _('https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p1.png') }}" />
-    </div>
-    <div class="pdf-page" id="page-2">
-      <img class="pdf-attachment-margin" src="{{ _('https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p2.png') }}" />
-    </div>
-    <div class="pdf-page" id="page-3">
-      <img class="pdf-attachment-margin" src="{{ _('https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p3.png') }}" />
-    </div>
-    <div class="pdf-page" id="page-4">
-      <img class="pdf-attachment-margin" src="{{ _('https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p4.png') }}" />
-    </div>
-{% endblock %}
+{% if locale() == "es" %}
+
+  <div class="pdf-page">
+    <img class="pdf-attachment page-break-after" src="https://cdn.cloverhealth.com/assets/img/letters/NDN_Span_p1.png"/>
+  </div>
+    <div class="pdf-page">
+    <img class="pdf-attachment page-break-after" src="https://cdn.cloverhealth.com/assets/img/letters/NDN_Span_p2.png"/>
+  </div>
+    <div class="pdf-page">
+    <img class="pdf-attachment page-break-after" src="https://cdn.cloverhealth.com/assets/img/letters/NDN_Span_p3.png"/>
+  </div>
+    <div class="pdf-page">
+    <img class="pdf-attachment" src="https://cdn.cloverhealth.com/assets/img/letters/NDN_Span_p4.png"/>
+  </div>
+
+
+{% else %}
+
+
+  <div class="pdf-page">
+    <img class="pdf-attachment page-break-after" src="https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p1.png"/>
+  </div>
+    <div class="pdf-page">
+    <img class="pdf-attachment page-break-after" src="https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p2.png"/>
+  </div>
+    <div class="pdf-page">
+    <img class="pdf-attachment page-break-after" src="https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p3.png"/>
+  </div>
+    <div class="pdf-page">
+    <img class="pdf-attachment" src="https://cdn.cloverhealth.com/assets/img/letters/NDN_Eng_p4.png"/>
+  </div>
+
+
+{% endif %}

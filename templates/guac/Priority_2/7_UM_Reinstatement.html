@@ -29,3 +29,8 @@
     {{ footer.render(model_numbers={'en': 'ICE MA SNF-HHA- CORF NRC Approved by CMS Region IX (04/16/04) Rev (3.05, 6/11) H5141_5X082AC_Reinstatement_SNF_EN', 'es': 'ICE MA SNF-HHA- CORF NRC Approved by CMS Region IX (04/16/04) Rev (3.05, 6/11) H5141_5X082AC_Reinstatement_SNF_ESP'}) }}
 
 {% endblock %}
+
+{% block pdf_attachments %}
+{% include "guac/shared/ndn.html" %}
+
+{% endblock %}

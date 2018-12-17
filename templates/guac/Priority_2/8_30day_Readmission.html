@@ -93,3 +93,9 @@
 {% block footer %}
   {{ footer.render(model_numbers={'en': 'missing letter identifier'}) }}
 {% endblock %}
+
+
+{% block pdf_attachments %}
+{% include "guac/shared/ndn.html" %}
+
+{% endblock %}

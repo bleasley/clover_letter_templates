@@ -72,3 +72,8 @@
     {{ footer.render(model_numbers={'en': 'H5141_NDCS_EN', 'es': 'H5141_NDCS_ES'}) }}
 
 {% endblock %}
+
+{% block pdf_attachments %}
+{% include "guac/shared/ndn.html" %}
+
+{% endblock %}

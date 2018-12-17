@@ -22,3 +22,7 @@
 {% block footer %}
 	{{ footer.render(model_numbers={'en': 'H5141_NotRightEGX', 'es': 'H5141_NotRightEGX_SP'}) }}
 {% endblock %}
+{% block pdf_attachments %}
+{% include "guac/shared/ndn.html" %}
+
+{% endblock %}
