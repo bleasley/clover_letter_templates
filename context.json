@@ -33,7 +33,8 @@
     "requested_service_date": "2018-9-01"
   },
   "prior_auth": {
-	  "kind":{
+	"acuity":"<acuity>", 
+	 "kind":{
 		  "value":"outpatient"
 	  },
     "member": {
@@ -49,6 +50,7 @@
     "description": "Description of prior auth services goes here.",
     "approved_from_date":"2018-02-03",
     "approved_to_date": "2018-05-22",
+    "acuity_start_date":"2018-02-03",
     "denial_start_date": "2018-05-24",
     "member_denial_determination": "denied",
     "denial_rationale": "Rationale or explanation of determination goes here.",
@@ -87,7 +89,8 @@
     "extension_description":"Description of extension",
     "service_description": "services offered",
     "medical_director": {
-        "label": "Dr. Medical Director"
+        "label": "Dr. Medical Director",
+        "given_name":"George Smith"
     },
     "nomnc_date":"2017-12-11",
     "previous_aor_date":"2018-07-03",
@@ -105,7 +108,9 @@
     "recipient_street_1":"1234 State Street",
     "recipient_city": "Smalltown",
     "recipient_state": "ST",
-    "recipient_zip": "000000"
+    "recipient_zip": "000000",
+    "first_aor_letter_date":"2018-02-08",
+    "second_aor_letter_date":"2018-04-09"
   },
   "prior_auth_formatted_id": "1231238928",
   "is_auth_denied_expedite": "true",

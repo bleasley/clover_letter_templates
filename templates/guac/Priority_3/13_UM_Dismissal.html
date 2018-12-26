@@ -1,0 +1,43 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/customer/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block member_and_case_info %}
+{% include "guac/shared/Clover_address_block.html" %}
+
+  {% include "guac/shared/customer/greeting_info_requested.html" %}
+{% endblock %}
+{% block greeting %}
+ {% include "guac/shared/greeting.html" %}
+{% endblock %}
+
+{% block message %}
+
+  <p>{{ _("This letter follows requests we sent you on %(first_letter_date)s and %(second_letter_date)s asking for a completed Appointment of Representative (AOR) form. In accordance with Centers for Medicare and Medicaid (CMS) guidelines, an authorization filed on your behalf must be accompanied by a completed AOR, dated and signed by both the member and your representative. Legal documentation such as a court ordered guardianship or conservatorship, durable power of attorney, or healthcare power of attorney may also be submitted.",
+          first_letter_date=render_date_inline(values.first_aor_letter_date),
+          second_letter_date=render_date_inline(values.second_aor_letter_date)) }}</p>
+
+  <p>{{ _("As of today, our records show that you have not submitted documents appointing %(rep_name)s as your representative. You were given 14 calendar days to send Clover a valid AOR form, which has now expired. Therefore, your case has been dismissed.",
+          rep_name=values.rep_name) }}</p>
+
+  <p>{{ _("You may resubmit your request for services if you have a completed AOR. We value your membership with Clover and look forward to continuing to service your medical needs.") }}</p>
+
+
+  {% include "guac/shared/customer/customer_service_closing.html" %}
+
+  {% include "guac/shared/customer/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+    {{ footer.render(model_numbers={'en': 'H5141_Notice_of_dismissal_16_EN', 'es': 'H5141_Notice_of_dismissal_16_ESP'}) }}
+
+{% endblock %}
+{% block pdf_attachments %}
+
+  
+{% include "guac/shared/ndn.html" %}
+
+
+
+{% endblock %}

@@ -1,0 +1,146 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/customer/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block member_and_case_info %}
+{% include "guac/shared/Clover_address_block.html" %}
+
+  {% include "guac/shared/customer/greeting_info_requested.html" %}
+{% endblock %}
+{% block greeting %}
+ {% include "guac/shared/greeting.html" %}
+{% endblock %}
+
+{% block message %}
+
+ <p>{{ _("Your request was denied.") }}</p>
+
+  <p>{{ _("We %(member_denial_determination)s the medical services/items listed below requested by you or your doctor/provider:",
+          member_denial_determination=prior_auth.member_denial_determination.value.lower()) }}</p>
+
+  <ul>
+    <li>{{ service_type }} {% if prior_auth.description != None %}{{ prior_auth.description }}{% endif %}
+        {% for procedure in prior_auth.procedures %}
+          {% if not procedure.is_deleted %}
+            <ul>
+              <li>{{ procedure.code }} {{ procedure.procedure_code.description }}</li>
+                <ul>
+                    <li>{{ _("Units:") }} {{ procedure.requested_units }} {% if procedure.modifiers != None %} {{ _("Modifiers:") }} {{ procedure.modifiers }} {% endif %}</li>
+                </ul>
+            </ul>
+          {% endif %}
+        {% endfor %}
+    </li>
+  </ul>
+
+  <p>{{ _("Why did we deny your request?  We %(member_denial_determination)s the medical services/items listed above because:",
+          member_denial_determination=prior_auth.member_denial_determination.value.lower()) }}</p>
+
+  <p>{{ utils.render_text_block(values.denial_rationale)}}</p>
+
+  {% if prior_auth.is_per_diem and prior_auth.approved_to_date and prior_auth.member_denial_determination.value == 'Stopped' %}
+      <p><b>
+      {{ _('Additional Information') }}:
+      {{ _('Last Approved Date') }} {{ utils.render_date_inline(prior_auth.approved_to_date) }},
+      {{ _('Denial Begins') }} {{ utils.render_date_inline(add_timedelta(prior_auth.approved_to_date, 1)) }}
+      </b></p>
+  {% endif %}
+
+  <p>{{ _("You should share a copy of this decision with your doctor so you and your doctor can discuss next steps. If your doctor requested coverage on your behalf, we have sent a copy of this decision to your doctor.") }}</p>
+
+  <p><strong>{{ _("You have the right to appeal our decision.") }}</strong> {{ _("You have the right to ask Clover Health to review our decision by asking us for an appeal:") }}</p>
+
+  <p><strong>{{ _("Appeal") }}:</strong> {{ _("Ask Clover Health for an appeal within <strong>60 days</strong> of the date of this notice. We can give you more time if you have a good reason for missing the deadline.") }}</p>
+
+  <p>{{ _("If you want someone else to act for you, you can name a relative, friend, attorney, doctor, or someone else to act as your representative.  If you want someone else to act for you, call us at: 1-888-657-1207 to learn how to name your representative. TTY users call 711. Both you and the person you want to act for you must sign and date a statement confirming this is what you want. You'll need to mail or fax this statement to us.") }} {{ _("Keep a copy for your records.") }}
+  </p>
+
+  <p>{{ _("Respectfully,") }}</p>
+
+  <p>{{values.medical_director.given_name}} {{values.medical_director.family_name}}, {{ _("Medical Director") }}</p>
+
+  <h2>{{ _("Important Information About Your Appeal Rights") }}</h2>
+
+  <p><strong>{{ _("There are 2 kinds of appeals") }}</strong></p>
+
+  <p><strong>{{ _("Standard Appeal") }}</strong> - {{ _("We'll give you a written decision on a standard appeal within <strong>30 days</strong> after we get your appeal. Our decision might take longer if you ask for an extension, or if we need more information about your case. We'll tell you if we're taking extra time and will explain why more time is needed. If your appeal is for payment of a service you've already received, we'll give you a written decision within <strong>60 days</strong>.") }}</p>
+
+  <p><strong>{{ _("Fast Appeal") }}</strong> - {{ _("We'll give you a decision on a fast appeal within <strong>72 hours</strong> after we get your appeal. You can ask for a fast appeal if you or your doctor believe your health could be seriously harmed by waiting up to 30 days for a decision.") }}</p>
+
+  <p><strong>{{ _("We'll automatically give you a fast appeal if a doctor asks for one for you or supports your request.") }} </strong> {{ _("If you ask for a fast appeal without support from a doctor, we'll decide if your request requires a fast appeal. If we don't give you a fast appeal, we'll give you a decision within 30 days.") }}</p>
+
+
+  <p  class="border-top"><strong>{{ _("How to ask for an appeal with Clover Health") }}</strong></p>
+
+  <p><strong>{{ _("Step") }} 1:</strong> {{ _("You, your representative, or your doctor/provider must ask us for an appeal. Your request must include:") }}</p>
+
+  <p>
+  <ul>
+    <li>{{ _("Your name") }}</li>
+    <li>{{ _("Address") }}</li>
+    <li>{{ _("Member number") }}</li>
+    <li>{{ _("Reasons for appealing") }}</li>
+    <li>{{ _("Whether you want a Standard or Fast Appeal (for a Fast Appeal, explain why you need one)") }}</li>
+    <li>{{ _("Any evidence you want us to review, such as medical records, doctors' letters, or other information that explains why you need the item or service. Call your doctor if you need this information.") }}</li>
+  </ul>
+  </p>
+
+  <p>{{ _("You can ask to see the medical records and other documents we used to make our decision before or during the appeal. At no cost to you, you can also ask for a copy of the guidelines we used to make our decision.") }}</p>
+
+  <p>{{ _("We recommend keeping a copy of everything you send us for your records.") }}</p>
+
+  <p><strong>{{ _("Step") }} 2:</strong> {{ _("Mail, fax, or deliver your appeal or call us at") }} 1-888-657-1207.</p>
+
+  <p><strong>{{ _("For a Standard Appeal:") }}</strong></p>
+
+  <p>
+    Clover Health<br/>
+    Attention: Appeals and Grievances<br/>
+    PO Box 471<br/>
+    Jersey City, NJ 07303<br/>
+  </p>
+
+  <p>
+  {{ _("Phone:") }} 1-888-657-1207<br />
+    {{ _("Fax:") }} 1-732-412-9706
+  </p>
+
+  <p>{{ _("If you ask for a standard appeal by phone, we will send you a letter confirming what you told us.") }}</p>
+
+  <strong>{{ _("For a Fast Appeal:") }}</strong>
+
+  <p>
+  {{ _("Phone:") }} 1-888-657-1207<br />
+  {{ _("Fax:") }} 1-732-412-9706
+  </p>
+
+  <p><strong>{{ _("What happens next?") }}</strong></p>
+
+  <p>{{ _("If you ask for an appeal and we continue to deny your request for a service, we'll send you a written decision and automatically send your case to an independent reviewer.") }} <strong>{{ _("If the independent reviewer denies your request, the written decision will explain if you have additional appeal rights.") }}</strong></p>
+
+  <p>
+    {{ _("Get help and more information") }}
+    <ul>
+      <li>Clover Health {{ _("Toll Free:") }}  1-888-657-1207, {{ _("24 hours, 7 days a week. TTY users call:") }} 711</li>
+      <li>1-800-MEDICARE (1-800-633-4227), {{ _("24 hours, 7 days a week. TTY users call:") }} 1-877-486-2048</li>
+      <li>{{ _("Medicare Rights Center:") }} 1-888-HMO-9050</li>
+      <li>{{ _("Elder Care Locator:") }} 1-800-677-1116</li>
+    </ul>
+  </p>
+ 
+ 
+{% endblock %}
+
+{% block footer %}
+    {{ footer.render(model_numbers={'en': 'Form CMS 10003-NDMCP OMB Approval 0938-0829 (Expires: 1/31/2020) H5141_NDMC_EN', 'es': 'Form CMS 10003-NDMCP OMB Approval 0938-0829 (Expires: 1/31/2020) H5141_NDMC_ESP'}) }}
+
+{% endblock %}
+{% block pdf_attachments %}
+
+  
+{% include "guac/shared/ndn.html" %}
+
+
+
+{% endblock %}

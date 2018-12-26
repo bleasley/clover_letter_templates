@@ -1,0 +1,60 @@
+{% import "base.html" as utils %}
+{% extends "guac/shared/customer/base_letter_customer.html" %}
+{% import "guac/shared/footer.html" as footer with context %}
+
+
+{% block member_and_case_info %}
+{% include "guac/shared/Clover_address_block.html" %}
+
+  {% include "guac/shared/customer/greeting_info_requested.html" %}
+{% endblock %}
+{% block greeting %}
+ {% include "guac/shared/greeting.html" %}
+{% endblock %}
+
+{% block message %}
+
+  
+  <p>{{ _('This notice is to inform you that the coverage for the above-referenced requested inpatient service has been approved.') }}</p>
+
+  <br />
+  <table>
+    <tr>
+      <th>{{ _('Authorized Service') }}</th>
+      <th>{{ _('Authorization/date of service valid from') }}</th>
+    </tr>
+    <tr>
+      <td>{{ _('Skilled nursing at') }} {{ prior_auth.acuity }}</td>
+      <td>{{ _('%(low_date)s to %(high_date)s (last date approved)',
+        low_date=utils.render_date_inline(prior_auth.acuity_start_date),
+        high_date=utils.render_date_inline(prior_auth.approved_to_date))}}</td>
+    </tr>
+  </table>
+
+
+  <p style="margin-top:18pt"><b>{{ _('This prospectively authorized RUG rate/Level of Care was based on the clinical documentation provided by the requesting provider at the time of prior authorization request. This rate is subject to change based on clinical documentation exhibiting the medical necessity of skilled nursing services beyond what was approved. Clinical documentation must be submitted to Clover Utilization Management and will be reviewed at the next review date on, %(next_review)s, where your authorized rate will be reassessed based on the information provided. Any changes to the authorized rate will apply retrospectively to the entire stay.',
+    next_review=utils.render_date_inline(prior_auth.approved_to_date)) }}</b></p>
+
+  <p>{{ _('Requests for coverage of additional visits, treatments, testing or surgery may require a new authorization/precertification. Failure to obtain authorization/precertification, when required, may result in a reduction of benefits in accordance with the terms of your plan.') }}</p>
+
+  <p>{{ _('Prior authorization/precertification requests are reviewed for medical necessity and plan benefits. All prior authorization/precertification is administered in accordance with applicable state and federal law. The intent of this authorization is to establish medical necessity and is not a guarantee of payment. Coverage is also dependent on your eligibility. Payment will be based on the Provider Contract or the prevailing Medicare Methodology.') }}</p>
+
+  
+  
+  {% include "guac/shared/customer/customer_service_closing.html" %}
+
+  {% include "guac/shared/customer/signature.html" %}
+{% endblock %}
+
+{% block footer %}
+    {{ footer.render(model_numbers={'en': 'H5141_5X082AD_Approval_AuthServices_18_EN', 'es': 'H5141_5X082AD_Approval_AuthServices_18_ESP'}) }}
+
+{% endblock %}
+{% block pdf_attachments %}
+
+  
+{% include "guac/shared/ndn.html" %}
+
+
+
+{% endblock %}
