@@ -31,7 +31,9 @@
       {% endfor %}
     </li>
   </ul>
-
+	{% if use_large_font() %}
+<p class='page-break'></p>
+	{% endif %}
   <p>{{ _('Authorization/Date of Service Valid from: %(low_date)s to %(high_date)s (last date approved)',
     low_date=utils.render_date_inline(prior_auth.approved_from_date),
     high_date=utils.render_date_inline(prior_auth.approved_to_date))}}.</p>
