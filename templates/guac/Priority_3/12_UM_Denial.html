@@ -21,17 +21,24 @@
 
   <ul>
     <li>{{ service_type }} {% if prior_auth.description != None %}{{ prior_auth.description }}{% endif %}
-        {% for procedure in prior_auth.procedures %}
-          {% if not procedure.is_deleted %}
-            <ul>
-              <li>{{ procedure.code }} {{ procedure.procedure_code.description }}</li>
-                <ul>
-                    <li>{{ _("Units:") }} {{ procedure.requested_units }} {% if procedure.modifiers != None %} {{ _("Modifiers:") }} {{ procedure.modifiers }} {% endif %}</li>
-                </ul>
-            </ul>
-          {% endif %}
-        {% endfor %}
-    </li>
+    
+    
+       for procedure in prior_auth.procedures %}
+            {% if not procedure.is_deleted %}
+            
+              <ul style="margin-left:35px;" class="disable-split">
+                <li>{{ procedure.code }} {{ procedure.description }}</li>
+                  <ul>
+                      <li>{{ _("Units:") }} {{ procedure.requested_units }} 
+                      		{% if procedure.modifiers != None %} {{ _("Modifiers:") }} {{ procedure.modifiers }} {% endif %}
+                      </li>
+                  </ul>
+              </ul>
+              
+            {% endif %}
+          {% endfor %}
+        
+      </li>
   </ul>
 
   <p>{{ _("Why did we deny your request?  We %(member_denial_determination)s the medical services/items listed above because:",

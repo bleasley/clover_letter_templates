@@ -61,12 +61,14 @@
       {
         "code": "Proc1",
         "description": "description",
-        "requested_units": "units"
+        "requested_units": "units",
+        "modifiers":""
       },
       {
         "code": "Proc2",
         "description": "description",
-        "requested_units": "units"
+        "requested_units": "units",
+        "modifiers":""
       }
     ]
   },

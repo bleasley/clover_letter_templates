@@ -35,10 +35,12 @@
 
     <p style="margin-left:35px" >
     {{ service_type }} {% if prior_auth.description != None %}{{ prior_auth.description }}{% endif %}
+         
+         
           {% for procedure in prior_auth.procedures %}
             {% if not procedure.is_deleted %}
               <ul style="margin-left:35px;" class="disable-split">
-                <li>{{ procedure.code }} {{ procedure.code.description }}</li>
+                <li>{{ procedure.code }} {{ procedure.description }}</li>
                   <ul>
                       <li>{{ _("Units:") }} {{ procedure.requested_units }} 
                       		{% if procedure.modifiers != None %} {{ _("Modifiers:") }} {{ procedure.modifiers }} {% endif %}
