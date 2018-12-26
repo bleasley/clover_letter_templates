@@ -190,10 +190,10 @@ footer.letter-id {
 
 #disclaimer {
 	position: absolute;
-	height: .75in;
-	bottom: 14px;
+	height: auto;
+	bottom: 10px;
 	color: #b1b0b0;
-	margin: 0 0 8px 0;
+	margin: 8px 0 8px 0;
 	padding-top: 6px;
 }
 
