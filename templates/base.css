@@ -191,9 +191,9 @@ footer.letter-id {
 #disclaimer {
 	position: absolute;
 	height: .75in;
-	bottom: 9px;
+	bottom: 14px;
 	color: #b1b0b0;
-	margin: 0;
+	margin: 0 0 8px 0;
 	padding-top: 6px;
 }
 
