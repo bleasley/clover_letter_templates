@@ -27,7 +27,7 @@
 {% block message %}
 
 <p><strong>{{ _('Your request was denied.') }} </strong>{{ _("After completing our review, we've %(verb)s the medical services/items listed below requested by you or your doctor/provider:",
-         verb=prior_auth.member_denial_determination.lower()) }}</p>
+         verb=prior_auth.member_denial_determination.value.lower()) }}</p>
    
     {% if use_large_font() %}
 		<span class='page-break'></span>

@@ -52,7 +52,9 @@
     "approved_to_date": "2018-05-22",
     "acuity_start_date":"2018-02-03",
     "denial_start_date": "2018-05-24",
-    "member_denial_determination": "denied",
+    "member_denial_determination":{
+		  "value":"denied"
+	  },
     "denial_rationale": "Rationale or explanation of determination goes here.",
     "received_datetime":"2018-9-01",
     "procedures": [
