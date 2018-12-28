@@ -219,8 +219,13 @@ h2 {font-size:15pt}
   }
   
 .signature-line {border-top:1px solid black;}
-
-.border-bottom {border-bottom: 3px solid;padding-bottom: 18pt;}
+.border-top {    
+	border-top: 3px solid;
+    padding-top: 12pt;
+    margin-top: 16pt;}
+.border-bottom {
+	border-bottom: 3px solid;
+	padding-bottom: 18pt;}
 .no-bottom-space {margin-bottom:0;}
 .no-top-space {margin-top:0;}
 #Clover-address {margin-bottom:22pt; text-align:left}
