@@ -25,13 +25,13 @@
     {{ _('Your Medicare provider and/or health plan have determined that Medicare probably will not pay for your current %(services)s services after the effective date indicated above.', services=utils.render_text_inline(values.service_description)) }}
   </p>
 
-  <p class="border-bottom">{{ _('You may have to pay for any services you receive after the above date.') }}</p>
+  <p>{{ _('You may have to pay for any services you receive after the above date.') }}</p>
 		    		
 	{% if use_large_font() %}
 <p class='page-break'></p>
 	{% endif %}
 
-<ul class="border-bottom">
+<ul class="border-bottom border-top">
     <li>{{ _('You have the right to an immediate, independent medical review (appeal) of the decision to end Medicare coverage of these services. Your services will continue during the appeal.') }}</li>
     <li>{{ _('If you choose to appeal, the independent reviewer will ask for your opinion. The reviewer also will look at your medical records and/or other relevant information. You do not have to prepare anything in writing, but you have the right to do so if you wish.') }}</li>
 <li>{{ _('If you choose to appeal, you and the independent reviewer will each receive a copy of the detailed explanation about why your coverage for services should not continue. You will receive this detailed notice only after you request an appeal.') }}</li>

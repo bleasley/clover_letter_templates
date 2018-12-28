@@ -65,8 +65,8 @@
 	    {{ _('As a contracted provider, your rights to dispute the decision above are defined in your contract with Clover. If you have any questions or concerns, you may contact Provider Services at <span class="disable-wrap"><b>1-877-853-8019</b></span> for more information.') }}
 	</p>
 
-<p>{{ _("Respectfully,") }}</p>
-<p>{{ utils.render_text_inline(values.medical_director.label) }}, {{ _('Medical Director') }}</p>
+<p>{{ _("Respectfully,") }}<br/>
+	{{ utils.render_text_inline(values.medical_director.label) }}, {{ _('Medical Director') }}</p>
 
 {% endblock %}
 
