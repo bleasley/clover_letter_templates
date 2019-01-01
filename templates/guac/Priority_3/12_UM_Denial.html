@@ -122,9 +122,17 @@
   {{ _("Fax:") }} 1-732-412-9706
   </p>
 
+	{% if locale() == "es"  %}
+<p class='page-break'></p>
+	{% endif %}
+	
   <p><strong>{{ _("What happens next?") }}</strong></p>
 
   <p>{{ _("If you ask for an appeal and we continue to deny your request for a service, we'll send you a written decision and automatically send your case to an independent reviewer.") }} <strong>{{ _("If the independent reviewer denies your request, the written decision will explain if you have additional appeal rights.") }}</strong></p>
+
+	{% if use_large_font() and locale() == "en"  %}
+<p class='page-break'></p>
+	{% endif %}
 
   <p>
     {{ _("Get help and more information") }}

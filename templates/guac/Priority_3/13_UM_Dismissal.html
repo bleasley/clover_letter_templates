@@ -23,6 +23,9 @@
 
   <p>{{ _("You may resubmit your request for services if you have a completed AOR. We value your membership with Clover and look forward to continuing to service your medical needs.") }}</p>
 
+	{% if locale() == "es"  %}
+<p class='page-break'></p>
+	{% endif %}
 
   {% include "guac/shared/customer/customer_service_closing.html" %}
 

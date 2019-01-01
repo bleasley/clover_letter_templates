@@ -17,8 +17,30 @@
   
   <p>{{ _('This notice is to inform you that the coverage for the above-referenced requested inpatient service has been approved.') }}</p>
 
-  <br />
-  <table>
+  
+  {%if use_large_font() %}
+    <table>
+    <tr>
+      <th>{{ _('Authorized Service') }}</th>
+    </tr>
+    <tr>
+      <td>{{ _('Skilled nursing at') }} {{ prior_auth.acuity }}</td>
+    </tr>
+    <tr>
+	    <th>{{ _('Authorization/date of service valid from') }}</th>
+    </tr>
+    <tr>
+	    <td>{{ _('%(low_date)s to %(high_date)s (last date approved)',
+        low_date=utils.render_date_inline(prior_auth.acuity_start_date),
+        high_date=utils.render_date_inline(prior_auth.approved_to_date))}}</td>
+    </tr>   
+
+  </table>
+  
+  {% endif %}
+  
+    {%if not use_large_font() %}
+    <table>
     <tr>
       <th>{{ _('Authorized Service') }}</th>
       <th>{{ _('Authorization/date of service valid from') }}</th>
@@ -30,9 +52,13 @@
         high_date=utils.render_date_inline(prior_auth.approved_to_date))}}</td>
     </tr>
   </table>
+  
+  {% endif %}
+  
 
 
-  <p style="margin-top:18pt"><b>{{ _('This prospectively authorized RUG rate/Level of Care was based on the clinical documentation provided by the requesting provider at the time of prior authorization request. This rate is subject to change based on clinical documentation exhibiting the medical necessity of skilled nursing services beyond what was approved. Clinical documentation must be submitted to Clover Utilization Management and will be reviewed at the next review date on, %(next_review)s, where your authorized rate will be reassessed based on the information provided. Any changes to the authorized rate will apply retrospectively to the entire stay.',
+
+  <p style="margin-top:18pt"><b>{{ _('This prospectively authorized RUG rate/Level of Care was based on the clinical documentation provided by the requesting provider at the time of prior authorization request. This rate is subject to change based on clinical documentation exhibiting the medical necessity of skilled nursing services beyond what was approved. Clinical documentation must be submitted to Clover Utilization Management and will be reviewed at the next review date on %(next_review)s, where your authorized rate will be reassessed based on the information provided. Any changes to the authorized rate will apply retrospectively to the entire stay.',
     next_review=utils.render_date_inline(prior_auth.approved_to_date)) }}</b></p>
 
   <p>{{ _('Requests for coverage of additional visits, treatments, testing or surgery may require a new authorization/precertification. Failure to obtain authorization/precertification, when required, may result in a reduction of benefits in accordance with the terms of your plan.') }}</p>
