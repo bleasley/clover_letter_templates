@@ -162,7 +162,6 @@ function moveContentToNextPage(page) {
 
   $('.document').append(html);
 $('.page:not(:first)').addClass("multi");
-$('.page').addClass("multi");
 }
 
 
