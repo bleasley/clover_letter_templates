@@ -41,11 +41,15 @@
       </li>
   </ul>
 
+	{% if use_large_font() and locale() == "es"  %}
+<p class='page-break'></p>
+	{% endif %}
+	
   <p>{{ _("Why did we deny your request?  We %(member_denial_determination)s the medical services/items listed above because:",
           member_denial_determination=prior_auth.member_denial_determination.value.lower()) }}</p>
 
-  <p>{{ utils.render_text_block(values.denial_rationale)}}</p>
-
+ {{ utils.render_text_block(values.denial_rationale)}}
+	  
   {% if prior_auth.is_per_diem and prior_auth.approved_to_date and prior_auth.member_denial_determination.value == 'Stopped' %}
       <p><b>
       {{ _('Additional Information') }}:
@@ -59,6 +63,10 @@
   <p><strong>{{ _("You have the right to appeal our decision.") }}</strong> {{ _("You have the right to ask Clover Health to review our decision by asking us for an appeal:") }}</p>
 
   <p><strong>{{ _("Appeal") }}:</strong> {{ _("Ask Clover Health for an appeal within <strong>60 days</strong> of the date of this notice. We can give you more time if you have a good reason for missing the deadline.") }}</p>
+  
+  	{% if use_large_font() and locale() == "es"  %}
+<p class='page-break'></p>
+	{% endif %}
 
   <p>{{ _("If you want someone else to act for you, you can name a relative, friend, attorney, doctor, or someone else to act as your representative.  If you want someone else to act for you, call us at: 1-888-657-1207 to learn how to name your representative. TTY users call 711. Both you and the person you want to act for you must sign and date a statement confirming this is what you want. You'll need to mail or fax this statement to us.") }} {{ _("Keep a copy for your records.") }}
   </p>
@@ -73,12 +81,17 @@
 
   <p><strong>{{ _("Standard Appeal") }}</strong> - {{ _("We'll give you a written decision on a standard appeal within <strong>30 days</strong> after we get your appeal. Our decision might take longer if you ask for an extension, or if we need more information about your case. We'll tell you if we're taking extra time and will explain why more time is needed. If your appeal is for payment of a service you've already received, we'll give you a written decision within <strong>60 days</strong>.") }}</p>
 
+
+  	{% if use_large_font() and locale() == "es"  %}
+<p class='page-break'></p>
+	{% endif %}
+	
   <p><strong>{{ _("Fast Appeal") }}</strong> - {{ _("We'll give you a decision on a fast appeal within <strong>72 hours</strong> after we get your appeal. You can ask for a fast appeal if you or your doctor believe your health could be seriously harmed by waiting up to 30 days for a decision.") }}</p>
 
   <p><strong>{{ _("We'll automatically give you a fast appeal if a doctor asks for one for you or supports your request.") }} </strong> {{ _("If you ask for a fast appeal without support from a doctor, we'll decide if your request requires a fast appeal. If we don't give you a fast appeal, we'll give you a decision within 30 days.") }}</p>
 
 
-  <p  class="border-top"><strong>{{ _("How to ask for an appeal with Clover Health") }}</strong></p>
+  <p class="border-top"><strong>{{ _("How to ask for an appeal with Clover Health") }}</strong></p>
 
   <p><strong>{{ _("Step") }} 1:</strong> {{ _("You, your representative, or your doctor/provider must ask us for an appeal. Your request must include:") }}</p>
 
@@ -122,9 +135,7 @@
   {{ _("Fax:") }} 1-732-412-9706
   </p>
 
-	{% if locale() == "es"  %}
-<p class='page-break'></p>
-	{% endif %}
+
 	
   <p><strong>{{ _("What happens next?") }}</strong></p>
 
