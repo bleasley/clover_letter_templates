@@ -18,7 +18,7 @@
           first_letter_date=render_date_inline(values.first_aor_letter_date),
           second_letter_date=render_date_inline(values.second_aor_letter_date)) }}</p>
           
-{% if use_large_font() and locale=="es" %}
+{% if use_large_font() and locale() =="es" %}
 <p class='page-break'></p>
 	{% endif %}
 
