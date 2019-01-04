@@ -41,7 +41,7 @@
       </li>
   </ul>
 
-	{% if use_large_font() and locale() == "es"  %}
+	{% if use_large_font() %}
 <p class='page-break'></p>
 	{% endif %}
 	
@@ -61,13 +61,19 @@
   <p>{{ _("You should share a copy of this decision with your doctor so you and your doctor can discuss next steps. If your doctor requested coverage on your behalf, we have sent a copy of this decision to your doctor.") }}</p>
 
   <p><strong>{{ _("You have the right to appeal our decision.") }}</strong> {{ _("You have the right to ask Clover Health to review our decision by asking us for an appeal:") }}</p>
-
-  <p><strong>{{ _("Appeal") }}:</strong> {{ _("Ask Clover Health for an appeal within <strong>60 days</strong> of the date of this notice. We can give you more time if you have a good reason for missing the deadline.") }}</p>
   
-  	{% if use_large_font() and locale() == "es"  %}
+    	{% if not use_large_font() and locale=="es" %}
 <p class='page-break'></p>
 	{% endif %}
 
+  <p><strong>{{ _("Appeal") }}:</strong> {{ _("Ask Clover Health for an appeal within <strong>60 days</strong> of the date of this notice. We can give you more time if you have a good reason for missing the deadline.") }}</p>
+  
+  	{% if use_large_font() or (not use_large_font() and locale == "en")  %}
+<p class='page-break'></p>
+	{% endif %}
+	
+   
+	
   <p>{{ _("If you want someone else to act for you, you can name a relative, friend, attorney, doctor, or someone else to act as your representative.  If you want someone else to act for you, call us at: 1-888-657-1207 to learn how to name your representative. TTY users call 711. Both you and the person you want to act for you must sign and date a statement confirming this is what you want. You'll need to mail or fax this statement to us.") }} {{ _("Keep a copy for your records.") }}
   </p>
 
@@ -82,7 +88,7 @@
   <p><strong>{{ _("Standard Appeal") }}</strong> - {{ _("We'll give you a written decision on a standard appeal within <strong>30 days</strong> after we get your appeal. Our decision might take longer if you ask for an extension, or if we need more information about your case. We'll tell you if we're taking extra time and will explain why more time is needed. If your appeal is for payment of a service you've already received, we'll give you a written decision within <strong>60 days</strong>.") }}</p>
 
 
-  	{% if use_large_font() and locale() == "es"  %}
+  	{% if use_large_font()  %}
 <p class='page-break'></p>
 	{% endif %}
 	
@@ -106,6 +112,12 @@
   </ul>
   </p>
 
+  	{% if not use_large_font()  %}
+<p class='page-break'></p>
+	{% endif %}
+	
+	
+	
   <p>{{ _("You can ask to see the medical records and other documents we used to make our decision before or during the appeal. At no cost to you, you can also ask for a copy of the guidelines we used to make our decision.") }}</p>
 
   <p>{{ _("We recommend keeping a copy of everything you send us for your records.") }}</p>
@@ -134,16 +146,16 @@
   {{ _("Phone:") }} 1-888-657-1207<br />
   {{ _("Fax:") }} 1-732-412-9706
   </p>
-
-
+    	
+    {% if not use_large_font() %}
+<p class='page-break'></p>
+	{% endif %}
 	
   <p><strong>{{ _("What happens next?") }}</strong></p>
 
   <p>{{ _("If you ask for an appeal and we continue to deny your request for a service, we'll send you a written decision and automatically send your case to an independent reviewer.") }} <strong>{{ _("If the independent reviewer denies your request, the written decision will explain if you have additional appeal rights.") }}</strong></p>
 
-	{% if use_large_font() and locale() == "en"  %}
-<p class='page-break'></p>
-	{% endif %}
+
 
   <p>
     {{ _("Get help and more information") }}
