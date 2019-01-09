@@ -1,0 +1,24 @@
+<div class="header-logo">
+
+<p>Include new svg</p>
+    {% include "logos/Clover_logo_en.svg" %}
+ 
+<p>Just for kicks, a "cleaned" version of the new svg</p>
+    {% include "logos/Clover_logo_en-cleaned.svg" %}
+    
+       
+<p>Include old svg</p>
+{% include "logos/logo.svg" %}
+
+<p>embed new svg in img tag</p>
+<image src="logos/Clover_logo_en.svg">
+
+
+<p>embed old svg in img tag</p>
+<image src="logos/logo.svg">
+
+<p>Just load a png file instead</p>
+ <img src="src/templates/logos/Clover_PartnerInHealth_logo_300dpi.png" style="width:300px;" />
+
+</div>
+
