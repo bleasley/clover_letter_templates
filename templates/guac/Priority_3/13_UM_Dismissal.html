@@ -1,12 +1,12 @@
 {% import "base.html" as utils %}
-{% extends "guac/shared/customer/base_letter_customer.html" %}
+{% extends "guac/shared/member/base_letter_member.html" %}
 {% import "guac/shared/footer.html" as footer with context %}
 
 
 {% block member_and_case_info %}
 {% include "guac/shared/Clover_address_block.html" %}
 
-  {% include "guac/shared/customer/greeting_info_requested.html" %}
+  {% include "guac/shared/member/greeting_info_requested.html" %}
 {% endblock %}
 {% block greeting %}
  {% include "guac/shared/greeting.html" %}
@@ -31,9 +31,9 @@
 <p class='page-break'></p>
 	{% endif %}
 
-  {% include "guac/shared/customer/customer_service_closing.html" %}
+  {% include "guac/shared/member/member_service_closing.html" %}
 
-  {% include "guac/shared/customer/signature.html" %}
+  {% include "guac/shared/member/signature.html" %}
 {% endblock %}
 
 {% block footer %}

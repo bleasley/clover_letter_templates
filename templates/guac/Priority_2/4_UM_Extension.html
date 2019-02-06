@@ -1,11 +1,11 @@
 {% import "base.html" as utils %}
-{% extends "guac/shared/customer/base_letter_customer.html" %}
+{% extends "guac/shared/member/base_letter_member.html" %}
 {% import "guac/shared/footer.html" as footer with context %}
 
 
 {% block member_and_case_info %}
 {% include "guac/shared/Clover_address_block.html" %}
-  {% include "guac/shared/customer/greeting_info_requested.html" %}
+  {% include "guac/shared/member/greeting_info_requested.html" %}
 {% endblock %}
 
 {% block greeting %}
@@ -15,8 +15,8 @@
 
 {% block message %}
 
-{% include "guac/shared/customer/notice_of_denied_expedite_or_extension_letter.html" %}
-{% include "guac/shared/customer/signature.html" %}
+{% include "guac/shared/member/notice_of_denied_expedite_or_extension_letter.html" %}
+{% include "guac/shared/member/signature.html" %}
 {% endblock %}
 
 {% block footer %}

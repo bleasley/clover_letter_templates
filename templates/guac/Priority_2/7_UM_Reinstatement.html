@@ -1,11 +1,11 @@
 {% import "base.html" as utils %}
-{% extends "guac/shared/customer/base_letter_customer.html" %}
+{% extends "guac/shared/member/base_letter_member.html" %}
 {% import "guac/shared/footer.html" as footer with context %}
 
 
 {% block member_and_case_info %}
 {% include "guac/shared/Clover_address_block.html" %}
-  {% include "guac/shared/customer/greeting_info_requested.html" %}
+  {% include "guac/shared/member/greeting_info_requested.html" %}
 {% endblock %}
 {% block greeting %}
  {% include "guac/shared/greeting.html" %}
@@ -22,7 +22,7 @@
 <p>{{ _('If you have any further questions or additional information related to this review in the interim, please call Customer Service at 1-888-657-1207. TTY users should call 711. We are open 8 a.m. - 8 p.m. EST, 7 days a week. From February 15 through September 30, alternate technologies (for example, voicemail) will be used on the weekends and holidays.') }}</p>
 
 
-  {% include "guac/shared/customer/signature.html" %}
+  {% include "guac/shared/member/signature.html" %}
 {% endblock %}
 
 {% block footer %}
