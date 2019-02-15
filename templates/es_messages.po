@@ -78,6 +78,32 @@ msgstr ""
 "representante (AOR) sea válido, debe estar fechado y firmado por usted y "
 "%(reporter_name)s."
 
+
+#: src/templates/guac/appeals/aor_cover_letter.html:11
+#, python-format
+msgid ""
+"In compliance with the Centers for Medicare &amp; Medicaid (CMS) guidelines, "
+"we will not be able to proceed with this appeal unless we receive "
+"documentation appointing %(reporter_name)s as your representative. We have "
+"enclosed an Appointment of Representative (AOR) Form for your convenience. "
+msgstr ""
+"En conformidad con las pautas de los Centros de Medicare y Medicaid (CMS), "
+"no podremos continuar con esta apelación a menos que recibamos la "
+"documentación en laque se designa a %(reporter_name)s como su representante. "
+"Para su conveniencia, hemos adjuntado un Formulario de nombramiento de un "
+"representante (AOR)."
+
+#: src/templates/guac/appeals/aor_cover_letter.html:11
+#, python-format
+msgid ""
+The Appointment of Representative (AOR) form must be dated and signed by "
+"both you and %(reporter_name)s to be valid."
+msgstr ""
+"Para que el formulario de nombramiento de un "
+"representante (AOR) sea válido, debe estar fechado y firmado por usted y "
+"%(reporter_name)s."
+
+
 #: src/templates/guac/appeals/aor_cover_letter.html:14
 #: src/templates/guac/grievances/aor_cover_letter.html:14
 #: src/templates/guac/grievances/aor_followup_letter.html:14
