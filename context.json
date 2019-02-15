@@ -114,7 +114,8 @@
     "recipient_state": "ST",
     "recipient_zip": "000000",
     "first_aor_letter_date":"2018-02-08",
-    "second_aor_letter_date":"2018-04-09"
+    "second_aor_letter_date":"2018-04-09",
+    "representative_name":"name of representative"
   },
   "prior_auth_formatted_id": "1231238928",
   "is_auth_denied_expedite": "true",
