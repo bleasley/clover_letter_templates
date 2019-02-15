@@ -22,11 +22,17 @@
   <p>{{ _("In compliance with the Centers for Medicare and Medicaid (CMS) guidelines, we will not be able to proceed with this pre-authorization unless we receive documentation appointing %(rep_name)s as your representative. We have enclosed an Appointment of Representative (AOR) Form for your convenience. The Appointment of Representative (AOR) form must be dated and signed by both you and %(rep_name)s to be valid.",
           rep_name=utils.render_text_inline(values.representative_name) ) }}</p>
        
+       	{% if use_large_font() %}
+<p class='page-break'></p>
+	{% endif %}
+	
 
   <p>{{ _("In the case where a member is incapacitated or legally incompetent, legal documentation such as a court-ordered guardianship or conservatorship, durable power of attorney, or healthcare power of attorney should be submitted.") }}</p>
   
-		<span class='page-break'></span>
-
+	{% not if use_large_font() %}
+<p class='page-break'></p>
+	{% endif %}
+	
   <p class="no-bottom-space">{{ _("You may return the form and/or legal appointment of representative documentation either via facsimile at") }} (732) 412-4317 {{ _("or mail at:") }}</p>
   <p class="no-top-space" style="padding-left: 60px;">Clover Health<br /> Attention: Utilization Management PO BOX 471<br /> Jersey City, NJ 07303-9919</p>
 
