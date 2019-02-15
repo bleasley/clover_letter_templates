@@ -23,7 +23,7 @@
 
 
 {% block message %}
-<p>Clover Health received a claim for services rendered to one of our members. The Utilization Management Department at Clover Health is requesting supporting medical records to determine medical necessity for the service rendered. The details of the received claim can be found below:</p>
+<p >Clover Health received a claim for services rendered to one of our members. The Utilization Management Department at Clover Health is requesting supporting medical records to determine medical necessity for the service rendered. The details of the received claim can be found below:</p>
 
 <table style="" width="100%">
 <tbody>
@@ -60,6 +60,8 @@
 </tr>
 </tbody>
 </table>
+
+<p class='page-break'></p>
 
 <p>If we do not receive these medical records by {{ utils.render_date_inline(member.date_to_receive) }}, your claim will be denied for a lack of clinical documentation. You will have the right to request a reconsideration of this denial. Out-of-network providers in particular should know they have 60 days from the date of their remittance notice to request this reconsideration.</p>
 <p> For in-network providers, please refer to your contract or the Provider Manual for information on the dispute process. If you have any questions about the importance of these medical records for the processing of your claim, please call us at 1-877-853-8019.</p>
