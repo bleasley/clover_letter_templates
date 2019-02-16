@@ -1024,6 +1024,41 @@ msgstr ""
 "representante sea válido, debe estar fechado y firmado por el miembro y "
 "%(reporter_name)s."
 
+
+
+
+#: src/templates/guac/grievances/aor_followup_letter.html:10
+#, python-format
+msgid ""
+"I am writing to follow up on the letter we sent you on "
+"%(previous_aor_date)s. In compliance with the Centers for Medicare &amp; "
+"Medicaid (CMS) guidelines, we will not be able to proceed with this "
+"grievance unless we receive documentation appointing %(reporter_name)s as "
+"your representative."
+msgstr ""
+"Le escribimos para hacer un seguimiento de la carta que le enviamos el "
+"%(previous_aor_date)s. Tal como se establece en esta carta, en conformidad "
+"con las pautas de los Centros de Medicare y Medicaid (CMS), no podremos "
+"continuar con su reclamo a menos que recibamos la documentación en la que se "
+"designa a %(reporter_name)s como su representante. La autorización debe "
+"realizarse a través de un formulario de nombramiento de un representante "
+"(AOR) firmado y por escrito."
+
+
+#: src/templates/guac/grievances/aor_followup_letter.html:10
+#, python-format
+msgid ""
+"We have enclosed an Appointment of Representative (AOR) "
+"Form for your convenience. The Appointment of Representative (AOR) form must "
+"be dated and signed by both you and %(reporter_name)s to be valid."
+msgstr ""
+"Para que el formulario de nombramiento de un "
+"representante sea válido, debe estar fechado y firmado por el miembro y "
+"%(reporter_name)s."
+
+
+
+
 #: src/templates/guac/grievances/aor_followup_letter.html:16
 #, python-format
 msgid ""
@@ -1677,6 +1712,24 @@ msgid ""
 msgstr ""
 "Usted tiene el derecho de pedirle a Clover Health que evalúe su decisión a "
 "través de su apelación:"
+
+
+
+
+#: src/templates/guac/prior_auths/denial_letter.html:44
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:42
+msgid ""
+"You have the right to ask Clover Health to review our decision by asking  "
+"for an appeal within <strong>60 days</strong> of the date "
+"of this notice. We can give you more time if you have a good reason for "
+"missing the deadline."
+msgstr ""
+"Usted tiene el derecho de pedirle a Clover Health que evalúe su decisión"
+"a través de una apelación en un plazo de 60 días a partir de la fecha "
+"de este aviso. Podemos extenderle el plazo si tiene algún motivo"
+"válido para no cumplirlo.""
+
+
 
 #: src/templates/guac/prior_auths/denial_letter.html:46
 #: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:44
@@ -2427,6 +2480,23 @@ msgid ""
 msgstr ""
 "Hemos denegado los servicios/artículos médicos listados, que fueron "
 "solicitados por usted o su médico:"
+
+
+
+
+
+
+#: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:11
+msgid ""
+"Your request was denied for the medical services/items listed below requested by you or your "
+"doctor/provider:"
+msgstr ""
+"Su petición fue denegada para los servicios/artículos médicos listados, que fueron "
+"solicitados por usted o su médico:"
+
+
+
+
 
 #: src/templates/guac/prior_auths/outpatient_therapy_denial_letter.html:28
 msgid ""

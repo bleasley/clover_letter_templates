@@ -14,9 +14,7 @@
 
 {% block message %}
 
- <p>{{ _("Your request was denied.") }}</p>
-
-  <p>{{ _("We %(member_denial_determination)s the medical services/items listed below requested by you or your doctor/provider:",
+ <p>{{ _("Your request was %(member_denial_determination)s the medical services/items listed below requested by you or your doctor/provider:",
           member_denial_determination=prior_auth.member_denial_determination.value.lower()) }}</p>
 
   <ul>
@@ -60,17 +58,11 @@
 
   <p>{{ _("You should share a copy of this decision with your doctor so you and your doctor can discuss next steps. If your doctor requested coverage on your behalf, we have sent a copy of this decision to your doctor.") }}</p>
 
-  <p><strong>{{ _("You have the right to appeal our decision.") }}</strong> {{ _("You have the right to ask Clover Health to review our decision by asking us for an appeal:") }}</p>
+  <p><strong>{{ _("You have the right to appeal our decision.") }}</strong> {{ _("You have the right to ask Clover Health to review our decision by asking for an appeal within <strong>60 days</strong> of the date of this notice. We can give you more time if you have a good reason for missing the deadline.") }}</p>
   
-    	{% if not use_large_font() and locale() =="es" %}
+  
 <p class='page-break'></p>
-	{% endif %}
 
-  <p><strong>{{ _("Appeal") }}:</strong> {{ _("Ask Clover Health for an appeal within <strong>60 days</strong> of the date of this notice. We can give you more time if you have a good reason for missing the deadline.") }}</p>
-  
-  	{% if use_large_font() or (not use_large_font() and locale()=="es")%}
-<p class='page-break'></p>
-	{% endif %}
 
    
 	
@@ -80,9 +72,7 @@
   <p>{{ _("Respectfully,") }}<br/>
 	  {{values.medical_director.given_name}} {{values.medical_director.family_name}}, {{ _("Medical Director") }}</p>
 	  
-	  {% if not use_large_font() %}
-<p class='page-break'></p>
-	{% endif %}
+
 
   <h2>{{ _("Important Information About Your Appeal Rights") }}</h2>
 
