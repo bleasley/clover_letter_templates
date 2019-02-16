@@ -23,15 +23,11 @@
           	  	  <p>{{ _("In compliance with the Centers for Medicare and Medicaid (CMS) guidelines, we will not be able to proceed with this pre-authorization unless we receive documentation appointing %(rep_name)s as your representative. We have enclosed an Appointment of Representative (AOR) Form for your convenience.) ) }}   </p><p class='page-break'></p><p> {{ _("The Appointment of Representative (AOR) form must be dated and signed by both you and %(rep_name)s to be valid.",
           rep_name=utils.render_text_inline(values.representative_name) ) }}</p>
 
-	{% endif %}
-	{% if not use_large_font() %}
+	{% else %}
 
 	<p>{{ _("In compliance with the Centers for Medicare and Medicaid (CMS) guidelines, we will not be able to proceed with this pre-authorization unless we receive documentation appointing %(rep_name)s as your representative. We have enclosed an Appointment of Representative (AOR) Form for your convenience. The Appointment of Representative (AOR) form must be dated and signed by both you and %(rep_name)s to be valid.",
           rep_name=utils.render_text_inline(values.representative_name) ) }}</p>
 	{% endif %}
-
-  <p>{{ _("In compliance with the Centers for Medicare and Medicaid (CMS) guidelines, we will not be able to proceed with this pre-authorization unless we receive documentation appointing %(rep_name)s as your representative. We have enclosed an Appointment of Representative (AOR) Form for your convenience. The Appointment of Representative (AOR) form must be dated and signed by both you and %(rep_name)s to be valid.",
-          rep_name=utils.render_text_inline(values.representative_name) ) }}</p>
 
 
   <p>{{ _("In the case where a member is incapacitated or legally incompetent, legal documentation such as a court-ordered guardianship or conservatorship, durable power of attorney, or healthcare power of attorney should be submitted.") }}</p>
