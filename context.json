@@ -33,7 +33,7 @@
     "requested_service_date": "2018-9-01"
   },
   "prior_auth": {
-	"acuity":"<acuity>", 
+	"acuity":"<acuity>",
 	 "kind":{
 		  "value":"outpatient"
 	  },
@@ -114,9 +114,9 @@
     "recipient_state": "ST",
     "recipient_zip": "000000",
     "first_aor_letter_date":"2018-02-08",
-    "second_aor_letter_date":"2018-04-09",
-    "representative_name":"name of representative"
+    "second_aor_letter_date":"2018-04-09"
   },
+
   "prior_auth_formatted_id": "1231238928",
   "is_auth_denied_expedite": "true",
   "service_type": "Outpatient",
