@@ -20,8 +20,7 @@
           rep_name=utils.render_text_inline(values.representative_name) ) }}</p>
 
           	  	{% if use_large_font() %}
-          	  	  <p>{{ _("In compliance with the Centers for Medicare and Medicaid (CMS) guidelines, we will not be able to proceed with this pre-authorization unless we receive documentation appointing %(rep_name)s as your representative. We have enclosed an Appointment of Representative (AOR) Form for your convenience.",
-          rep_name=utils.render_text_inline(values.representative_name) ) }}</p><p class='page-break'></p><p> {{ _("The Appointment of Representative (AOR) form must be dated and signed by both you and %(rep_name)s to be valid.") ) }} </p>
+          	  	  <p>{{ _("In compliance with the Centers for Medicare and Medicaid (CMS) guidelines, we will not be able to proceed with this pre-authorization unless we receive documentation appointing %(rep_name)s as your representative. We have enclosed an Appointment of Representative (AOR) Form for your convenience.",rep_name=utils.render_text_inline(values.representative_name) ) }}</p><p class='page-break'></p><p> {{ _("The Appointment of Representative (AOR) form must be dated and signed by both you and %(rep_name)s to be valid.",rep_name=utils.render_text_inline(values.representative_name) ) }} </p>
 
 	{% else %}
 

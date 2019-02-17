@@ -22,10 +22,9 @@
 
 {% if use_large_font() %}
   <p>{{ _("I am writing to follow up on the letter we sent you on %(previous_aor_date)s. In compliance with the Centers for Medicare and Medicaid (CMS) guidelines, we will not be able to proceed with this pre-authorization unless we receive documentation appointing %(rep_name)s as your representative.",
-	  previous_aor_date=utils.render_date_inline(values.previous_aor_date)) }}
-	  
-	  
-  </p><p class='page-break'></p><p> {{ _(" We have enclosed an Appointment of Representative (AOR) Form for your convenience. The Appointment of Representative (AOR) form must be dated and signed by both you and %(rep_name)s to be valid.",
+	  rep_name=utils.render_text_inline(values.representative_name),
+	  previous_aor_date=utils.render_date_inline(values.previous_aor_date)) }} </p><p class='page-break'></p>
+	  <p> {{ _(" We have enclosed an Appointment of Representative (AOR) Form for your convenience. The Appointment of Representative (AOR) form must be dated and signed by both you and %(rep_name)s to be valid.",
           rep_name=utils.render_text_inline(values.representative_name)) }}</p>
 
 
