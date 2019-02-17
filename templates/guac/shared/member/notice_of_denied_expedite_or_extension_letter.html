@@ -1,14 +1,15 @@
 {% import "base.html" as utils %}
+
+
+{%if use_large_font() and locale = "en" %}
 <p>{{ _("You have the right to file an expedited (fast) grievance if:") }}</p>
 
-
-{%if use_large_font() %}
 	<ul class="checkboxes disable-split">
   <li>{{ utils.render_checkbox(checked=is_auth_denied_expedite) }} {{ _("You asked for a fast decision on a service, and we decided to process it under our regular (non-expedited) time frame. We will give you a fast decision if you resubmit it with a supporting statement from your doctor.") }}</li>
 
   <li>{{ utils.render_checkbox(checked=is_appeal_denied_expedite) }} {{ _("You asked for a fast appeal for a service, and we decided to process it under our regular (non-expedited) time frame. We will give you a fast decision on your appeal if you resubmit it with a supporting statement from your doctor.") }}</li>
 	</ul>
-	<span class="page-break"></span>
+	<p class="page-break"></p>
 	<ul class="checkboxes disable-split">
 
   <li>{{ utils.render_checkbox(checked=is_auth_extension) }} {{ _("We need up to 14 more days to decide on your request for a service.") }}  {{values.extension_reason}}</li>
@@ -20,7 +21,31 @@
 
 <p>{{ _("NOTE: When you request a fast grievance, we will make a quick decision on your request and notify you within 24 hours.") }}</p>
 
+{% elseif use_large_font() and locale = "es" %}
 
+
+<p>{{ _("You have the right to file an expedited (fast) grievance if:") }}</p>
+
+	<ul class="checkboxes disable-split">
+  <li>{{ utils.render_checkbox(checked=is_auth_denied_expedite) }} {{ _("You asked for a fast decision on a service, and we decided to process it under our regular (non-expedited) time frame. We will give you a fast decision if you resubmit it with a supporting statement from your doctor.") }}</li>
+</ul>
+	<p class="page-break"></p>
+	<ul class="checkboxes disable-split">
+		
+  <li>{{ utils.render_checkbox(checked=is_appeal_denied_expedite) }} {{ _("You asked for a fast appeal for a service, and we decided to process it under our regular (non-expedited) time frame. We will give you a fast decision on your appeal if you resubmit it with a supporting statement from your doctor.") }}</li>
+	
+
+  <li>{{ utils.render_checkbox(checked=is_auth_extension) }} {{ _("We need up to 14 more days to decide on your request for a service.") }}  {{values.extension_reason}}</li>
+
+  <li>{{ utils.render_checkbox(checked=is_appeal_extension) }} {{ _("We need up to 14 more days to consider your appeal for a service.") }} {{values.extension_description}}</li>
+
+</ul>
+
+
+<p>{{ _("NOTE: When you request a fast grievance, we will make a quick decision on your request and notify you within 24 hours.") }}</p>
+
+
+<p class="page-break"></p>
 
 {% else %}
 
@@ -40,5 +65,7 @@
 
 {% endif %}
 
-<p>{{ _("How to File an Expedited (Fast) Grievance") }}</p>
+
+
+<p><strong>{{ _("How to File an Expedited (Fast) Grievance") }}</strong></p>
 <p>{{ _("Call us at") }} 1-888-657-1207 {{ _("to file an expedited grievance or get more information.") }} {{ _("You can also call") }} 1-800-MEDICARE (1-800-633-4227) {{ _("24 hours a day, 7 days a week, for more information about the expedited grievance process. TTY users should call") }} 1-877-486-2048.</p>
