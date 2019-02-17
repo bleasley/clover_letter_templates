@@ -2071,6 +2071,45 @@ msgstr ""
 "o custodia ordenada judicialmente, un poder de representación duradero o un "
 "poder de representación para la atención médica."
 
+
+
+#: src/templates/guac/prior_auths/dismissal_letter.html:6
+#, python-format
+msgid ""
+"This letter follows requests we sent you on %(first_letter_date)s and "
+"%(second_letter_date)s asking for a completed Appointment of Representative "
+"(AOR) form. In accordance with Centers for Medicare and Medicaid (CMS) "
+"guidelines, an authorization filed on your behalf must be accompanied by a "
+"completed AOR, dated and signed by both the member and your representative. "
+msgstr ""
+"Enviamos esta carta luego de haberle enviado solicitudes el "
+"%(first_letter_date)s y el %(second_letter_date)s para que nos envíe un "
+"Formulario de nombramiento de representante (Appointment of Representative, "
+"AOR) completo. De acuerdo con las pautas de los Centros de Servicios de "
+"Medicare y Medicaid (Centers for Medicare and Medicaid Services, CMS), las "
+"autorizaciones que se presentan en su nombre deben estar acompañadas de un "
+"formulario de AOR completo, con fecha y firmado por el miembro y su "
+"representante."
+
+
+
+
+
+#: src/templates/guac/prior_auths/dismissal_letter.html:6
+#, python-format
+msgid ""
+"Legal documentation such as a court ordered guardianship or conservatorship, "
+"durable power of attorney, or healthcare power of attorney may also be "
+"submitted."
+msgstr ""
+"También puede presentar documentación legal, como una tutela "
+"o custodia ordenada judicialmente, un poder de representación duradero o un "
+"poder de representación para la atención médica."
+
+
+
+
+
 #: src/templates/guac/prior_auths/dismissal_letter.html:10
 #, python-format
 msgid ""

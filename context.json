@@ -94,7 +94,8 @@
     "service_description": "services offered",
     "medical_director": {
         "label": "Dr. Medical Director",
-        "given_name":"George Smith"
+        "given_name":"George",
+        "family_name":"Smith"
     },
     "nomnc_date":"2017-12-11",
     "previous_aor_date":"2018-07-03",
