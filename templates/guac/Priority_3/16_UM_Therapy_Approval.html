@@ -32,21 +32,26 @@
     </li>
   </ul>
 
-  <p>{{ _('Authorization/Date of Service Valid from: %(low_date)s to %(high_date)s (last date approved)',
+  <p>{{ _('Authorization/Date of Service valid from %(low_date)s to %(high_date)s (last date approved)',
     low_date=utils.render_date_inline(prior_auth.approved_from_date),
     high_date=utils.render_date_inline(prior_auth.approved_to_date))}} </p>
+    
+      {% if use_large_font() %}
+<p class='page-break'></p>
+	{% endif %}
 
   <p>{{ _('Requests for coverage of additional visits, treatments, testing or surgery may require a new authorization/precertification. Failure to obtain authorization/ precertification, when required, may result in a reduction of benefits in accordance with the terms of your plan.') }}</p>
   
-  {% if use_large_font() %}
-<p class='page-break'></p>
-	{% endif %}
+
 
   <p>{{ _('Prior authorization/precertification requests are reviewed for medical necessity and plan benefits. All prior authorization/precertification is administered in accordance with applicable state and federal law. The intent of this authorization is to establish medical necessity and is not a guarantee of payment. Coverage is also dependent on your eligibility. Payment will be based on the Provider Contract or the prevailing Medicare Methodology.') }}</p>
   
   
   	
 {% if not use_large_font() %}
+<p class='page-break'></p>
+
+{% if use_large_font() and locale() =="es" %}
 <p class='page-break'></p>
 	{% endif %}
   

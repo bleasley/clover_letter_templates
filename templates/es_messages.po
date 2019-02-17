@@ -1471,6 +1471,34 @@ msgstr ""
 "Autorización/Fecha del servicio válida desde: %(low_date)s hasta "
 "%(high_date)s (último día de la cobertura)"
 
+
+#: src/templates/guac/prior_auths/approval_letter.html:25
+#: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:25
+#, python-format
+msgid ""
+"Authorization/Date of Service"
+"(last date approved)"
+msgstr ""
+"Autorización/Fecha del servicio"
+
+
+#: src/templates/guac/prior_auths/approval_letter.html:25
+#: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:25
+#, python-format
+msgid ""
+"valid from %(low_date)s to %(high_date)s "
+"(last date approved)"
+msgstr ""
+"válida desde %(low_date)s hasta "
+"%(high_date)s (último día de la cobertura)"
+
+
+
+
+
+
+
+
 #: src/templates/guac/prior_auths/approval_letter.html:29
 #: src/templates/guac/prior_auths/outpatient_therapy_approval_letter.html:29
 msgid ""
@@ -2862,10 +2890,47 @@ msgstr "Muchas Gracias,"
 #~ "debe estar fechado y firmado por usted y%(reporter_first_name)s "
 #~ "%(reporter_last_name)s."
 
+
+
+
+
 #~ msgid ""
-#~ "Authorization/Date of Service Valid from: %(low_date)s to %(high_date)s"
+#~ "In compliance with the Centers for Medicare &amp; Medicaid (CMS) "
+#~ "guidelines, we will not be able to proceed with this grievance unless we "
+#~ "receive documentation appointing %(reporter_first_name)s "
+#~ "%(reporter_last_name)s as your representative. We have enclosed an "
+#~ "Appointment of Representative (AOR) Form for your convenience. "
 #~ msgstr ""
-#~ "Autorización Válida/Fecha de Servicio del %(low_date)s al %(high_date)s"
+#~ "En conformidad con las pautas de los Centros de Medicare y Medicaid "
+#~ "(CMS), no podremos continuar con este reclamo a menos que recibamos la "
+#~ "documentación en la que se designa a %(reporter_first_name)s "
+#~ "%(reporter_last_name)s como su representante. Para su conveniencia, hemos "
+#~ "adjuntado un Formulario de nombramiento de un representante (AOR)."
+#~ "%(reporter_last_name)s."
+
+
+
+
+#~ msgid ""
+#~ "The Appointment of Representative (AOR) form must be dated and signed by both "
+#~ "you and %(reporter_first_name)s %(reporter_last_name)s to be valid."
+#~ msgstr ""
+#~ "Para que el formulario de nombramiento de un representante (AOR) sea válido, "
+#~ "debe estar fechado y firmado por usted y%(reporter_first_name)s "
+#~ "%(reporter_last_name)s."
+
+
+
+
+#~ msgid ""
+#~ "Authorization/Date of Service valid from %(low_date)s to %(high_date)s"
+#~ msgstr ""
+#~ "Autorización Válida/Fecha de Servicio válida desde %(low_date)s al %(high_date)s"
+
+
+
+
+
 
 #~ msgid "Appeal Received on %(date_received)s"
 #~ msgstr "Solicitud de apelación presentada en la fecha %(date_received)s"

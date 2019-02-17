@@ -228,7 +228,7 @@ h2 {font-size:15pt}
 	padding-bottom: 18pt;}
 .no-bottom-space {margin-bottom:0;}
 .no-top-space {margin-top:0;}
-#Clover-address {margin-bottom:22pt; text-align:left}
+#Clover-address {margin-bottom:22pt; text-align:left; margin-top:2pt;}
 #spacer {width: 7.5in; height: 10px; float:left; display:inline-block;}
 
 .page-break-after {  page-break-after:always;}

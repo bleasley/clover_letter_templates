@@ -19,18 +19,19 @@
 
   
   {%if use_large_font() %}
+  
     <table>
     <tr>
-      <th>{{ _('Authorized Service') }}</th>
+      <th align="left">{{ _('Authorized Service') }}</th>
     </tr>
     <tr>
       <td>{{ _('Skilled nursing at') }} {{ prior_auth.acuity }}</td>
     </tr>
     <tr>
-	    <th>{{ _('Authorization/date of service valid from') }}</th>
+	    <th align="left">{{ _('Authorization/date of service') }}</th>
     </tr>
     <tr>
-	    <td>{{ _('%(low_date)s to %(high_date)s (last date approved)',
+	    <td>valid from {{ _('%(low_date)s to %(high_date)s (last date approved)',
         low_date=utils.render_date_inline(prior_auth.acuity_start_date),
         high_date=utils.render_date_inline(prior_auth.approved_to_date))}}</td>
     </tr>   
@@ -42,12 +43,12 @@
     {%if not use_large_font() %}
     <table>
     <tr>
-      <th>{{ _('Authorized Service') }}</th>
-      <th>{{ _('Authorization/date of service valid from') }}</th>
+      <th align="left">{{ _('Authorized Service') }}</th>
+      <th align="left">{{ _('Authorization/date of service') }}</th>
     </tr>
     <tr>
       <td>{{ _('Skilled nursing at') }} {{ prior_auth.acuity }}</td>
-      <td>{{ _('%(low_date)s to %(high_date)s (last date approved)',
+      <td>{{ _('valid from %(low_date)s to %(high_date)s (last date approved)',
         low_date=utils.render_date_inline(prior_auth.acuity_start_date),
         high_date=utils.render_date_inline(prior_auth.approved_to_date))}}</td>
     </tr>
@@ -62,6 +63,11 @@
     next_review=utils.render_date_inline(prior_auth.approved_to_date)) }}</b></p>
 
   <p>{{ _('Requests for coverage of additional visits, treatments, testing or surgery may require a new authorization/precertification. Failure to obtain authorization/precertification, when required, may result in a reduction of benefits in accordance with the terms of your plan.') }}</p>
+
+
+  {% if not use_large_font() %}
+      <p class='page-break'></p>
+{% endif %}
 
   <p>{{ _('Prior authorization/precertification requests are reviewed for medical necessity and plan benefits. All prior authorization/precertification is administered in accordance with applicable state and federal law. The intent of this authorization is to establish medical necessity and is not a guarantee of payment. Coverage is also dependent on your eligibility. Payment will be based on the Provider Contract or the prevailing Medicare Methodology.') }}</p>
 
