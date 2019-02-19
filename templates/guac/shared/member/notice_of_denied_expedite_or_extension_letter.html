@@ -1,7 +1,7 @@
 {% import "base.html" as utils %}
 
 
-{%if use_large_font() and locale = "en" %}
+{% if use_large_font() and locale == "en" %}
 <p>{{ _("You have the right to file an expedited (fast) grievance if:") }}</p>
 
 	<ul class="checkboxes disable-split">
@@ -21,7 +21,7 @@
 
 <p>{{ _("NOTE: When you request a fast grievance, we will make a quick decision on your request and notify you within 24 hours.") }}</p>
 
-{% elseif use_large_font() and locale = "es" %}
+{% elif use_large_font() and locale == "es" %}
 
 
 <p>{{ _("You have the right to file an expedited (fast) grievance if:") }}</p>
