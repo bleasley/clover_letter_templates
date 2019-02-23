@@ -16,20 +16,18 @@
 
   
   <p >{{ _('Your request has been modified. We modified the medical services/items listed below requested by your or your doctor/provider. The following services were requested by your provider: ') }}<br/>
-	  {{ _(utils.render_text_block(partial.services_requested)) }}
+	  {{ _(utils.render_text_inline(partial.services_requested)) }}
   </p>
 
   {% if use_large_font() %}
       <p class='page-break'></p>
 {% endif %}
 
-    <p >{{ _('We have approved the following services: ') }}<br/>
-	  {{ _(utils.render_text_inline(partial.services_requested)) }}
+    <p >{{ _('We have approved the following services: ') }}  {{ _(utils.render_text_inline(partial.services_requested)) }}
   </p>
 
 
-    <p >{{ _('However, our Medical Director has determined that the following services are not medically necessary at this time: ') }}<br/>
-	  {{ _(utils.render_text_inline(partial.services_not_necessary)) }}
+    <p >{{ _('However, our Medical Director has determined that the following services are not medically necessary at this time: ') }} {{ _(utils.render_text_inline(partial.services_not_necessary)) }}
   </p>
 
   
@@ -38,8 +36,7 @@
 {% endif %}
 
 	
-  <p>{{ _("Why did we deny your request?  We denied the medical services/items listed above because:") }} <br/>
-
+  <p>{{ _("Why did we deny your request?  We denied the medical services/items listed above because:") }} 
  {{ utils.render_text_inline(values.denial_rationale)}}
 	  </p>
 	  
@@ -48,8 +45,10 @@
 
 
  <p>{{ _("You should share a copy of this decision with your doctor so you and your doctor can discuss next steps. If your doctor requested coverage on your behalf, we have sent a copy of this decision to your doctor.") }}
-	 	    {% if not use_large_font() %}
+	 
+{% if not use_large_font() %}
       <p class='page-break'></p>
+      
 {% endif %}
 	 
  <p><strong>{{ _("You have the right to appeal our decision.") }}</strong> {{ _("You have the right to ask Clover Health to review our decision by asking for an appeal within <strong>60 days</strong> of the date of this notice. We can give you more time if you have a good reason for missing the deadline.") }}</p>
@@ -98,8 +97,8 @@
   	{% if not use_large_font()  %}
 <p class='page-break'></p>
 	{% endif %}
-	
-	
+
+
 	
   <p>{{ _("You can ask to see the medical records and other documents we used to make our decision before or during the appeal. At no cost to you, you can also ask for a copy of the guidelines we used to make our decision.") }}</p>
 
