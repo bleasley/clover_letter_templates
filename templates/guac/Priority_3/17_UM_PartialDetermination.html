@@ -16,7 +16,7 @@
 
   
   <p >{{ _('Your request has been modified. We modified the medical services/items listed below requested by your or your doctor/provider. The following services were requested by your provider: ') }}<br/>
-	  {{ _(utils.render_text_inline(partial.services_requested)) }}
+	  {{ _(utils.render_text_block(partial.services_requested)) }}
   </p>
 
   {% if use_large_font() %}
@@ -24,12 +24,12 @@
 {% endif %}
 
     <p >{{ _('We have approved the following services: ') }}<br/>
-	  {{ _(utils.render_text_inline(partial.services_requested)) }}
+	  {{ _(utils.render_text_block(partial.services_requested)) }}
   </p>
 
 
     <p >{{ _('However, our Medical Director has determined that the following services are not medically necessary at this time: ') }}<br/>
-	  {{ _(utils.render_text_inline(partial.services_not_necessary)) }}
+	  {{ _(utils.render_text_block(partial.services_not_necessary)) }}
   </p>
 
   
