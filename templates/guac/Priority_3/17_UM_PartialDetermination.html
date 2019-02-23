@@ -24,12 +24,12 @@
 {% endif %}
 
     <p >{{ _('We have approved the following services: ') }}<br/>
-	  {{ _(utils.render_text_block(partial.services_requested)) }}
+	  {{ _(utils.render_text_inline(partial.services_requested)) }}
   </p>
 
 
     <p >{{ _('However, our Medical Director has determined that the following services are not medically necessary at this time: ') }}<br/>
-	  {{ _(utils.render_text_block(partial.services_not_necessary)) }}
+	  {{ _(utils.render_text_inline(partial.services_not_necessary)) }}
   </p>
 
   
@@ -40,14 +40,21 @@
 	
   <p>{{ _("Why did we deny your request?  We denied the medical services/items listed above because:") }} <br/>
 
- {{ utils.render_text_block(values.denial_rationale)}}
+ {{ utils.render_text_inline(values.denial_rationale)}}
 	  </p>
 	  
+	  
+
+
+
  <p>{{ _("You should share a copy of this decision with your doctor so you and your doctor can discuss next steps. If your doctor requested coverage on your behalf, we have sent a copy of this decision to your doctor.") }}
+	 	    {% if not use_large_font() %}
+      <p class='page-break'></p>
+{% endif %}
 	 
  <p><strong>{{ _("You have the right to appeal our decision.") }}</strong> {{ _("You have the right to ask Clover Health to review our decision by asking for an appeal within <strong>60 days</strong> of the date of this notice. We can give you more time if you have a good reason for missing the deadline.") }}</p>
   
-<p class='page-break'></p>
+
 
   <p>{{ _("If you want someone else to act for you, you can name a relative, friend, attorney, doctor, or someone else to act as your representative.  If you want someone else to act for you, call us at: 1-888-657-1207 to learn how to name your representative. TTY users call 711. Both you and the person you want to act for you must sign and date a statement confirming this is what you want. You'll need to mail or fax this statement to us.") }} {{ _("Keep a copy for your records.") }}
   </p>
