@@ -123,9 +123,9 @@
   "service_type": "Outpatient",
   "cpt_codes":"CODES",
   "partial": {
-	  	  "services_requested":"A list of services requested can go here: <ul><li>Item 1</li><li>Item 2</li>",
-	  	  "services_approved":"A list of services approved can go here: <ul><li>Item 1</li><li>Item 2</li>",
-	  	  "services_not_necessary":"A list of services deemed not necessary: <ul><li>Item 1</li><li>Item 2</li>"
+	  	  "services_requested":"A list of services requested can go here. They would be listed in serial form, like this: Item 1, Item 2, Item 3, and so forth.",
+	  	  "services_approved":"A list of services approved can go here. They would be listed in serial form, like this: Item 1, Item 2, Item 3, and so forth.",
+	  	  "services_not_necessary":"A list of services deemed not necessary. They would be listed in serial form, like this: Item 1, Item 2, Item 3, and so forth."
 
 	  }
 
