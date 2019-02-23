@@ -121,6 +121,12 @@
   "prior_auth_formatted_id": "1231238928",
   "is_auth_denied_expedite": "true",
   "service_type": "Outpatient",
-  "cpt_codes":"CODES"
+  "cpt_codes":"CODES",
+  "partial": {
+	  	  "services_requested":"A list of services requested can go here: <ul><li>Item 1</li><li>Item 2</li>",
+	  	  "services_approved":"A list of services approved can go here: <ul><li>Item 1</li><li>Item 2</li>",
+	  	  "services_not_necessary":"A list of services deemed not necessary: <ul><li>Item 1</li><li>Item 2</li>"
+
+	  }
 
 }
